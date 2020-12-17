@@ -1,0 +1,34 @@
+<script>
+  window.VuexState = window.VuexState || {};
+  window.VuexState.translations = {
+    cart: { 
+      "shipping_at_checkout": "{{ 'cart.general.shipping_at_checkout' | t }}", 
+      "savings": "{{ 'cart.general.savings' | t }}",
+      "empty": "{{ 'cart.general.empty' | t }}",
+      "remove": "{{ 'cart.general.remove' | t }}",
+      "subtotal": "{{ 'cart.general.subtotal' | t }}",
+      "checkout": "{{ 'cart.general.checkout' | t }}",
+      "cart": "{{ 'cart.general.cart' | t }}",
+      "busy_message": "Please wait, cart is processing"
+    },
+    products: {
+      "sold_out": "{{ 'products.product.sold_out' | t}}",
+      "unavailable": "{{ 'products.product.unavailable' | t}}",
+      "add_to_cart": "{{ 'products.product.add_to_cart' | t}}",
+      "sale_price": "{{'products.product.sale_price' | t}}",
+      "quickshop_btn_text": "{{ 'products.product.quickshop_btn_text' | t}}"
+    }
+  }
+  window.VuexState.settings = {
+    "display_ship_msg": {{ settings.display_ship_msg | json }},
+    "display_savings": {{ settings.display_savings | json }},
+    "goto_checkout": {{ settings.minicart_goto-checkout | json }},
+    "minicart_use_dropdown": {{settings.minicart_use_dropdown | json}},
+    "minicart_dropdown_timeout": 3000,
+    "collection_enabled-img-hover": {{settings.collection_enabled-img-hover | json}},
+    "product_groupby_type": {{settings.product_groupby_type | json }},
+    "product_groupby_prefix": {{settings.product_groupby_prefix | json}},
+    "quickshop_enable": window.bcSfFilterMainConfig ? window.bcSfFilterMainConfig.settings.actionlist.qvEnable : false,
+    "quickshop_template": {{settings.quickshop_template | default: "bc-quickview" | json}}
+  }
+</script> 

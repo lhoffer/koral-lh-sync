@@ -1,0 +1,60 @@
+<section class="section__hero-section">
+  <div class="section__hero-section"> 
+    
+    <div class="wlp-hero-img-cont wlp-hero-cont-img-1"><a href="{{ section.settings.hero_sec_link }}">
+    	<img class="wlp-hero wlp-hero-d" src="{{ section.settings.hero_sec_image_d | img_url: 'master' }}">
+        <img class="wlp-hero wlp-hero-m" src="{{ section.settings.hero_sec_image_m | img_url: 'master' }}">
+      </a></div>
+    
+  </div>
+</section>
+
+<style>
+  .wlp-hero {
+    width: 100%;
+  }
+  .wlp-hero-d {
+    width: 100%;
+    display: block;
+  }
+  .wlp-hero-m {
+    width: 100%;
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+  .wlp-hero {
+    width: 100%;
+  }
+  .wlp-hero-d {
+    width: 100%;
+    display: none;
+  }
+  .wlp-hero-m {
+    width: 100%;
+    display: block;
+  }
+  } 
+</style>
+
+{% schema %}
+{
+  "name": "Hero Image",
+  "settings": [    
+    {
+      "id": "hero_sec_link",
+      "type": "url",
+      "label": "Link"
+    },
+    {
+      "id": "hero_sec_image_d",
+      "type": "image_picker",
+      "label": "Desktop Image"
+    },
+    {
+      "id": "hero_sec_image_m",
+      "type": "image_picker",
+      "label": "Mobile Image"
+    }
+]
+}
+{% endschema %}

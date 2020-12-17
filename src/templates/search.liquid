@@ -1,0 +1,13 @@
+
+<div class="collection search">
+  <div class="collection__container">
+    {%- if settings.collection_use_filters -%}
+      {% section 'collection-filters' %}
+      {% section 'search-template-bc-sf-filter' %} 
+    {%- else -%}
+      {% section 'search-template' %}
+    {%- endif -%}
+  </div>
+</div>
+{% section 'swatch-settings' %}
+{% section 'tag_mappings' %}

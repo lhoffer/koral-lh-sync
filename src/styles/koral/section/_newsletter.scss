@@ -1,0 +1,43 @@
+.newsletter__section {
+  .form-group {
+    position: relative;
+  }
+
+  .input-group {
+    border-bottom: 1px solid #fff;
+  }
+  .input-group__btn {
+    display: flex;
+  }
+  .form-control {
+    border: 0;
+    padding-left: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    background: transparent;
+    @include placeholder {
+      text-transform: lowercase;
+      color: #fff;
+    }
+  }
+
+  .newsletter__submit {
+    border: 0;
+    padding: 0;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #fff;
+    .icon {
+      display: none;
+    }
+  }
+
+  .newsletter__section-message {
+    font-size: 1.5rem;
+    line-height: 2;
+    margin-bottom: 10px;
+  }
+}
+
+

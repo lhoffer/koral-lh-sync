@@ -1,0 +1,24 @@
+<div class="hp-static-img-cont">
+  <a href="{{ section.settings.static_image_link }}">
+  <img src="{{ section.settings.static_image_desktop | img_url: '2000x' }}" class="hp-static-img-d hp-static-img" alt="{{ section.settings.static_image_alt }}">
+  <img src="{{ section.settings.static_image_mobile | img_url: '1000x' }}" class="hp-static-img-m hp-static-img" alt="{{ section.settings.static_image_alt }}">
+  </a>
+</div>
+
+<style>
+  
+  .hp-static-img {width: 100%;}
+  .hp-static-img-d {display: block;}
+  .hp-static-img-m {display: none;}
+  
+  @media screen and (max-width: 767px) {
+  
+  .hp-static-img {}
+{% if section.settings.static_image_mobile != blank %}  
+  .hp-static-img-d {display: none;}
+{% endif %}
+  .hp-static-img-m {display: block;}
+  
+  }
+  
+</style>

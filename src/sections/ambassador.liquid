@@ -1,0 +1,143 @@
+<div class="ambassador-page">
+  
+{% for block in section.blocks %}
+{% case block.type %}
+{% when 'ambassador-block' %}
+  
+  <div class="am-block-cont">
+    <a href="{{ block.settings.ambassador_url }}" class="am-block-link">
+      <img src="{{ block.settings.ambassador_image_d | img_url: '2673x1068' }}" class="am-block-img-d">
+      <img src="{{ block.settings.ambassador_image_m | img_url: '2673x1068' }}" class="am-block-img-m">
+    </a>
+  </div>
+  
+{% endcase%}
+{% endfor %}
+  
+<div class="rte">
+    
+    <div class="front-line-container">
+      
+      <div class="fl-text-cont">
+      
+        <h2>Our Ambassador program is looking for the fitness-focused, style-driven creative who would love to represent our brand throughout their daily life while making money every time your individualized link is used.</h2>
+
+        <h3>How do you sign up?</h3>
+
+		<p>Koral’s Ambassador Program offers an affiliate program via MagicLinks.</p>
+
+        <h3>You applied, now what?</h3>
+
+		<p>Once approved, you can link any KORAL product directly through our website using MagicLinks tools.</p>
+        
+        <a href="https://www.magiclinks.com/join/koral/"><button class="btn btn-primary">APPLY NOW</button></a>
+
+      </div>
+    
+    </div>
+
+</div>  
+  
+<div class="rte">
+  
+  <h1 style="width: 100%; text-align:center;margin: 25px 0;font-size: 2.5rem;">KORAL CARES</h1>
+    
+    <div class="front-line-container">
+    
+      <div class="front-line-img">
+      
+        <img src="https://cdn.shopify.com/s/files/1/0744/4099/files/koral-front-line.jpg?v=1586893541">
+      
+      </div>
+      
+      <div class="front-line-form" style="margin: 5% 0;">
+      
+        <div style="margin:0 auto;" class="pxFormGenerator" id="P3doGpYoOP8fX55KuYmu8g"></div>		
+      
+      </div>
+    
+    </div>
+
+</div>
+  
+</div>
+
+<style type="text/css">
+  
+  .ambassador-page {}
+  .am-block-cont {}
+  .am-block-link {}
+  .am-block-img-d {
+  		display: block;
+        width: 100%;
+  }
+  .am-block-img-m {
+  		display: none;
+  }
+  .front-line-container > .fl-text-cont {width: 100%; text-align:center;margin: 25px 0;}
+  .front-line-container > .fl-text-cont > h2 {}
+  .front-line-container > .fl-text-cont > h3 {margin: 25px;}
+  .front-line-container > .fl-text-cont > p {margin: 25px;font-size: 1.6rem;}
+  .front-line-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 25px auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .front-line-container > div {
+    width: 50%;
+  }
+  
+  @media (max-width: 992px){ 
+    
+  .ambassador-page {}
+  .am-block-cont {}
+  .am-block-link {}
+  .am-block-img-d {
+  		display: none;
+  }
+  .am-block-img-m {
+  		display: block;
+    width: 100%;
+  }
+  .front-line-container {padding: 0 15px;}
+  .front-line-container {}
+  .front-line-container > div {
+      width: 100%;
+  }
+    
+  }
+  
+</style>
+
+
+{% schema %}
+{
+  "name": "Ambassador",
+  "class": "ambassador",
+  "blocks": [
+	    	{
+            "type": "ambassador-block",
+			"name": "Ambassador Block",
+		    "settings": [
+						{
+						"type": "url",
+						"id":	"ambassador_url",
+						"label": "Link"
+						},
+						{
+						"type": "image_picker",
+						"id":	"ambassador_image_d",
+						"label": "Image Desktop"
+						},
+						{
+						"type": "image_picker",
+						"id":	"ambassador_image_m",
+						"label": "Image Mobile"
+						}
+						]
+		}
+		]
+}
+{% endschema %}

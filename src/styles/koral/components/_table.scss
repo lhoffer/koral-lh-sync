@@ -1,0 +1,26 @@
+.table-gray {
+  background: $color-brand-tertiary;
+  &.table-bordered {
+    tbody tr td, 
+    thead tr th {
+      border-color: #fff
+    }
+  }
+}
+.size-chart.modal {
+  .modal-container {
+    border-radius: 5px;
+  }
+  .modal-title {
+    font-weight: 400;
+    text-transform: none;
+  }
+  .table {
+    text-align: center;
+    tbody > tr > td:first-child {
+      font-weight: 400;
+      text-align: left;
+      width: 150px;
+    }
+  }
+}

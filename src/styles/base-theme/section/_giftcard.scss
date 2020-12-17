@@ -1,0 +1,45 @@
+$giftcard__amount-color:  #fff;
+$giftcard__code-bg: rgba($white, .8);
+.template-gift_card {
+  text-align: center;
+  .giftcard__wrapper {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    h2 {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      color: $giftcard__amount-color;
+      text-shadow: 1px 1px 3px darken($giftcard__amount-color, 80%);
+    }
+    & + p {
+      margin: 10px 0;
+    }
+  }
+  .giftcard__code {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    max-width: 300px;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 2.5rem;
+    background: $giftcard__code-bg;
+    padding: 10px 0 5px;
+    margin: 0 auto;
+  }
+  .start-shop-cta {
+    @extend .btn-primary;
+    margin-bottom: 15px;
+  }
+  .print-giftcard {
+    @extend .btn;
+    border: 1px solid $black;
+  }
+  .site-logo {
+    margin: 20px auto;
+    display: block;
+  }
+}

@@ -1,0 +1,165 @@
+<section class="section__staggered-section">
+  <div class="section__staggered-section"> 
+    
+    <div class="ss-img-cont ss-cont-img-1">
+    	<img src="{{ section.settings.stag_sec_image_1 | img_url: 'master' }}">
+    </div>
+    
+    <div class="ss-text-cont ss-text-sont-1">
+      <p class="ss-text-header">{{ section.settings.stag_sec_header_1 }}</p>
+      <p class="ss-text-subheader">{{ section.settings.stag_sec_subheader_1 }}</p>
+      <a href="{{ section.settings.stag_sec_link_1 }}"><p class="ss-text-link">{{ section.settings.stag_sec_cta_1 }} &#9658;</p></a>
+    </div>
+    
+    <div class="ss-img-cont ss-cont-img-2">
+    	<img src="{{ section.settings.stag_sec_image_2 | img_url: 'master' }}">
+    </div>
+    
+    <div class="ss-text-cont ss-text-sont-1">
+      <p class="ss-text-header">{{ section.settings.stag_sec_header_2 }}</p>
+      <p class="ss-text-subheader">{{ section.settings.stag_sec_subheader_2 }}</p>
+      <a href="{{ section.settings.stag_sec_link_2 }}"><p class="ss-text-link">{{ section.settings.stag_sec_cta_2 }} &#9658;</p></a>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  #shopify-section-womens-staggered-block {
+    display: inline-block;
+  }
+  div.section__staggered-section {
+    width: 100%;
+    display: block;
+  }
+  .ss-img-cont {
+    width: 50%;
+    padding: 15px;
+  }
+  .ss-cont-img-1 {
+    float: left;
+  }
+  .ss-cont-img-2 {
+    float: right;
+    margin: -50px 0 100px 0;
+  }
+  .ss-text-cont {
+    width: 25%;
+    text-align: left;
+    margin-right: 10%;
+  }
+  .ss-text-sont-1 {
+    padding: 350px 0 200px 0;
+    float: right;
+  }
+  .ss-text-sont-2 {
+    padding: 350px 0;
+    float: left;
+    margin-top: -150px;
+  }
+  .ss-text-header {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-decoration: underline;
+  }
+  .ss-text-subheader {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .ss-text-link {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 25px 0;
+    letter-spacing: 0.1em;
+    font-family: "futura-pt", sans-serif;
+  }
+  
+  @media screen and (max-width: 767px) {
+  
+  div.section__staggered-section {}
+  .ss-img-cont {
+    width: 100%;
+    float: none;
+  }
+  .ss-cont-img-1 {}
+  .ss-cont-img-2 {
+     margin: 0 0 0 0;
+  }
+  .ss-text-cont {
+    width: 70%;
+    float: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .ss-text-sont-1 {}
+  .ss-text-sont-2 {
+    margin-top: 0px;
+  }
+  .ss-text-header {}
+  .ss-text-subheader {}
+  .ss-text-link {}
+  
+  }
+  
+</style>
+
+{% schema %}
+{
+  "name": "Staggered Section",
+  "settings": [    
+    {
+      "id": "stag_sec_image_1",
+      "type": "image_picker",
+      "label": "Image 1"
+    },
+    {
+      "id": "stag_sec_header_1",
+      "type": "text",
+      "label": "Header 1"
+    },
+    {
+      "id": "stag_sec_subheader_1",
+      "type": "text",
+      "label": "Sub-Header 1"
+    },
+    {
+      "id": "stag_sec_cta_1",
+      "type": "text",
+      "label": "Link Text 1"
+    },
+    {
+      "id": "stag_sec_link_1",
+      "type": "url",
+      "label": "Link 1"
+    },
+    {
+      "id": "stag_sec_image_2",
+      "type": "image_picker",
+      "label": "Image 2"
+    },
+    {
+      "id": "stag_sec_header_2",
+      "type": "text",
+      "label": "Header 2"
+    },
+    {
+      "id": "stag_sec_subheader_2",
+      "type": "text",
+      "label": "Sub-Header 2"
+    },
+    {
+      "id": "stag_sec_cta_2",
+      "type": "text",
+      "label": "Link Text 2"
+    },
+    {
+      "id": "stag_sec_link_2",
+      "type": "url",
+      "label": "Link 2"
+    }
+  ]
+}
+{% endschema %}

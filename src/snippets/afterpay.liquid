@@ -1,0 +1,43 @@
+<!-- http://static.secure-afterpay.com.au/shopify-afterpay-javascript.html -->
+
+<!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.1) -->
+<script type="text/javascript">
+// Editable fields:
+var afterpay_min = 0.04;            // As per your Afterpay contract.
+var afterpay_max = 1000.00;         // As per your Afterpay contract.
+var afterpay_logo_theme = 'colour'; // Can be 'colour', 'black' or 'white'.
+
+// Overrides (jQuery CSS Selectors)
+var afterpay_product_selector = '.product__prices';
+var afterpay_cart_static_selector = '.total-price > p';
+var afterpay_modal_responsive = false;
+var afterpay_show_currency_code = false;
+// Non-editable fields:
+var afterpay_shop_currency = {{ shop.currency | json }};
+var afterpay_shop_money_format = {{ shop.money_format | json }};
+var afterpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
+var afterpay_theme_name = {{ theme.name | json }};
+var afterpay_product = {{ product | json }};
+var afterpay_current_variant = {{ product.selected_or_first_available_variant | json }};
+var afterpay_cart_total_price = {{ cart.total_price | json }};
+var afterpay_js_snippet_version = '1.0.1';
+  
+  
+if (afterpay_product && afterpay_product.type === "Gift Card") { 
+ afterpay_product_selector = "";
+}
+  
+</script>
+<script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
+<!-- End Shopify-Afterpay JavaScript Snippet (v1.0.1) -->
+ 
+<style type="text/css">
+  p.afterpay-paragraph {
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
+  img.afterpay-logo {
+    max-width: 80px !important;
+    height: auto !important;
+  }
+</style>

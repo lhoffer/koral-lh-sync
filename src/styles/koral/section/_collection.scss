@@ -1,0 +1,270 @@
+.collection {
+  &__container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 15px;
+  }
+
+  &__header {
+    font-size: 5rem;
+    font-weight: 500;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 3rem;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+
+    .product__filter {
+      margin-left: auto;
+
+      ul {
+        display: flex;
+        list-style: none;
+      }
+    }
+
+    .view__filter {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+
+
+      span,
+      a {
+        margin-right: 5px;
+      }
+
+      a.active {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px -15px;
+
+    .product__item {
+      width: 50%;
+      margin-bottom: 40px;
+
+      a:hover {
+        color: $color-text-primary;
+      }
+
+      &-option.color,
+      &-option.colors {
+        font-weight: 300;
+        position: relative;
+      }
+
+      .option-labels,
+      .selected-value {
+        opacity: 0;
+        flex-grow: 1;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        transition: opacity 0.3s ease-in-out;
+
+        .option {
+          margin-right: 0;
+        }
+      }
+
+      .selected-value {
+        margin-top: 5px;
+      }
+
+      .total-color-count {
+        position: absolute;
+        top: 0;
+      }
+
+      .plus-more {
+        display: flex;
+        align-items: center;
+        margin-top: -6px;
+
+        > span {
+          padding: 2px 0 0 3px;
+        }
+
+        &:before {
+          content: "+";
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .banner__inline {
+      position: relative;
+      flex: 0 0 50%;
+      max-width: 47.5%;
+      order: 2;
+      margin-bottom: 20px;
+
+      &-summary {
+        position: absolute;
+        font-size: 3rem;
+        color: #fff;
+        right: 5%;
+        top: 55%;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        padding: 2.2px 0 10px;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 2rem;
+          top: 45%;
+          text-align: right;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .product__item {
+        padding: 0 15px 30px;
+        width: 25%;
+
+        &:hover {
+          .option-labels,
+          .selected-value {
+            opacity: 1;
+          }
+
+          .total-color-count {
+            display: none;
+          }
+        }
+      }
+
+      .banner__inline {
+        padding: 0 15px 30px;
+        margin-bottom: 0;
+      }
+    }
+
+    .product__item-option {
+      &.color {
+        .option-name {
+          margin: 0;
+          width: 100%;
+          justify-content: center;
+          .label {
+            > span {
+              display: none
+            }
+            > em {
+              display: block
+            }
+          }
+        }
+        .option-labels {
+          display: none
+        }
+      }
+    }
+  }
+}
+.collection__title {
+  text-align: center;
+}
+.collection__banner {
+  position: relative;
+
+  .img + .collection__header {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+  }
+}
+
+.pagination {
+  padding: 10px 10px 15px;
+  text-align: center;
+
+  .page,
+  .next,
+  .prev {
+    padding: 0 10px;
+  }
+
+  .current {
+    font-weight: 700;
+  }
+}
+
+.sidebar-menu {
+  ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    > li {
+      > a {
+        padding: 0 0 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+
+      &.active > a {
+        font-weight: 700;
+      }
+    }
+  }
+
+  > .submenu {
+    margin: 15px 0;
+
+    > li {
+      > a {
+        font-weight: 700;
+      }
+
+      ul > li > ul {
+        padding-left: 20px;
+
+        > li > a {
+          text-transform: none;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.product__item {
+  .product__item-quickshop {
+    .btn {
+      padding: .7rem 1rem;
+    }
+  }
+  .product__item-name {
+    margin-bottom: 33px;
+    .product__related &, .recently-viewed & {
+      margin-bottom: inherit;
+    }
+  }
+  .product__item-option {
+    .option-name {
+      color: $color-brand-primary;
+    }
+    &.color {
+      margin-top: -43px
+    }
+  }
+}
+collection .product__item {
+  display: none
+}

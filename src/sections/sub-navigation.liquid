@@ -1,0 +1,79 @@
+{% if section.settings.sub_nav_active %}
+<div class="sub-nav-cont">
+  <ul class="sub-nav-ul">
+    <li><a href="{{ section.settings.sub_nav_1_link }}">{{ section.settings.sub_nav_1_text }}</a></li>
+    <li><a href="{{ section.settings.sub_nav_2_link }}">{{ section.settings.sub_nav_2_text }}</a></li>
+    <li><a href="{{ section.settings.sub_nav_3_link }}">{{ section.settings.sub_nav_3_text }}</a></li>
+  </ul>
+</div>
+
+<style>
+.sub-nav-cont {display: none;}
+@media screen and (max-width: 767px) {
+.sub-nav-cont {
+  display: block;
+}
+.sub-nav-ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 10px 0;
+}
+.sub-nav-ul > li {
+    width: 33.33%;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+}
+</style>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Sub-Navigation",
+    "settings": [
+      {
+        "id":     "sub_nav_active",
+        "type":   "checkbox",
+        "label":  "Active",
+        "default":  false
+      },
+      {
+        "id":     "sub_nav_1_text",
+        "type":   "text",
+        "label":  "Item 1 Text"
+      },
+      {
+        "id":     "sub_nav_1_link",
+        "type":   "url",
+        "label":  "Item 1 Link"
+      },
+      {
+        "id":     "sub_nav_2_text",
+        "type":   "text",
+        "label":  "Item 2 Text"
+      },
+      {
+        "id":     "sub_nav_2_link",
+        "type":   "url",
+        "label":  "Item 2 Link"
+      },
+      {
+        "id":     "sub_nav_3_text",
+        "type":   "text",
+        "label":  "Item 3 Text"
+      },
+      {
+        "id":     "sub_nav_3_link",
+        "type":   "url",
+        "label":  "Item 3 Link"
+      }
+    ]
+  }
+{% endschema %}

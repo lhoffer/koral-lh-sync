@@ -1,0 +1,55 @@
+<script>
+  window.VuexState = window.VuexState || {};
+  window.VuexState.tag_mappings = [
+    {%- for block in section.blocks -%}
+      { "prefix": {{block.settings.title | json}}, "label": {{block.settings.label | json}}, "visible": {{block.settings.visible}}, "add_to_cart": {{block.settings.add_to_cart}}, "prop_key_value": {{block.settings.prop_key_value | json}} }
+      {%-unless forloop.last-%},{%-endunless-%} 
+    {%- endfor -%}
+  ]
+</script> 
+{% schema %}
+{
+  "name": "Product Tag Mappings",
+  "blocks": [
+    {
+      "name": "Tag Mapping",
+      "type": "tag_mapping",
+      "settings": [
+        {
+          "id": "title",
+          "label": "Prefix",
+          "type": "text",
+          "info": "This can be either the whole tag value or the key in 'prefix:label'"
+        },
+        {
+          "id": "label",
+          "label": "Display Label",
+          "type": "text",
+          "info": "This label is what gets displayed for matching tags"
+        },
+        {
+          "id": "visible",
+          "label": "Visible",
+          "type": "checkbox",
+          "info": "Display tag on PLP and PDP",
+          "default": true
+        },
+        {
+          "id": "add_to_cart",
+          "label": "Append to cart item",
+          "type": "checkbox",
+          "info": "Adds tag to cart item properties",
+          "default": false
+        },
+        {
+          "id": "prop_key_value",
+          "label": "Cart Item Key & Value",
+          "type": "text",
+          "default": "${prefix}:${label}",
+          "info": "Cart item property key/value must contain ':'. Value can be string:string, ie: Final: Sale. ${prefix}:${label} or ${prefix}:${tag}, ie tag and prefix is 'Web Only' and Exclusive: ${tag}, result will be Exclusive: Web Only"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

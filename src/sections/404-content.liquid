@@ -1,0 +1,172 @@
+<div class="page404 d-flex flex-column align-items-center flex-wrap">
+  
+  {% if section.settings.main_image %}
+  <img src="{{section.settings.main_image | img_url: '1200x' }}" alt="{{section.settings.alt_text}}" class="my-4" />
+  {% endif %}
+  
+  {% if section.settings.title %}
+  <h1 class="page404__title">{{section.settings.title}}</h1>
+  {% endif %}
+  
+  {% if section.settings.paragraph_text %}
+  <p class="page404__description my-3 text-center">{{section.settings.paragraph_text}}</p>
+  {% endif %}
+  
+  <div>
+    <ul class="text-uppercase text-center font-weight-bold page404-navitems">
+    {% for block in section.blocks %}
+      {% if block.type == '404-plp-tile' %}
+          <li class="page404-tile">
+            <a href="{{ block.settings.plp_tile_url }}">
+              <img class="page404-tile-img" src="{{ block.settings.plp_tile_img | img_url: '600x' }}">
+              {% if block.settings.plp_tile_header %}
+              <h3 class="page404-tile-header">{{ block.settings.plp_tile_header }}</h3>
+              {% endif %}
+              {% if block.settings.plp_tile_desc %}
+              <h5 class="page404-tile-desc">{{ block.settings.plp_tile_desc }}</h5>
+              {% endif %}
+              {% if block.settings.plp_tile_btn %}
+              <button class="page404-tile-btn btn btn-primary btn-block">{{ block.settings.plp_tile_btn }}</button>
+              {% endif %}
+            </a>
+          </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "404 Content",
+	"blocks": [
+            {
+            "type": "404-plp-tile",
+            "name": "Collection Tile",
+            "settings": [
+                        {
+                            "type":        "image_picker",
+                            "id":          "plp_tile_img",
+                            "label":       "Image (600x800 Pixels)"
+                        },
+                        {
+                            "type":        "text",
+                            "id":          "plp_tile_header",
+                            "label":       "Header",
+                            "default":     "SAMPLE COLLECTION NAME"
+                        },
+                        {
+                            "type":        "text",
+                            "id":          "plp_tile_desc",
+                            "label":       "Description",
+                            "default":     "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                        },
+                        {
+                            "type":        "text",
+                            "id":          "plp_tile_btn",
+                            "label":       "Button",
+                            "default":     "Shop Now"
+                        },
+                        {
+                            "type":        "url",
+                            "id":          "plp_tile_url",
+                            "label":       "Link"
+                        }
+                        ]
+            }
+],
+"settings": [
+		        {
+		        "type":     "image_picker",
+		        "id":       "main_image",
+		        "label":    "Main Image",
+		        "info":     "1200px width"
+		        },
+		        {
+		        "id":       "alt_text",
+		        "type":     "textarea",
+		        "label":    "Image alt Text",
+		        "default":  "model in black, textured fitness apparel",
+		        "info":     "If you are including an image (above), please fill in descriptive alt text."
+		        },
+		        {
+		        "id":       "title",
+		        "type":     "text",
+		        "label":    "Page Title",
+		        "default":  "Oops!"
+		        },
+		        {
+		        "id":       "paragraph_text",
+		        "type":     "textarea",
+		        "label":    "Paragraph Text",
+		        "default":  "Looks like you have either reached a page for a product that is no longer available or the page you are looking for does not exist. Let's find what you are looking for!"
+		        }
+      ]
+  }
+{% endschema %}
+
+
+<style>
+.page404 {
+	max-width: 1200px;
+	margin: 40px auto 0 auto;
+}
+.page404__title {
+	font-size: 32px !important;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+.page404__description {
+	font-size: 16px;
+	max-width: 670px;
+}
+.page404-navitems {
+	padding: 0 !important;
+	list-style: none !important;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.page404-tile {
+  padding: 15px 20px !important;
+	font-size: 1.3rem !important;
+	letter-spacing: .1em !important;
+  width: 33.333%;
+}
+.page404-tile-img {
+
+}
+.page404-tile-header {
+  margin-top: 15px;
+  font-weight: 700;
+}
+.page404-tile-desc {
+
+}
+.page404-tile-btn {
+  width: 75%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+.page404__description {
+    padding: 0 15px;
+}
+.page404-tile {
+  width: 50%;
+}
+.page404-tile-header {
+    font-size: 14px;
+}
+.page404-tile-desc {
+    font-size: 12px;
+}
+.page404-tile-btn {
+  width: 100%;
+}
+}
+</style>

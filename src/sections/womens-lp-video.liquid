@@ -1,0 +1,27 @@
+<section class="section__video-banner">
+  <div class="section__video-container">
+    <h3 class="video-header">{{section.settings.video_header}}</h3>
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        {{ section.settings.video_iframe }}
+      </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Video Banner",
+  "settings": [    
+    {
+      "id": "video_header",
+      "type": "text",
+      "label": "Video Header"
+    },
+    {
+      "id": "video_iframe",
+      "type": "html",
+      "label": "Video iFrame"
+}
+  ]
+}
+{% endschema %}

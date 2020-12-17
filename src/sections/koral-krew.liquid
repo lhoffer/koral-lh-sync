@@ -1,0 +1,77 @@
+<div class="koral-krew-page">
+  
+{% for block in section.blocks %}
+{% case block.type %}
+{% when 'koral-krew-block' %}
+  
+  <div class="kk-block-cont">
+    <a href="{{ block.settings.kk_url }}" class="kk-block-link">
+      <img src="{{ block.settings.kk_image_d | img_url: '2673x1068' }}" class="kk-block-img-d">
+      <img src="{{ block.settings.kk_image_m | img_url: '2673x1068' }}" class="kk-block-img-m">
+    </a>
+  </div>
+  
+{% endcase%}
+{% endfor %}
+  
+</div>
+
+<style type="text/css">
+  
+  .koral-krew-page {}
+  .kk-block-cont {}
+  .kk-block-link {}
+  .kk-block-img-d {
+  		display: block;
+  }
+  .kk-block-img-m {
+  		display: none;
+  }
+  
+  @media (max-width: 992px){ 
+    
+  .koral-krew-page {}
+  .kk-block-cont {}
+  .kk-block-link {}
+  .kk-block-img-d {
+  		display: none;
+  }
+  .kk-block-img-m {
+  		display: block;
+    width: 100%;
+  }
+    
+  }
+  
+</style>
+
+
+{% schema %}
+{
+  "name": "Koral Krew",
+  "class": "koral_krew",
+  "blocks": [
+	    	{
+            "type": "koral-krew-block",
+			"name": "koral-krew Block",
+		    "settings": [
+						{
+						"type": "url",
+						"id":	"kk_url",
+						"label": "Link"
+						},
+						{
+						"type": "image_picker",
+						"id":	"kk_image_d",
+						"label": "Image Desktop"
+						},
+						{
+						"type": "image_picker",
+						"id":	"kk_image_m",
+						"label": "Image Mobile"
+						}
+						]
+		}
+		]
+}
+{% endschema %}

@@ -1,0 +1,19 @@
+{%- assign image_count = 0 -%}
+{%- capture image_links -%}
+{%- for block in blocks -%}
+  {%- assign associated = block.settings.associated-menu-title | downcase -%}
+  {%- assign title = link.title | downcase -%}
+  {%- if associated == title -%}
+    {%- assign image_count = image_count | plus: 1 -%}
+    <li class="image-list image-list-{{image_count}}" {% if block.settings.position != 0 %}style="order: {{block.settings.position}}"{%endif%}>
+      <a class="image-link" style="max-width: {{block.settings.max-width}}px" href="{{block.settings.link}}">
+        <img src="{{block.settings.image | img_url: '640x'}}" />
+        {%- if block.settings.title != blank -%}
+        <span class="title">{{block.settings.title}}</span>
+        {%- endif -%}
+        <span class="link">{{block.settings.link-text}}</span>
+      </a>
+    </li>
+  {%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}

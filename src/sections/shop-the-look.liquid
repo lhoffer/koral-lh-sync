@@ -1,0 +1,34 @@
+{%- assign MAX_PRODUCTS = 4 -%}
+
+{%- assign counter = 0 -%}
+
+{%- capture products -%}
+    {%- for tag in product.tags -%}
+        {%- if tag contains 'look:' -%}
+            {%- assign handle = tag | remove_first: "look:" -%}
+
+            {%- if all_products[handle].available == true -%}
+                {%- include 'json__product' model: all_products[handle] -%}{%- unless forloop.last -%},{%- endunless -%}
+                {%- assign counter = counter | plus: 1 -%}    
+                
+                {%- if counter == MAX_PRODUCTS -%}
+                    {% break %}
+                {%- endif -%}
+            {%- endif -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endcapture -%}
+
+{%- if products.size > 0 -%}
+    <section class="shop-the-look collection__container">
+        <h1 class="shop-the-look__title">
+            {{ 'products.general.shop_the_look' | t }}
+        </h1>
+    
+        <div class="shop-the-look__grid">
+            <div class="collection__body vue-shop-the-look">
+                <shop-the-look class="collection__grid" :list='[{{products}}]' />
+            </div>
+        </div>   
+    </section>
+{%- endif -%}

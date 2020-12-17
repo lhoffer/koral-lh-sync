@@ -1,0 +1,41 @@
+<div class="career-container">
+  <h1 class="career-title">{{ page.title | replace: 'Career - ' }}</h1> 
+  <hr class="">
+  {{ page.content }}
+  <a class="career-job-link" href="/pages/careers"><button class="career-job-btn btn btn-primary">BACK TO POSITIONS</button></a>
+
+</div>
+
+<style>
+  
+  .career-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 25px auto;
+    text-align: left;
+    padding: 0 15px;
+  } 
+  .career-title {
+    font-size: 30px;
+    padding: 15px 0 5px 0;
+    font-weight: 700;
+    text-align:center;
+  }
+  .career-job-btn {
+    margin: 15px auto;
+  }
+  .section-head {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: 600;
+  }
+  .description {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  body > div.root > main > div > p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+</style>

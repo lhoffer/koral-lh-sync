@@ -1,0 +1,57 @@
+
+<div class="technology-icon-containers">
+  {% for block in section.blocks %}
+  <div>
+    <div>
+      <img src="{{ block.settings.image | img_url: 'master'}}" style="width:100%" />
+    </div>
+    <div>
+      <h3>{{block.settings.title}}</h3>
+
+      {{block.settings.desc}}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<script>
+  var technologyIcons = [
+    {%- for block in section.blocks -%}
+    {"title": "{{block.settings.title}}", "code": "{{block.settings.title | handle}}", "image": "{{block.settings.image | img_url: 'master'}}"}{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+  $(".tech-icon").each(function(i, icon) {
+    var $el = $(this);
+    var icon = technologyIcons.filter(function(ti) { return ti.code == $el.data("code") })[0];
+    if(icon)
+      $el.replaceWith('<img src="'+icon.image+'" title="'+icon.title+'"/>');
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Technology Icons",
+  "blocks": [
+    {
+      "type": "technology_icon",
+      "name": "Technology Icon",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "desc",
+          "type": "richtext",
+          "label": "Description"
+        }
+      ]
+    }    
+  ]
+}
+{% endschema %}

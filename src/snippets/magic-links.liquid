@@ -1,0 +1,38 @@
+<script>
+(function($) {
+    function GetURLParameter(sParam){
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++){
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam){
+                return sParameterName[1];
+            }
+        }
+    }
+    var ml = GetURLParameter('ml');
+    if(ml){
+      //console.log('Found ML:');
+      /* Send the value as a cart attribute via the AJAX API */
+      $.ajax({
+        type: "POST",
+        url: '/cart/update.js',
+        data: {"attributes[ml]": ml}, /* We are using an attribute named "ml" */
+        success: function(data){
+          /* Store the cart data in the local storage */
+          localStorage.setItem("ad_cart", JSON.stringify({
+           "data":{
+              "data":{
+                /* Reference: http://es6-features.org/#SpreadOperator */
+                /* copy arguments of an iterable collection */
+                 ...data
+              }
+           }
+      }));
+          
+        },
+        dataType: 'json'
+      });
+    }
+  })(jQuery);
+</script>

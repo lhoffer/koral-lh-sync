@@ -1,0 +1,56 @@
+{%- assign heading = section.settings.title -%}
+{%- if section.settings.show_recently_viewed -%}
+<div class="recently-viewed vue-recently-viewed">
+  <div class="recently-viewed__container" style="display: none;background-color: {{section.settings.bg}}" v-show="showHeader">
+    {%- unless heading == blank -%}
+    <header class="recently-viewed__header">
+      <h3 class="recently-viewed__title">{{ heading }}</h3>
+    </header>
+    {%- endunless -%}
+    <div class="collection__body">
+      <recently-viewed :how-many-to-store-in-memory="{{section.settings.number_of_products}}" :carousel-options="{}" @complete="toggleHeader">
+      </recently-viewed>
+    </div>
+  </div>
+</div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Recently Viewed Products",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_recently_viewed",
+      "label": "Show Recently Viewed Products",
+      "default": true
+    },
+    {
+      "id": "bg",
+      "type": "color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Section title",
+      "default": "Recently Viewed"
+    },
+    {
+      "id": "number_of_products",
+      "type": "range",
+      "label": "Number of Products To Record",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recently Viewed",
+      "category": "Widget"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,76 @@
+{% for block in section.blocks %}
+{% case block.type %}
+{% when 'mens-lp-section' %}
+
+<div class="mlp-block-cont">
+  
+  <a href="{{ block.settings.mlp_link }}" class="mlp-block-link">
+    
+     <img src="{{ block.settings.mlp_img_desktop | img_url: 'master' }}" class="mlp-block-img-d">
+    
+    <img src="{{ block.settings.mlp_img_mobile | img_url: 'master' }}" class="mlp-block-img-m">
+    
+  </a>
+
+</div>
+
+
+{% endcase%}
+{% endfor %}
+
+<style>
+  
+  .mlp-block-cont {}
+  .mlp-block-link {}
+  .mlp-block-img-d {
+    display: block;
+  }
+  .mlp-block-img-m {
+    display: none;
+  }
+  
+@media screen and (max-width: 767px) {  
+  
+  .mlp-block-cont {}
+  .mlp-block-link {}
+  .mlp-block-img-d {
+    display: none;
+  }
+  .mlp-block-img-m {
+    display: block;
+  }
+  
+  }
+  
+</style>
+
+{% schema %}
+{
+  "name": "Mens LP",
+  "class": "mens_lp",
+  "blocks": [
+	           {
+                  "type": "mens-lp-section",
+			      "name": "Mens LP Sections",
+			      "settings": [
+                                 {
+				                  "id": 	    "mlp_link",
+				                  "type": 	    "url",
+				                  "label": 	    "Link"
+				                  },
+								  {
+				                  "id": 	    "mlp_img_desktop",
+				                  "type": 	    "image_picker",
+				                  "label": 	    "Desktop Image"
+				                  },
+								  {
+				                  "id": 	    "mlp_img_mobile",
+				                  "type": 	    "image_picker",
+				                  "label": 	    "Mobile Image"
+				                  }
+                              ]
+
+               }
+]
+}
+{% endschema%}

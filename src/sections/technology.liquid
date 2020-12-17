@@ -1,0 +1,63 @@
+<h1 class="technology-title">{{section.settings.title}}</h1>
+<div class="technology-container">
+  {% for block in section.blocks %}
+  <div class="fabric">
+    <h2>
+      {% if block.settings.image != blank %}
+      <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{block.settings.title}}" title="{{block.settings.title}}"/>
+      {% else %}
+      {{block.settings.title}}
+      {% endif %}
+    </h2>
+    {{block.settings.message}}
+    <div class="icons">
+      {% assign list = block.settings.icons | split: ',' %}
+      {% for icon in list %}
+      <span class="tech-icon" data-code="{{icon | handle}}"></span>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% schema %}
+{
+  "name": "Fabric Technology",
+  "settings": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Title",
+      "default": "Fabric Technology"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "fabric",
+      "name": "Fabric",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Title Image"
+        },
+        {
+          "id": "message",
+          "type": "richtext",
+          "label": "Message"
+        },
+        {
+          "id": "icons",
+          "type": "text",
+          "label": "Icons"
+        }
+      ]
+    }
+  ]
+  
+}
+{% endschema %}

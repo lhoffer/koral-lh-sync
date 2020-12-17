@@ -1,0 +1,7 @@
+{%comment%}
+  This view template is meant for AJAX to get grouped products in a product page.
+  example: example.com/products/abcdef?view=json
+{%endcomment%}
+{% layout none %}
+{%- include 'json__product' model: product -%}
+ 

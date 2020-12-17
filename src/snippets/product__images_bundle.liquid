@@ -1,0 +1,12 @@
+<div class="product__images">
+  <div class="d-md-none">
+    {% for image in product.metafields.accentuate.bundle_image %}
+    <img src="{{ image.src }}">
+    {% endfor %}
+  </div>
+  <div class="d-none d-md-flex" style="padding: 20px 0;">
+    {% for image in product.metafields.accentuate.bundle_image %}
+    <img src="{{ image.src }}">
+    {% endfor %}
+  </div>
+</div>

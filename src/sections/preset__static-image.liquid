@@ -1,0 +1,35 @@
+{% include 'template__static-image' %}
+
+{% schema %}
+{
+  "name": "Static Image",
+  "settings": [
+    {
+      "id": "static_image_desktop",
+      "type": "image_picker",
+	  "label": "Desktop Image (Width = 2,000px)"
+    },
+	{
+      "id": "static_image_mobile",
+      "type": "image_picker",
+	  "label": "Mobile Image (Width = 800px)"
+    },
+	{
+      "id": "static_image_alt",
+      "type": "text",
+	  "label": "Image Alt Text"
+    },
+	{
+      "id": "static_image_link",
+      "type": "url",
+	  "label": "Link"
+    }
+	],
+  "presets": [
+    {
+      "name": "Static Image",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema%}

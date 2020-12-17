@@ -1,0 +1,222 @@
+.accounts {
+  &__container {
+    @extend .container;
+  }
+
+  &__recover-pass,
+  &__register {
+    max-width: 500px;
+    margin: 0 auto 50px;
+  }
+
+  .form-group {
+    > label {
+      text-transform: uppercase;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    margin: 30px auto;
+
+    .accounts__title {
+      margin: 0 auto 10px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px auto;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__recover-link {
+    margin: 30px 0;
+    display: block;
+  }
+
+  &__logout-link {
+    text-transform: capitalize;
+  }
+
+  &__logout-link,
+  &__viewaddress-link {
+    @extend .underlined-link;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+
+    > li {
+      &.active > a {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__history {
+    .info-section {
+
+      address {
+        line-height: 20px;
+      }
+
+      .accounts__subtitle {
+        text-transform: capitalize;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 180px;
+        padding-top: 70px;
+        border-top: 1px solid $color-brand-border;
+      }
+    }
+
+    .order-summary {
+      margin-top: 40px;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+
+        &.total {
+          margin-top: 50px;
+        }
+
+        span {
+          text-transform: uppercase;
+        }
+      }
+
+      .accounts__subtitle {
+        text-transform: uppercase;
+        padding-bottom: 20px;
+      }
+    }
+
+    .order-section {
+      > .underlined-link {
+        text-transform: capitalize;
+      }
+    }
+
+    .product-cell {
+      display: flex;
+    }
+
+    .product-info {
+      padding-left: 20px;
+
+      .product-title {
+        margin-bottom: 10px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      span {
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+
+    .history-section, .order-section {
+      @include media-breakpoint-up(lg) {
+        padding-right: 40px;
+      }
+    }
+
+    .address-section {
+      padding-top: 40px;
+    }
+
+    .table {
+      text-align: center;
+
+      &.order-table {
+        text-align: left;
+      }
+
+      th {
+        text-transform: uppercase;
+        border-bottom: 1px solid $color-brand-border;
+        font-weight: normal;
+        padding: 20px 0;
+      }
+
+      td {
+        padding: 30px 0;
+      }
+    }
+  }
+
+  &__history,
+  &__addresses {
+    margin-bottom: 100px;
+  }
+
+  &__address-new {
+    margin-top: 20px;
+  }
+
+  .order-date {
+    margin: 15px 0 30px;
+  }
+
+  .table a {
+    text-decoration: underline;
+  }
+
+  address {
+    margin-bottom: 20px;
+  }
+
+
+  .login-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 100px;
+    }
+
+
+    .login-section, .create-section {
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        width: 45%;
+        padding: 20px;
+      }
+
+
+      h2 {
+        text-transform: uppercase;
+      }
+
+      .form-group {
+        margin-bottom: 30px;
+
+        label {
+          margin: 0;
+        }
+
+        &:first-of-type {
+          margin-top: 20px;
+        }
+      }
+
+      p {
+        margin: 30px 0;
+      }
+    }
+  }
+}

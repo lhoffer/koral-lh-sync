@@ -1,0 +1,6 @@
+label.option[title*="(Bundle price)"] {
+  display:none;
+}
+.bold-bundles-widget-item__price {
+  display: none;
+}

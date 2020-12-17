@@ -1,0 +1,123 @@
+<script>
+  window.dataLayer = window.dataLayer || [];
+  {%- if shop.customer_accounts_enabled and customer -%}
+  dataLayer.push({customer: {
+    'id'        : '{{customer.id}}',
+    'email' : '{{customer.email}}',
+    'orders_count': {{customer.orders_count | json}},
+    'default_address'  : {{customer.default_address | json}}
+  }});
+  {%- endif -%}
+  {%- if template contains 'article' -%}
+    var article = ;
+    dataLayer.push({article: {
+      'author'      : {{article.author | json}},
+      'title'       : {{article.title | json}},
+      'created_at' : {{article.created_at | json}}
+    }});
+  {%- endif -%}
+
+  {%- if template contains 'collection' -%}
+    dataLayer.push({collection: {
+      'title' : "{{collection.title}}",
+      'products': [
+      {%- for product in collection.products -%}
+        {'id': '{{ product.id }}','productType': "{{product.type}}", 'title': "{{product.title}}", 'price': '{{product.price | money_without_currency | remove: ","}}', 'brand': '{{shop.name}}',
+        'comparePrice': '{{product.compare_at_price_max|money_without_currency | remove: ","}}',
+        'categories': {{-product.collections|map:"title"|json-}},'currentCategory' : "{{collection.title}}"},
+      {%- endfor -%}]
+    }});
+  {%- endif -%}
+
+  {%-if template contains 'product' -%}
+    dataLayer.push({product: {
+      'id': '{{ product.id }}','productType': "{{product.type}}", 'title': "{{product.title}}", 'price': '{{product.price | money_without_currency | remove: ","}}', 'brand': '{{shop.name}}',
+        'comparePrice': '{{product.compare_at_price_max|money_without_currency | remove: ","}}',
+        'categories': {{-product.collections|map:"title"|json-}},'currentCategory' : "{{collection.title}}"
+    }});
+  {%- endif-%}
+
+  {%- if template contains 'cart' -%}
+    dataLayer.push({cart: {
+      'items':[{%- for line_item in cart.items -%}{
+        'product_id'       : '{{line_item.product_id}}',
+        'sku'      : '{{line_item.sku}}',
+        'variant_id'  : '{{line_item.variant_id}}',
+        'title'     : '{{line_item.title}}',
+        'message': '{{line_item.message}}',
+        'final_price': '{{line_item.final_price|money_without_currency|remove:","}}',
+        'original_price'    : '{{line_item.original_price | money_without_currency | remove:","}}',
+        'quantity' : '{{line_item.quantity}}'
+      },{%- endfor -%}],
+      'items_subtotal_price': '{{cart.items_subtotal_price | money_without_currency | remove:","}}',
+      'original_total_price': '{{cart.original_total_price | money_without_currency | remove:","}}',
+      'total_discount': '{{cart.total_discount | money_without_currency | remove:","}}',
+      'total_price': '{{cart.total_price | money_without_currency | remove:","}}',
+    }});
+  {%- endif -%}
+
+  {%- if template contains 'checkout' -%}
+    var __ECOM_checkout = {
+      'order_id'      : '{{checkout.order_id}}',
+      'order_number'          : '{{checkout.order_number}}',
+      'total_price'       : '{{checkout.total_price |  money_without_currency| remove: ","}}',
+      'tax_price'         : '{{checkout.tax_price |  money_without_currency| remove: ","}}',
+      'shipping_price'    : '{{checkout.shipping_price |  money_without_currency| remove: ","}}',
+      'subtotal_price'    : '{{checkout.subtotal_price |  money_without_currency| remove: ","}}',
+      "discounts": [
+      {%- for discount in checkout.discounts -%}
+      {
+        'code' : '{{discount.code}}',
+        'amount'  : '{{discount.amount | money_without_currency | remove: ","}}'
+      },
+      {%- endfor -%}
+      ]
+      'line_items': [
+        {%- for line_item in checkout.line_items -%}
+        {
+          'product_id'          : '{{line_item.product_id}}',
+          'sku'         : '{{line_item.sku}}',
+          'variant_id'   : '{{line_item.variant_id}}',
+          'title'        : '{{line_item.title}}',
+          'type' : "{{line_item.product.type}}",
+          'message': '{{line_item.message}}',
+          'final_price': '{{line_item.final_price|money_without_currency|remove:","}}',
+          'original_price'       : '{{line_item.original_price | money_without_currency| remove: ","}}',
+          'quantity'    : '{{line_item.quantity}}'
+        }{%-unless forloop.last-%},{%-endunless-%}
+        {%-endfor-%}]
+    };
+    
+    /* DATALAYER: Checkout
+    -------------------------- */
+    if(Shopify.Checkout){
+      if(Shopify.Checkout.step){ 
+        if(Shopify.Checkout.step.length > 0){
+          if (Shopify.Checkout.step === 'contact_information'){
+            dataLayer.push({checkout: __ECOM_checkout},{
+              'event'    :Shopify.Checkout.step
+            });
+          } else if (Shopify.Checkout.step === 'shipping_method'){
+            dataLayer.push({checkout: __ECOM_checkout},{
+              'event'    :Shopify.Checkout.step
+            });
+          }else if( Shopify.Checkout.step === "payment_method" ){
+            dataLayer.push({checkout: __ECOM_checkout},{
+              'event'    :Shopify.Checkout.step
+            });
+          }
+        }
+        /* DATALAYER: Transaction
+        -------------------------- */
+        if(Shopify.Checkout.page == "thank_you"){
+          dataLayer.push({checkout: __ECOM_checkout},{
+            'pageType' :Shopify.Checkout.page,
+            'event'    :Shopify.Checkout.page
+          });
+        }
+        
+      }
+    }
+
+  {%- endif -%}
+</script>

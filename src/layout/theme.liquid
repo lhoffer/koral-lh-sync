@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="no-js supports-no-cookies" lang="{{ shop.locale }}"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  {%- include 'head__meta' -%}
+  {%- include 'social-meta-tags' -%}
+
+  <link rel="canonical" href="{{ canonical_url }}">
+  {%- if settings.favicon != blank -%}
+  <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {%- endif -%}
+
+  <link rel="stylesheet" href="https://use.typekit.net/vmt3hoy.css">
+  {{ 'theme.bundle.css' | asset_url | stylesheet_tag }}
+  {{ 'fonts.scss.css' | asset_url | stylesheet_tag }}
+
+  {{ 'jquery.min.js' | asset_url | script_tag }}
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+  {%- capture seo_title -%}
+    {{ page_title }}
+    {%- if current_tags -%}
+      {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+    {%- endif -%}
+    {%- if current_page != 1 -%}
+      &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {%- endif -%}
+    {%- unless page_title -%}
+      &ndash; {{ shop.name }}
+    {%- endunless -%}
+  {%- endcapture -%}  
+  <title>{{ seo_title }}</title>
+
+  {%- if template.directory == 'customers' -%}
+    <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script><!--<![endif]-->
+    <!--[if lte IE 9]><script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script><![endif]-->
+  {%- endif -%}
+
+  {{ content_for_header }}
+  {%- include 'bold-product' with product, hide_action: 'header' -%}
+  {%- include 'bold-product' with product, hide_action: 'header' -%}
+{%- render 'bold-common' -%}
+  {{ 'bold-custom.css' | asset_url | stylesheet_tag }}
+  {%- if settings.collection_use_filters -%}
+  <!--begin-bc-sf-filter-css-->
+    {% include 'bc-sf-filter-style' %}
+  <!--end-bc-sf-filter-css-->
+  {%- endif -%}
+  {% include 'shogun-head' %}
+
+  {% include 'magic-links' %}
+  
+</head>
+
+<body class="template-{{ template | handle }} {{ page_title | handle }}">
+  {%- include 'dataLayer-allPages' -%}
+  <div class="root">
+    {%- section 'header' -%}
+    {%- section 'sub-navigation' -%}
+    <main role="main">
+      {{ content_for_layout }}
+    </main>
+    {%- section 'footer' -%}
+  </div>
+  {%- include 'minicart_drawer' -%}
+  {{ 'vendors.bundle.js' | asset_url | script_tag }}
+  {%- if settings.collection_use_filters -%}
+  <!--begin-bc-sf-filter-js-->
+    {% include 'bc-sf-filter' %}
+  <!--end-bc-sf-filter-js-->
+  {% comment %} Init BC Action List {% endcomment %}
+  <!--start-bc-al-init-->
+    {% include 'bc-al-init' %}
+  <!--end-bc-al-init-->
+  {% comment %} Init Recently Viewed Products {% endcomment %}
+  <!-- start-bc-recently-viewed-product-init -->
+    {% include 'bc-recently-viewed-product-init' %}
+  <!-- end-bc-recently-viewed-product-init -->
+  {% comment %} Init Most Popular Widgets {% endcomment %}
+  <!--start-bc-most-popular-product-init-->
+    {% include 'bc-most-popular-product-init' %}
+  <!--end-bc-most-popular-product-init-->
+  {%- else -%}
+    {%- include 'vue-initial-states' -%}
+    {{ 'main.bundle.js' | asset_url | script_tag }}
+  {%- endif -%}
+  
+  <script src="https://cdn.attn.tv/koral/dtag.js"></script>
+  
+  {% include 'klaviyo-bis' %}
+  
+  {% include 'custom_styling' %}
+  
+  {% include 'klarna-snippet' %}
+  
+</body>
+</html>

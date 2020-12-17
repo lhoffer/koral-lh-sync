@@ -1,0 +1,108 @@
+<div class="career-container">
+  <h1 class="career-title">KORAL CAREERS</h1>
+  <hr class="career-line">
+  
+  {% for block in section.blocks %}
+  {% case block.type %}
+  {% when 'career-block' %}
+  
+  <div class="career-job-section">
+    <h3 class="career-job-title">{{ block.settings.title }}</h3>
+    <div class="career-job-desc">{{ block.settings.description }}</div>
+    <a class="career-job-link" href="{{ block.settings.link }}"><button class="career-job-btn btn btn-primary">{{ block.settings.link_text }}</button></a>
+  </div>
+  
+  {% endcase%}
+  {% endfor %}
+  
+</div>
+
+<style>
+  
+  .career-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 25px auto;
+    text-align: center;
+  } 
+  .career-title {
+    font-size: 30px;
+    padding: 15px 0 5px 0;
+    font-weight: 700;
+  } 
+  .career-line {} 
+  .career-job-section {
+    width: 50%;
+    margin: 30px auto 30px auto;
+    display: block;
+  } 
+  .career-job-title {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 25px 10px 5px 10px;;
+  } 
+  .career-job-desc {
+    font-size: 17px;
+    text-transform: none;
+    margin: 5px 10px 15px 10px;
+  } 
+  .career-job-link {} 
+  .career-job-btn {} 
+  
+  @media screen and (max-width: 767px) {
+  
+  .career-container {} 
+  .career-title {} 
+  .career-line {} 
+  .career-job-section {} 
+  .career-job-title {} 
+  .career-job-desc {} 
+  .career-job-link {} 
+  .career-job-btn {}
+  
+  }
+  
+</style>
+
+{% schema %}
+{
+  "name": "Careers",
+  "blocks": [
+    {
+      "name": "Career Block",
+      "type": "career-block",
+      "settings": [
+        			{
+          				"id": 			"title",
+          				"label": 		"Title",
+          				"type": 		"text",
+          				"default": 		"Job Title"
+        			},
+					{
+          				"id": 			"description",
+          				"label": 		"Description",
+          				"type": 		"text",
+          				"default": 		"Job Description"
+        			},
+					{
+          				"id": 			"link_text",
+          				"label": 		"Link",
+          				"type": 		"text",
+          				"default": 		"View Position"
+        			},
+					{
+          				"id": 			"link",
+          				"label": 		"Link",
+          				"type": 		"url"
+        			},
+					{
+          				"id": 			"color",
+          				"label": 		"Button Color",
+          				"type": 		"color",
+          				"default": 		"#000"
+        			}
+      			  ]
+    }
+  ]
+}
+{% endschema %}

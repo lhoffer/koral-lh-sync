@@ -1,0 +1,61 @@
+// This theme is only using a subset of bootstrap 4 features
+// ********************** IMPORTANT NOTE *****************************
+// Shopify currenty doesn't support the required sass version to compile bootstrap 4
+// Therefore we're using a build tool to output theme.min.css in assets directory.
+//  
+
+@import "../base-theme/mixin";
+@import "variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "../base-theme/components/reboot";
+
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/utilities";
+
+// Vendor styles
+@import "~swiper/dist/css/swiper";
+@import "~lity/dist/lity";
+//@import "~owl.carousel/src/scss/owl.carousel"; 
+
+// Theme styles
+@import "../base-theme/global";
+
+@import "../koral/components/type";
+@import "../koral/components/buttons";
+@import "../base-theme/components/hamburger";
+@import "../base-theme/components/modal";
+@import "../base-theme/components/table";
+@import "../koral/components/accordion";
+@import "../base-theme/components/tooltip";
+@import "../base-theme/components/animation";
+@import "../koral/components/drawer";
+//@import "../base-theme/components/owl-carousel";
+
+@import "../koral/section/header";
+@import "../base-theme/section/giftcard";
+@import "../base-theme/section/header__search";
+@import "../base-theme/section/slideshow";
+@import "../koral/section/footer";
+@import "../koral/section/newsletter";
+@import "../koral/section/img-text-banner";
+@import "../koral/section/collection";
+@import "../koral/section/product";
+@import "../base-theme/section/featured-blocks";
+@import "../base-theme/section/cart";
+@import "../base-theme/section/account";
+@import "../koral/section/minicart";
+@import "../base-theme/section/instafeed";
+@import "../koral/section/pages";
+@import "../base-theme/section/two-cols";
+
+@import "../koral/components/table";
+@import "../koral/section/filters";
+@import "../koral/section/tri-banner";

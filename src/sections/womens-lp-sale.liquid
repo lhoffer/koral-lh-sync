@@ -1,0 +1,60 @@
+<section class="section__sale-section">
+  <div class="section__sale-section"> 
+    
+    <div class="wlp-sale-img-cont wlp-sale-cont-img-1"><a href="{{ section.settings.sale_sec_link }}">
+    	<img class="wlp-sale wlp-sale-d" src="{{ section.settings.sale_sec_image_d | img_url: 'master' }}">
+        <img class="wlp-sale wlp-sale-m" src="{{ section.settings.sale_sec_image_m | img_url: 'master' }}">
+      </a></div>
+    
+  </div>
+</section>
+
+<style>
+  .wlp-sale {
+    width: 100%;
+  }
+  .wlp-sale-d {
+    width: 100%;
+    display: block;
+  }
+  .wlp-sale-m {
+    width: 100%;
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+  .wlp-sale {
+    width: 100%;
+  }
+  .wlp-sale-d {
+    width: 100%;
+    display: none;
+  }
+  .wlp-sale-m {
+    width: 100%;
+    display: block;
+  }
+  } 
+</style>
+
+{% schema %}
+{
+  "name": "Sale Image",
+  "settings": [    
+    {
+      "id": "sale_sec_link",
+      "type": "url",
+      "label": "Link"
+    },
+    {
+      "id": "sale_sec_image_d",
+      "type": "image_picker",
+      "label": "Desktop Image"
+    },
+    {
+      "id": "sale_sec_image_m",
+      "type": "image_picker",
+      "label": "Mobile Image"
+    }
+]
+}
+{% endschema %}

@@ -1,0 +1,242 @@
+{%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
+{% include 'json__products' %}
+
+{%-assign current_variant = bold_selected_or_first_available_variant -%}
+{%- include 'bold-variant' with current_variant, output: 'none' -%}
+
+<div class="product__section vue-product-detail" product-id="{{product.id}}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
+  
+  {%- assign featured_image = current_variant.image | default: product.featured_image -%}
+
+  <meta itemprop="name" content="{{ product.title | escape }}{% unless product.has_only_default_variant %} - {{ current_variant.title | escape }}{% endunless %}">
+  <meta itemprop="url" content="{{ shop.url }}{{ current_variant.url }}">
+  <meta itemprop="brand" content="{{ product.vendor | escape }}">
+  <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
+  <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
+
+  <div class="product__container" v-if="product">
+    {%- if section.settings.display_breadcrumb -%}
+    <div class="product__breadcrumb">
+      {% include 'breadcrumbs' %}
+    </div>
+    {%- endif -%}
+    <div class="product__top-panel">
+      
+      {% assign productURL = product.url | within: collection %}
+      
+	    {% if productURL contains '/collections/sets/' %}      
+      {% include 'product__images_bundle' %}      
+      {% else %}
+      {% include 'product__images' %}      
+      {% endif %}
+      
+      <div class="product__details">
+        
+        {% assign productURL = product.url | within: collection %}
+		{% if productURL contains '/collections/sets/' %}
+
+        <div class="product__details-container">
+          <h1 class="product__title">{{ product.metafields.accentuate.bundle_name }}</h1>
+          <h4 class="bundle-descr" style="border-bottom: none;">{{ product.metafields.accentuate.bundle_price }}</h4>
+          <h4 class="bundle-descr">{{ product.metafields.accentuate.bundle_description }}</h4>
+          {% render 'shappify-bdl-load-bundle' %}
+        </div>
+
+        {% else %}
+
+        <div class="product__details-container">
+          <h1 class="product__title prod-title" v-html="product.title">{{ product.title }}</h1>
+          
+          {% for tag in product.tags %}
+            {% if tag contains 'final_sale' %}
+              <div class="final_sale">This item is FINAL SALE</div>
+            {% endif %}
+          {% endfor %}
+
+          <div class="product__prices" :class="variant.compare_at_price > 0 && variant.compare_at_price > variant.price ? 'on-sale' : ''">
+            <span class="price" v-if="variant.price" v-html="$options.filters.money_nodec(variant.price)">
+              {{ bold_variant_price | money | remove: '.00'}}
+            </span>
+            <span class="price" v-else v-text="'{{'products.product.sold_out' | t}}'"></span>
+
+            <span v-if="variant.compare_at_price > 0 && variant.compare_at_price > variant.price">
+              <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+              <span class="compare-price" v-if="variant.compare_at_price > variant.price" v-html="$options.filters.money_nodec(variant.compare_at_price)">
+                {% if current_variant.compare_at_price > bold_variant_price %}
+                  {{ current_variant.compare_at_price | money | remove: '.00' }}
+                {% endif %}
+              </span>
+              <span class="label">{{ 'products.product.on_sale' | t }}</span>
+            </span>
+          </div>
+
+          <!-- Placement v2 -->
+			    <klarna-placement
+  				data-key="credit-promotion-small"
+  				data-locale="en-US"
+  				data-purchase-amount="{{ product.price }}"
+			    ></klarna-placement>
+			    <!-- end Placement -->
+
+          {% for tag in product.tags %}
+            {% if tag contains 'fit:runs_big' %}
+            <div class="size-suggestion">This item runs big. We suggest getting a size smaller</div>
+            {% elsif tag contains 'fit:runs_small' %}
+            <div class="size-suggestion">This item runs small. We suggest getting a size bigger</div>
+            {% endif %}
+          {% endfor %}
+
+          <div class="product__form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+            <meta itemprop="price" content="{{ bold_variant_price | divided_by: 100.00 }}">
+            <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+
+            <form class="form form-wrapper" @submit.prevent="addToCart()" ref="addToCartForm">
+              <div class="product__variant-options" v-if="!hasOnlyDefaultVariant">
+                <product-option v-for="opt in productGroup.options_with_values" :key="opt.name" :option="opt" @selected="selectOption" :is-available="isAvailable"></product-option>
+              </div>
+
+              {%- if section.settings.remaining_stock_max > 0 -%}
+              <div class="product__inventory-count" v-if="variant.available && variant.inventory_quantity <= {{section.settings.remaining_stock_max}}">
+                <div class="message">{{ 'products.product.stock_label_html' | t: count: '<strong v-html="variant.inventory_quantity"></strong>'}}</div>
+              </div>
+              {%- endif -%}
+              {% if product.type == "Gift Card" %}
+              <div class="product__giftcard-msg">
+                <label>{{ 'gift_cards.product.label' | t }}</label>
+                <textarea class="form-control" col="4" rows="4" v-model="giftMessage"></textarea>
+              </div>
+              {% endif %}
+              <div class="product__quantity">
+                <span>{{ 'products.product.quantity' | t }}</span>
+                <div class="product__quantity-box">
+                  <span class="minus" @click="decQty">-</span>
+                  <input type="number" min="0" max="99" size="2" class="quantity" v-model="quantity"/>
+                  <span class="plus" @click="addQty">+</span>
+                </div>
+              </div>
+              {% for tag in product.tags %}
+                {% if tag contains 'final_sale' %}
+                  <input type="hidden" name="properties[final_sale]" value="This item is FINAL SALE">
+                {% endif %}
+              {% endfor %}
+              {%- if tag contains '#' -%}
+                  <input name="properties[{{tag | split: ':' | first | remove: '#'}}]" type="hidden" value="{{tag | split:':' | last}}"/>
+                {%-endif-%}
+              {%- for tag in product.tags -%}
+			  {%- if tag contains '#Expected to Ship' -%}
+                <div class="exclusive-preorder">Expected to Ship {{ tag | split:':' | last }}</div>
+              {%- endif -%}
+              {%- endfor -%}
+              <button type="submit" class="btn btn-primary product__addToCart" :class="{'is-busy': isBusy}" :hidden="!variant.available || isBusy">
+			    {% if selected_variant.available %}
+                {%- if ptags contains '#expected to ship' -%}
+                           {{ 'products.product.pre_order' | t }}
+                {%-else-%}
+                          {{ 'products.product.add_to_cart' | t }}
+                {%-endif-%}
+                {% else %}
+                        {{ 'products.product.sold_out' | t }}
+                {% endif %}
+              </button>
+              
+              <div :hidden="variant.available || isBusy" style="margin-bottom: 15px;">
+               <a class="btn btn-primary klaviyo-bis-trigger" href="#">Notify Me When Available</a>
+              </div>
+
+            </form>
+
+            {% assign titles = 'Description,Fit & Feel,Fabric & Care' | split : ',' %}
+              {% assign descriptions = product.description | split : '<!-- split -->' %}
+
+              <div class="product__desc-details">
+                <div class="accordions" v-accordion>
+                  {%- for desc in descriptions -%}
+                    <div class="accordion{% if forloop.first %} is-active{%endif%}">
+                      <div class="accordion__heading">
+                        <h4 class="accordion__title">
+                          <a class="accordion__toggle" href="#tab-{{titles[forloop.index0] | handle}}" role="button" aria-expanded="false" aria-controls="tab-{{titles[forloop.index0] | handle}}">
+                            <span>{{ titles[forloop.index0] }}</span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="tab-{{titles[forloop.index0] | handle}}" class="accordion__body">
+                        <div class="accordion__content">  
+                          {{ desc }}
+                        </div>
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                  {%- if product.metafields.details.details != blank -%}
+                  <div class="accordion">
+                    <div class="accordion__heading">
+                      <h4 class="accordion__title">
+                        <a class="accordion__toggle" href="#tab-details" role="button" aria-expanded="false" aria-controls="tab-details">
+                          <span>Details</span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="tab-details" class="accordion__body">
+                      <div class="accordion__content">          
+                        {{product.metafields.details.details}}
+                      </div>
+                    </div>
+                  </div>
+                  {%- endif -%}
+                </div> 
+              </div>
+
+              <div class="size-chart-link">
+                <a href="#modal-size-chart" @click.prevent="openSizeChart">{{ 'products.product.size_chart' | t }}</a>
+              </div>
+            
+            {% comment %} <button type="button" :hidden="variant.available" class="btn btn-primary btn-block product__addToCart" id="BIS_trigger">Notify me</button> {% endcomment %}
+          </div>
+
+          
+
+          {% if section.settings.show_share_buttons %}
+            <div class="social-sharing-container">
+              <a href="#">SHARE &gt;</a>
+              <div id="social-sharing-list">
+                {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        {% endif %}
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Details",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_share_buttons",
+        "label": "Show social sharing buttons",
+        "default": false
+      },
+      {
+        "id": "remaining_stock_max",
+        "type": "range",
+        "min": 0,
+        "max": 50,
+        "label": "Remaining Stock Limit",
+        "default": 0,
+        "info": "Set to 0 to disable remaining stock message"
+      },
+      {
+        "id": "display_breadcrumb",
+        "type": "checkbox",
+        "label": "Display Breadcrumb",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}
+

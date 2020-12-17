@@ -1,0 +1,105 @@
+<div class="container mt-3">
+<h1 class="text-center mb-3 page-title">{{page.title}}</h1>
+    <div class="row">
+        {% for block in section.blocks %}
+            <div class="col-6 col-lg-3 mb-4 text-center">
+                <a class="image-container" href="/collections/sets{{ block.settings.link }}">
+                    <img src="{{ block.settings.image | img_url: '400x' }}" alt="{{ block.settings.alt_text }}">
+                    <img src="{{ block.settings.image_hover | img_url: '400x' }}" alt="{{ block.settings.alt_text }}"> 
+                </a>
+                {% if block.settings.name != blank %}
+                    <p class="mt-3 mb-2 product-title">{{block.settings.name}}</p>
+                {% endif %}
+
+                {% if block.settings.price != blank %}
+                    <p>{{block.settings.price}}</p>
+                {% endif %}
+                    
+                {% if block.settings.message != blank %}
+                    <p style="color:{{block.settings.message_color}}">{{block.settings.message}}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style type="text/css">
+.page-title {
+    font-size: 2.4rem;
+}
+
+.product-title {
+    min-height:40px;
+}
+
+.image-container:first-child {
+    display: block;
+}
+
+.image-container img:last-child {
+    display: none;
+}
+
+.image-container:hover img:last-child {
+    display: block;
+}
+
+.image-container:hover img:first-child {
+    display: none;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Product Bundle",
+  "class": "product_bundle",
+  "blocks": [
+      {
+          "type": "product-bundle",
+          "name": "Product Bundle",
+          "settings": [
+              {
+                  "type": "url",
+                  "id":	"link",
+                  "label": "Product link"
+              },
+              {
+                  "type": "text",
+                  "id":	"alt_text",
+                  "label": "Image alt text"
+              },
+              {
+                  "type": "image_picker",
+                  "id":	"image",
+                  "label": "Product image"
+              },
+              {
+                  "type": "image_picker",
+                  "id":	"image_hover",
+                  "label": "Product image - hover"
+              },
+              {
+                  "type": "text",
+                  "id": "name",
+                  "label": "Product name"
+              },
+              {
+                  "type": "text",
+                  "id": "price",
+                  "label": "Product price"
+              },
+              {
+                  "type": "color",
+                  "id": "message_color",
+                  "label": "Product message color"
+              },
+              {
+                  "type": "text",
+                  "id": "message",
+                  "label": "Product message"
+              }
+              ]
+      }
+  ]
+}
+{% endschema %}

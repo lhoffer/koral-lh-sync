@@ -1,0 +1,78 @@
+<div class="search-summary">
+  <h2 class="text-center">
+    {% if search.performed %}
+      {% if search.results_count == 0 %}
+        {{ 'general.search.no_results_html' | t: terms: search.terms }}
+      {% else %}
+        {{ 'general.search.results_for_html' | t: terms: search.terms }}
+      {% endif %}
+    {% else %}
+      {{ 'general.search.title' | t }}
+    {% endif %}
+  </h2>
+
+  <form class="page__search-form" action="/search" method="get" role="search">
+    {% comment %} <label for="Search" class="label-hidden">
+      {{ 'general.search.placeholder' | t }}
+    </label> {% endcomment %}
+    <div class="input-group">
+      <input type="search"
+            name="q"
+            class="form-control"
+            id="Search"
+            value="{{ search.terms | escape }}">
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-outline-primary">
+          {%- include 'icon-search'-%}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+{% paginate search.results by section.settings.products_per_page %}      
+  <div class="collection__body vue-collection">
+    <collection class="collection__grid" :list="product_groups">
+      {% for result in search.results %}
+        {%- if result.object_type == 'product'-%}
+          {% include 'product__item' %}
+        {% else %}      
+          <div class="product__item">              
+            {% assign featured_image = item.image | default: item.featured_image %}
+            {% if featured_image != blank %}
+              <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
+                {{ featured_image | img_url: '240x240' | img_tag: featured_image.alt }}
+              </a>
+            {% endif %}
+
+            <h5>{{ item.title | link_to: item.url }}</h5>
+
+            <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+          </div>
+        {%- endif -%}
+      {% endfor %}
+    </collection>
+  </div>
+
+  {% if paginate.pages > 1 %}
+    {% include 'pagination' %}
+  {% endif %}
+  {%- include 'json__products' list: search.results -%}
+{% endpaginate %}
+
+
+{% schema %}
+{
+  "name": "Search Grid",
+  "settings": [
+    { 
+      "id": "products_per_page",
+      "type": "range",
+      "min": 12,
+      "max": 56,
+      "step": 1,
+      "default": 15,
+      "label": "Products per Page"
+    }
+  ]
+}
+{% endschema %}

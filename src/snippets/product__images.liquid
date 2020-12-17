@@ -1,0 +1,64 @@
+{% assign poster_video = product.metafields.poster_video.poster_video %}
+{% assign product_video = product.metafields.product_video.product_video %}
+
+<div class="product__images">
+  <div class="product-thumbnail-images d-none d-md-flex">
+    <div class="sticky-container thumb-slider">
+      <div class="thumbnail d-none d-md-flex" v-for="image in product.images_info">
+        <responsive-img :src="image.src" :size="'500x'"/>
+      </div>
+      {% if poster_video != blank %}
+      <div id="poster-video" class="thumbnail" @click="onclickPlayVideo" @click.prevent="scrollToImage(product.images_info.length)">
+        <div class="responsive-img">
+          <img src="{{ poster_video }}" />
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="product-carousel-images">
+    <span class="product-badge" v-if="getBadge" :style="{color: getBadge.color}" v-text="getBadge.text"></span>
+    <div class="slider-wrap-pdp">
+      <div class="slider_item" v-for="image in product.images_info">
+         <div class="slider_img_wrap">
+            <responsive-img :src="image.src" :size="'3000x'" v-bind:zoom-feature="true" :zoom="{url: image.src, magnify: .50}"/>
+         </div>
+      </div>
+      {% if product_video != blank %}
+      <div class="slider_item" >
+        <video class="product-video" controls autoplay muted loop playsinline >
+          <source src="{{ product_video }}" type="video/mp4" >
+        </video>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $('.thumb-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.slider-wrap-pdp',
+    dots: false,
+    infinite: true,
+    focusOnSelect: true,
+    arrows: true,
+    adaptiveHeight: true,
+    vertical: true,
+    verticalSwiping: false,
+  });
+  $('.slider-wrap-pdp').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.thumb-slider',
+    dots: true,
+    arrows: false,
+    cssEase: 'linear',
+    speed: 500,
+    fade: true
+  });
+});
+</script>
