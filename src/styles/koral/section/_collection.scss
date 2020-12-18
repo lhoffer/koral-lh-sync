@@ -251,7 +251,7 @@
     }
   }
   .product__item-name {
-    margin-bottom: 33px;
+    margin-bottom: 5px;
     .product__related &, .recently-viewed & {
       margin-bottom: inherit;
     }
@@ -261,7 +261,7 @@
       color: $color-brand-primary;
     }
     &.color {
-      margin-top: -43px
+      margin-top: 5px
     }
   }
 }

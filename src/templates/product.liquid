@@ -1,5 +1,4 @@
 {% include 'bold-bundles-custom-style' %}
-{% capture captured_page %}
 {% section 'product' %}
 {% if product.metafields.video.url %}
   <div class="product-features">
@@ -20,6 +19,7 @@
     </div>
   </div>
 {% endif %}
+{% render 'bundle-detail' %}
 {% section 'shop-the-look' %}
 {% section 'pdp-recommendations' %}
 {% section 'pdp-recently-viewed' %}

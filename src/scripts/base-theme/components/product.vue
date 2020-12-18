@@ -24,8 +24,10 @@
       <h3 class="product__item-name">
         <span>{{ product.title }}</span>
       </h3>
-      <div class="product__tags" v-html="productTags"></div>
       <div class="product__item-extra">
+
+      <product-option :option="colorOption" @selected="selectOption" :is-available="isAvailable" :limit="8" :moreHref="productUrl"></product-option>
+      
         <span class="product__item-prices" v-if="variant" :class="variant.compare_at_price > variant.price ? 'on-sale' : ''">
           <span class="price">{{variant.price | money_nodec}}</span>
           <span class="compare-price" v-if="variant.compare_at_price > variant.price">{{ variant.compare_at_price | money_nodec }}</span>
@@ -34,9 +36,10 @@
 
         <span class="label" v-if="allSoldOut">{{translations.sold_out}}</span>
       </div>
+      <div class="product__tags" v-html="productTags"></div>
     </a>
     <span class="shopify-product-reviews-badge" :data-id="product.id"></span>
-    <product-option :option="colorOption" @selected="selectOption" :is-available="isAvailable" :limit="8" :moreHref="productUrl"></product-option>
+    
   </div>
 </template>
 

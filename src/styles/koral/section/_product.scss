@@ -77,13 +77,14 @@
     }
 
     .product__item-extra {
-      margin-top: 15px;
-      display: flex;
+      display: inline-block;
       justify-content: center;
 
-      .label {
-        margin-left: 10px;
-      }
+    }
+
+    span.product__item-prices.on-sale {
+      display:inline-block;
+      margin-top:5px;
     }
 
     @include media-breakpoint-down(sm) {
