@@ -1,0 +1,113 @@
+{% style %}
+
+.sustainable-detail{
+   max-width: 1000px;
+   margin: 20px auto 0 auto;
+}
+
+.sust-col-full-width {
+   margin:auto;
+}
+
+.sust-3-col {
+    flex:1 1 25%;
+}
+
+.sust-3-col-image {
+    align-content:center;
+    align-items:center;
+}
+
+.sust-3-col-image-logo {
+    align-content:center;
+    align-items:center;
+}
+
+.sust-3-col-image-logo img {
+    width:75%;
+}
+
+.sust-3-col-image img {
+    width:50%;
+}
+
+
+
+
+.sust-3-col-body {
+    font-family: futura-pt,sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0e0e0e;
+    text-align: center;
+    width:75%;
+    margin: 20px auto 20px auto;
+}
+
+.sust-3-col-container {
+    width:90%;
+    display:flex;
+    flex-wrap:wrap;
+    text-align:center;
+    margin:auto;
+}
+
+@media only screen and (max-width: 768px) {
+
+.sust-3-col {
+    flex:1 1 50%;
+}
+
+
+{% endstyle %}
+
+
+
+{%if product.metafields.accentuate.sustainable_block %}
+<div class="sustainable-detail">
+  <div class="sust-3-col-container">
+    <div class="sust-3-col">
+      <div class="sust-3-col-image-logo">
+      <img src="https://cdn.shopify.com/s/files/1/0744/4099/files/blackout_logo_4_grid.png?v=1609868103">
+      </div>
+      <div class="sust-3-col-body">
+        Our innovative Koral Blackout™ fabric is crafted in a highly-vetted mill that respects the environment and its employees.
+      </div>  
+    </div>
+    <div class="sust-3-col">
+      <div class="sust-3-col-image">
+      <img src="https://cdn.shopify.com/s/files/1/0744/4099/files/solar_panel_pdp.png?v=1609834579">
+      </div>
+      <div class="sust-3-col-body">
+        Sustainably-made in the USA using solar panel technology
+      </div>  
+    </div>
+    <div class="sust-3-col">
+      <div class="sust-3-col-image">
+      <img src="https://cdn.shopify.com/s/files/1/0744/4099/files/water_panel_pdp.png?v=1609834579">
+      </div>
+      <div class="sust-3-col-body">
+        Produced with local water that is treated and returned into the environment
+      </div>  
+    </div>
+    <div class="sust-3-col">
+      <div class="sust-3-col-image">
+      <img src="https://cdn.shopify.com/s/files/1/0744/4099/files/soil_pdp.png?v=1609834579">
+      </div>
+      <div class="sust-3-col-body">
+        Made with biodegradable fabric to reduce landfill waste
+      </div>  
+    </div>
+    <div class="sust-col-full-width">
+      <a href="/collections/blackout"><button class="btn btn-primary btn-block">
+        <span>SHOP ALL BLACKOUT</span>
+      </button>
+      </a>  
+    </div>  
+    
+  </div>  
+
+</div> 
+{% endif %}
+ 
