@@ -1,4 +1,4 @@
-<template>
+<template>  
   <div class="product__item" v-if="product" :class="{'sold-out': allSoldOut}">
     <div class="product__item-media">
       <a class="product__item-images" :href="productUrl">
@@ -20,14 +20,13 @@
         </button>
       </div>
     </div>
-    <a class="product__item-summary" :href="productUrl">
+    <a class="product__item-summary" :href="productUrl"> 
       <h3 class="product__item-name">
-        <span>{{ product.title }}</span>
+        <span v-html="productTitle"></span>
       </h3>
+    
       <div class="product__item-extra">
-
-      <product-option :option="colorOption" @selected="selectOption" :is-available="isAvailable" :limit="8" :moreHref="productUrl"></product-option>
-      
+        <product-option :option="colorOption" @selected="selectOption" :is-available="isAvailable" :limit="8" :moreHref="productUrl"></product-option>
         <span class="product__item-prices" v-if="variant" :class="variant.compare_at_price > variant.price ? 'on-sale' : ''">
           <span class="price">{{variant.price | money_nodec}}</span>
           <span class="compare-price" v-if="variant.compare_at_price > variant.price">{{ variant.compare_at_price | money_nodec }}</span>
@@ -39,7 +38,9 @@
       <div class="product__tags" v-html="productTags"></div>
     </a>
     <span class="shopify-product-reviews-badge" :data-id="product.id"></span>
-    
+
+    <div class="promo-text" v-if="promoText" :style="{color: promoText.color}">{{ promoText.text }}</div>
+
   </div>
 </template>
 
@@ -67,6 +68,9 @@ export default {
         product = this.productGroup.products[0];
 
       return product;
+    },
+    productTitle() {
+      return this.product.title.split(' - ')[0];
     },
     productUrl() {
       let url = `${this.collectionHandle ? `/collections/${this.collectionHandle}` : ''}/products/${this.product.handle}`;
@@ -102,6 +106,23 @@ export default {
         return this.product.images_info[0].src
       }
       return noImageSrc;
+    },
+    promoText() {
+      const promoTextPrefix = 'promotext_';
+      const promoTextTag = this.product.tags.find(tag => tag.includes(promoTextPrefix));
+      if (!promoTextTag) {
+        return null;
+      }
+      const splittedTag = promoTextTag.split(':');
+      if (splittedTag.length != 2) {
+        return null;
+      }
+      const promoTextColor = splittedTag[0].replace(promoTextPrefix, '#');
+      const promoTextText = splittedTag[1];
+      return {
+        color: promoTextColor,
+        text: promoTextText,
+      };
     },
     altImage() {
       if(!this.settings['collection_enabled-img-hover'])

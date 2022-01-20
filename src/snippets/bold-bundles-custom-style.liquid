@@ -1,21 +1,21 @@
 <style>
-  
-  {% assign productURL = product.url | within: collection %}{% if productURL contains '/collections/bundles/' %}
+
+  {% assign productURL = product.url | within: collection %}
+
+  {% if productURL contains '/collections/bundles/' %}
   @media (min-width: 768px) {
 	.product__top-panel > .product__images {
-    	max-width: 65%;
+    max-width: 65%;
 	}
-  
   .d-md-flex img {
     align-self:center;
   }
-  
-    .product__top-panel > .product__details {
-    	max-width: 35%;
+  .product__top-panel > .product__details {
+    max-width: 35%;
 	}
   }
   {% endif %}
-  
+
   .bundle-descr {
     font-size: 14px;
     text-transform: inherit;
@@ -81,13 +81,13 @@
     border-color: #0e0e0e;
     width: 100%;
    }
-  
+
    @media (min-width: 768px) {
   .d-none.d-md-flex {
     display:block!important;
   }
   }
-
+  
   @media screen and (max-width: 767px) {
   
   div.bold-bundle-loaded > .bold-bundles-widget > .bold-bundles-widget__items > .bold-bundles-widget-item--product > .bold-bundles-widget-item__wrapper > .bold-bundles-widget-item__info {

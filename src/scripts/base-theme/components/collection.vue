@@ -9,7 +9,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import Product from './product.vue'
+import Product from '~/koral/components/product.vue'
 import carousel from './carousel.vue'
 
 export default {

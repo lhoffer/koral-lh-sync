@@ -1,0 +1,34 @@
+.quad-banner__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .quad-col {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .image-text__container {
+    .link {
+      &:after {
+        content: none;
+      }
+    }
+
+    .inner {
+      h2 {
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+
+    .quad {
+      width: 25%;
+      margin-bottom: 0;
+    }
+  }
+}

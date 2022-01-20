@@ -1,5 +1,9 @@
 import Vue from 'vue';
-import ProductOption from '../components/product-option.vue'
+import ProductOption from '../components/product-option.vue';
+import ProductOptionColorSolid from './product-option-color-solid.vue'
+import ProductOptionColorPrint from './product-option-color-print.vue'
+import ProductOptionColorAPrint from './product-option-color-aprint.vue'
+import ProductOptionSize from '../components/product-option-size.vue';
 import Carousel from '../components/carousel.vue';
 import ResponsiveImage from '../components/responsive-img.vue'
 import store from '../store'
@@ -43,6 +47,10 @@ document.querySelectorAll(".vue-product-detail").forEach(el => {
     components: {
       'carousel': Carousel,
       'product-option': ProductOption,
+      'product-option-color-solid': ProductOptionColorSolid,
+      'product-option-color-print': ProductOptionColorPrint,
+      'product-option-color-aprint': ProductOptionColorAPrint,
+      'product-option-size': ProductOptionSize,
       'responsive-img': ResponsiveImage,
       swiper,
       swiperSlide

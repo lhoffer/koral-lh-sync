@@ -62,9 +62,9 @@
   
   {%- assign collection_handles = collection_handles | split: ',' | uniq -%}
   {%- for col_handle in collection_handles -%}
-  {%- include 'bold-product' with col_handle, hide_action: 'skip' -%}
+  <script type="application/json" class="bold-product-json">{{ product | json }}</script>
     {%- for prod in collections[col_handle].products -%}
-    {%- include 'bold-product' with prod, hide_action: 'skip' -%}
+    <script type="application/json" class="bold-product-json">{{ product | json }}</script>
       {%- if id_list contains prod.id -%}
         {%- continue -%} {%- comment -%} Exclude products in group if it already exists in collection {%- endcomment -%}
       {%- endif -%}

@@ -41,7 +41,9 @@ body.header__search--is-active {
   @include transition(all 0.3s ease-in-out);
 
   body.header__search--is-active & {
-    max-height: $header__search--height;
+    @include media-breakpoint-up(md) {
+      max-height: $header__search--height;
+    }
   }
 
   .form-control {

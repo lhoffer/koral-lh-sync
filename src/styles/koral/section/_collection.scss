@@ -55,6 +55,7 @@
     .product__item {
       width: 50%;
       margin-bottom: 40px;
+      transition: 0.3s all;
 
       a:hover {
         color: $color-text-primary;
@@ -267,4 +268,84 @@
 }
 collection .product__item {
   display: none
+}
+
+.bc-sf-filter-left-col {
+  display: none;
+  &.is-show-filter {
+    display: block;
+  }
+} 
+
+@include media-breakpoint-up(md) {
+  #bc-sf-filter-wrapper {
+    .bc-sf-filter-left-col {
+      width: 0;
+      overflow: hidden;
+      transition: 0.3s all;
+      &.is-show-filter {
+        width: 20%;
+        padding-right: 24px;
+      }
+    } 
+    .bc-sf-filter-right-col {
+      width: 100%;
+      &.is-show-filter {
+        width: 80%;
+        .collection__grid {
+          .product__item {
+            width: 33.33%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bc-sf-filter-btn {
+  width: 150px;
+  background-color: black;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  &:hover {
+    color:#FFF;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 10px 20px !important;
+  }
+}
+
+.bc-sf-filter-option-block-size {
+  .bc-sf-filter-block-content {
+    ul {
+      flex-wrap: wrap;
+      display: flex;
+      li {
+        position: relative;
+        list-style: none;
+        margin: 0 3% 5px 0;
+        width: 22%;
+        text-align: center;
+        border: 1px solid #000;
+        .bc-sf-filter-option-item {
+          padding-left: 0 !important;
+          span:first-child {
+            display: none;
+          }
+          span:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bc-sf-filter-option-block-color {
+  .jspPane {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
 }

@@ -75,6 +75,13 @@
         "label": "Group by prefix",
         "default": "style:",
         "info": "Tag prefix to group products by"
+      },
+      {
+        "id": "product_groupby_color_prefix",
+        "type": "text",
+        "label": "Group by color type",
+        "default": "color_type:",
+        "info": "Tag prefix to group colors by"
       }
     ]
   },

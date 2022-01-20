@@ -12,6 +12,8 @@ const process = (swatches, products, groupby_type, groupby_prefix, product_id) =
   const groups = [];
   if(!products)
     return groups;
+
+  // console.log('products to group:', products);
   products.forEach(function(data) {
     let key = data.id; // defaults to product id in case no grouping is found 
     switch(groupby_type) {
@@ -47,6 +49,9 @@ const process = (swatches, products, groupby_type, groupby_prefix, product_id) =
           position: i + 1,
           isSize: /^size/gi.test(o.name),
           isColor: /^colou?r/gi.test(o.name),
+          isSolid: /^solid/gi.test(o.name),
+          isPrint: /^print/gi.test(o.name),
+          isStripe: /^stripes?/gi.test(o.name),
           values: o.values
         })
       }
@@ -54,6 +59,8 @@ const process = (swatches, products, groupby_type, groupby_prefix, product_id) =
     group.products.push(data);
     
   });
+
+  // console.log('groups', groups);
 
   // after we group all products, we can set initial states before passing to vuex
   groups.forEach(group => {
@@ -80,8 +87,18 @@ const process = (swatches, products, groupby_type, groupby_prefix, product_id) =
     
     firstAvailVariant.is_selected = true;
     let selectedProduct = group.products.find(p => p.variants.find(v => v.id == firstAvailVariant.id));
+    // console.log('options with values', group.options_with_values);
     group.options_with_values.forEach(function(o, i) {
-      o.selected_value = firstAvailVariant.merged_options[i].split(":")[1];
+      // console.log('merged options', firstAvailVariant.merged_options);
+      const selectedOption = firstAvailVariant.merged_options
+        .map(mo => {
+          const [name, value] = mo.split(':');
+          return { name, value };
+        })
+        .find(mo => mo.name.toLowerCase() === o.name.toLowerCase());
+
+      if (selectedOption)
+        o.selected_value = selectedOption.value;
       // add swatch image or color hex
       o.values.forEach(function(val) {
         const swatch = swatches.find(function(s) {
@@ -102,12 +119,36 @@ const process = (swatches, products, groupby_type, groupby_prefix, product_id) =
           if(swatch) {
             val.image = `<span class="swatch ${swatch.code}" style="background-color:${swatch.color}">${swatch.image ? `<img src="${swatch.image}"/>` : ''}</span>`;
           }
+        } else if(o.isSolid) {
+          // set default no-swatch
+          val.image = '<span class="swatch no-swatch"></span>';
+          if(swatch) {
+            val.image = `<span class="swatch ${swatch.code}" style="background-color:${swatch.color}">${swatch.image ? `<img src="${swatch.image}"/>` : ''}</span>`;
+          }
+        } else if(o.isPrint || o.isStripe) {
+          // set default no-swatch
+          val.image = '<span class="swatch no-swatch"></span>';
+          if(swatch) {
+            val.image = `<span class="swatch ${swatch.code}" style="background-color:${swatch.color}">${swatch.image ? `<img src="${swatch.image}"/>` : ''}</span>`;
+          }
         } else if(swatch) {
           val.display = swatch.name;
           val.order = swatch.order || 0;
         }
       });
       if(o.isColor) {
+        o.values.sort((a, b) => {
+          if (a.title < b.title) return -1;
+          if (a.title > b.title) return 1;
+          return 0
+        });
+      } else if(o.isSolid) {
+        o.values.sort((a, b) => {
+          if (a.title < b.title) return -1;
+          if (a.title > b.title) return 1;
+          return 0
+        });
+      } else if(o.isPrint || o.isStripe) {
         o.values.sort((a, b) => {
           if (a.title < b.title) return -1;
           if (a.title > b.title) return 1;
@@ -201,9 +242,19 @@ const mutations = {
     groups.forEach(g => state.product_groups.push(g));
   },
   SET_SELECTED_VARIANT(state, {key, id}) {
-    const group = state.product_groups.find(g => g.key == key) || state.related_product_groups.find(g => g.key == key);
-    if(group) {
-      group.variants.forEach(v => {
+    //const group = state.product_groups.find(g => g.key == key) || state.related_product_groups.find(g => g.key == key);
+    const group1 = state.product_groups.find(g => g.key == key);
+    if(group1) {
+      group1.variants.forEach(v => {
+        v.is_selected = false;
+        if(v.id == id) {
+          v.is_selected = true;
+        }
+      })
+    }
+    const group2 = state.related_product_groups.find(g => g.key == key);
+    if(group2) {
+      group2.variants.forEach(v => {
         v.is_selected = false;
         if(v.id == id) {
           v.is_selected = true;
@@ -211,13 +262,25 @@ const mutations = {
       })
     }
   },
-  SET_SELECTED_OPTION(state, {key, position, value}) {
-    const group = state.product_groups.find(g => g.key == key) || state.related_product_groups.find(g => g.key == key);
-    if(group) {
-      const opt = group.options_with_values.find(o => o.position == position);
-      if(opt) {
-        opt.selected_value = value;
-      }
+  SET_SELECTED_OPTION(state, {key, position, name, value}) {
+    // const group = state.product_groups.find(g => g.key == key) || state.related_product_groups.find(g => g.key == key);
+    const group1 = state.product_groups.find(g => g.key == key);
+    if(group1) {
+      group1.options_with_values.forEach(o => {
+        if (o.name.toLowerCase() === name.toLowerCase())
+          o.selected_value = value;
+        else if (o.position == position)
+          o.selected_value = null;
+      })
+    }
+    const group2 = state.related_product_groups.find(g => g.key == key);
+    if(group2) {
+      group2.options_with_values.forEach(o => {
+        if (o.name.toLowerCase() === name.toLowerCase())
+          o.selected_value = value;
+        else if (o.position == position)
+          o.selected_value = null;
+      })
     }
   },
   SET_RECENTLY_VIEWED_PRODUCT_GROUPS(state, groups) {

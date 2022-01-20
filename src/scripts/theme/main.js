@@ -72,3 +72,21 @@ const stickyNav = debounce(e => {
     $('body').removeClass('page-scrolled')
 }, 100);
 $(window).on('scroll', stickyNav);
+
+let screen  = $(window).width();
+$(window).on('resize', function() {
+  screen  = $(window).width();
+  console.log('win:', screen);
+  if(screen < 415) {
+    if($('.bc-sf-filter-left-col').hasClass('is-show-filter')) {
+      $('.bc-sf-filter-toolbar-count').addClass('d-none');
+      $('#bc-sf-filter-top-sorting').addClass('d-none');
+      $('.btn-close-filter').removeClass('d-none');
+    }
+  }
+  else {
+    $('.bc-sf-filter-toolbar-count').removeClass('d-none');
+    $('#bc-sf-filter-top-sorting').removeClass('d-none');
+    $('.btn-close-filter').addClass('d-none');
+  }
+});

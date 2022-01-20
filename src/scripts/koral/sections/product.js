@@ -1,269 +1,374 @@
-import Vue from 'vue';
-import ProductOption from '../components/product-option.vue'
-import Carousel from '~/base-theme/components/carousel.vue';
-import ResponsiveImage from '~/base-theme/components/responsive-img.vue'
-import store from '~/base-theme/store'
-import {mapActions, mapState} from 'vuex'
-import { noImageSrc } from '~/base-theme/utils/common'
-import {swiper, swiperSlide} from 'vue-awesome-swiper'
+import Vue from "vue";  
+import ProductOption from "../components/product-option.vue";
+import ProductOptionColorSolid from '../components/product-option-color-solid.vue'
+import ProductOptionColorPrint from '../components/product-option-color-print.vue'
+import ProductOptionColorAPrint from '../components/product-option-color-aprint.vue'
+import ProductOptionSize from '../components/product-option-size.vue';
+import Carousel from "~/base-theme/components/carousel.vue";
+import ResponsiveImage from "~/base-theme/components/responsive-img.vue";
+import store from "~/base-theme/store";
+import { mapActions, mapState } from "vuex";
+import { noImageSrc } from "~/base-theme/utils/common";
+import { swiper, swiperSlide } from "vue-awesome-swiper";
 
 document.querySelectorAll(".vue-product-detail").forEach(el => {
   new Vue({
     el: el,
     store,
-    delimiters: ['${', '}'], // This is important to not cause liquid errors with {{ ... }}
+    delimiters: ["${", "}"], // This is important to not cause liquid errors with {{ ... }}
     mounted() {
-      this.setProductId(this.$el.attributes['product-id'].value);
+      this.setProductId(this.$el.attributes["product-id"].value);
       this.displayVideoAfterOnloadPage();
       /**
        * If the current page is PDP and has grouping enabled, then we kick off ajax call to retrieve additional color products
        */
-      const groupByType = this.settings['product_groupby_type'];
-      const groupByPrefix = this.settings['product_groupby_prefix'];
+      const groupByType = this.settings["product_groupby_type"];
+      const groupByPrefix = this.settings["product_groupby_prefix"];
       const prod = window.VuexState.products[0];
-      let url = '';
-      if(groupByType == 'tag' && groupByPrefix && prod) {
-        let tag = prod.tags.find(t => t.toLowerCase().indexOf(groupByPrefix.toLowerCase()) >= 0);
-        if(tag) {
-          url = `/collections/all/${encodeURIComponent(tag)}?view=json`
+      let url = "";
+      if (groupByType == "tag" && groupByPrefix && prod) {
+        let tag = prod.tags.find(
+          t => t.toLowerCase().indexOf(groupByPrefix.toLowerCase()) >= 0
+        );
+        if (tag) {
+          url = `/collections/all/${encodeURIComponent(tag)}?view=json`;
         }
-      } else if(groupByType == 'type' && prod) {
-        url = `/collections/all/${prod.type}?view=json`
+      } else if (groupByType == "type" && prod) {
+        url = `/collections/all/${prod.type}?view=json`;
       }
-      if(url) {
+      if (url) {
         $.get(url).then(raw => {
-          try{
+          try {
             const products = JSON.parse(raw);
-            if(products && products.length)
-              this.setProducts({products: products, groupByType, groupByPrefix});
+            if (products && products.length)
+              this.setProducts({
+                products: products,
+                groupByType,
+                groupByPrefix
+              });
           } catch (e) {
             console.log(e);
           }
-        })
+        });
       }
     },
-    data: {quantity: 1, giftMessage: "", swiperMainOptions: null},
+    data: { quantity: 1, giftMessage: "", swiperMainOptions: null },
     components: {
-      'carousel': Carousel,
-      'product-option': ProductOption,
-      'responsive-img': ResponsiveImage,
+      carousel: Carousel,
+      "product-option": ProductOption,
+      'product-option-color-solid': ProductOptionColorSolid,
+      'product-option-color-print': ProductOptionColorPrint,
+      'product-option-color-aprint': ProductOptionColorAPrint,
+      'product-option-size': ProductOptionSize,
+      "responsive-img": ResponsiveImage,
       swiper,
       swiperSlide
     },
     computed: {
-      ...mapState('global', ['settings']),
-      ...mapState('cart', ['isBusy']),
-      ...mapState('products', {
-        'productGroup': 'single_product_group',
-        'tag_mappings': 'tag_mappings'
+      ...mapState("global", ["settings"]),
+      ...mapState("cart", ["isBusy"]),
+      ...mapState("products", {
+        productGroup: "single_product_group",
+        tag_mappings: "tag_mappings"
       }),
       product() {
-        if(!this.productGroup)
-          return null;
+        if (!this.productGroup) return null;
 
-        let product = this.productGroup.products.find(p => p.variants.find(v => v.is_selected));
+        let product = this.productGroup.products.find(p =>
+          p.variants.find(v => v.is_selected)
+        );
         // some clients doesn't pre-select variants so we have to set first product in product group as default
-        if(!product)
-          product = this.productGroup.products[0];
-  
+        if (!product) product = this.productGroup.products[0];
+
         return product;
       },
       productUrl() {
-        const url_split = window.location.href.split('/products/');
+        const url_split = window.location.href.split("/products/");
         const url_base = url_split[0];
         let url = `${url_base}/products/${this.product.handle}`;
-        if(this.variant) 
-          url += `?variant=${this.variant.id}`;
+        if (this.variant) url += `?variant=${this.variant.id}`;
         return url;
       },
       variant() {
         return this.productGroup.variants.find(v => v.is_selected);
       },
       featuredImage() {
-        if(this.product.images_info && this.product.images_info.length) {
-          return this.product.images_info[0].src
+        if (this.product.images_info && this.product.images_info.length) {
+          return this.product.images_info[0].src;
         }
         return noImageSrc;
       },
       altImages() {
-        return this.product.images_info.filter(i => i.src != this.featuredImage);
+        return this.product.images_info.filter(
+          i => i.src != this.featuredImage
+        );
       },
       productTags() {
-        if(this.tag_mappings && this.tag_mappings.length) {
+        if (this.tag_mappings && this.tag_mappings.length) {
           return this.product.tags
             .reduce((matches, t) => {
-              const tagSplit = t.split(':');
+              const tagSplit = t.split(":");
               const mapping = this.tag_mappings.find(tm => {
-                return tm.prefix.toLowerCase() == tagSplit[0].toLowerCase() && tm.visible;
+                return (
+                  tm.prefix.toLowerCase() == tagSplit[0].toLowerCase() &&
+                  tm.visible
+                );
               });
-              if(mapping) {
+              if (mapping) {
                 // if tag is key:value then we use value as the label, otherwise we use what's in the tag_mappings
-                matches.push(`<span class="${handleize(mapping.prefix)}">${titleCase(tagSplit[1] || mapping.label)}</span>`);
+                matches.push(
+                  `<span class="${handleize(mapping.prefix)}">${titleCase(
+                    tagSplit[1] || mapping.label
+                  )}</span>`
+                );
               }
               return matches;
-            }, []).join("")
+            }, [])
+            .join("");
         }
         return null;
       },
       hasOnlyDefaultVariant() {
         let has_only_default_variant = false;
-        if(this.product.options_with_values.length == 1) {
+        if (this.product.options_with_values.length == 1) {
           let values = this.product.options_with_values[0].values;
-          has_only_default_variant = values.length == 1 && values[0].title.indexOf("Default") >= 0;
+          has_only_default_variant =
+            values.length == 1 && values[0].title.indexOf("Default") >= 0;
         }
         return has_only_default_variant;
       },
       tagsToAdd() {
         let tagsToShow = null;
-        if(this.tag_mappings && this.tag_mappings.length) {
-          tagsToShow = this.product.tags
-            .reduce((matches, t) => {
-              const tagSplit = t.split(':');
-              const mapping = this.tag_mappings.find(tm => {
-                return tm.prefix.toLowerCase() == tagSplit[0].toLowerCase() && tm.add_to_cart;
-              });
-              if(mapping) {
-                matches.push({mapping: mapping, tag: t})
-              }
-              return matches;
-            }, [])
+        if (this.tag_mappings && this.tag_mappings.length) {
+          tagsToShow = this.product.tags.reduce((matches, t) => {
+            const tagSplit = t.split(":");
+            const mapping = this.tag_mappings.find(tm => {
+              return (
+                tm.prefix.toLowerCase() == tagSplit[0].toLowerCase() &&
+                tm.add_to_cart
+              );
+            });
+            if (mapping) {
+              matches.push({ mapping: mapping, tag: t });
+            }
+            return matches;
+          }, []);
         }
         return tagsToShow;
       },
       getBadge() {
-        const badgePrefix = 'badge_';
-        const badgeTag = this.product.tags.find(tag => tag.includes(badgePrefix));
+        const badgePrefix = "badge_";
+        const badgeTag = this.product.tags.find(tag =>
+          tag.includes(badgePrefix)
+        );
         if (!badgeTag) {
           return null;
         }
-        const splittedTag = badgeTag.split(':');
+        const splittedTag = badgeTag.split(":");
         if (splittedTag.length != 2) {
           return null;
         }
-        const badgeColor = splittedTag[0].replace(badgePrefix, '#');
+        const badgeColor = splittedTag[0].replace(badgePrefix, "#");
         const badgeText = splittedTag[1];
         return {
           color: badgeColor,
-          text: badgeText,
+          text: badgeText
+        };
+      },
+      colorTypes() {
+        const colorTypePrefix = "color_type";
+        const colorTypeTag = this.product.tags.find(tag =>
+          tag.includes(colorTypePrefix)
+        );
+        if (!colorTypeTag) {
+          return null;
+        }
+        const splittedColorTag = colorTypeTag.split(":");
+        if (splittedColorTag.length != 2) {
+          return null;
+        }
+        const colorType = splittedColorTag[1];
+        return {
+          name: colorType
         };
       }
     },
     methods: {
-      ...mapActions('cart', ['addItem']),
-      ...mapActions('global', ['openCartDrawer', 'openSizeChart']),
-      ...mapActions('products', {
-        setProductId(dispatch, payload) { dispatch('setProductId', payload) },
-        setProducts(dispatch, payload) { dispatch('setProducts', payload) },
-        selectOption(dispatch, {position, value}) {
-          dispatch('selectOption', { key: this.productGroup.key, position, value });
-          const opt = this.productGroup.options_with_values.map(o => { 
-            if(position == o.position)
-              return { position, selected_value: value };
-            return { position: o.position, selected_value: o.selected_value }
+      ...mapActions("cart", ["addItem"]),
+      ...mapActions("global", ["openCartDrawer", "openSizeChart"]),
+      ...mapActions("products", {
+        setProductId(dispatch, payload) {
+          dispatch("setProductId", payload);
+        },
+        setProducts(dispatch, payload) {
+          dispatch("setProducts", payload);
+        },
+        selectOption(dispatch, { position, name, value }) {
+          dispatch("selectOption", {
+            key: this.productGroup.key,
+            position,
+            name,
+            value
           });
-          
+
+          const opt = this.getOptionsWithSelectedValues(position, name, value);
+          // console.log('select opts', opt);
+
           const variant = this.getVariant(opt);
           let id = null;
-          if(variant) {
+          if (variant) {
             id = variant.id;
           }
-          dispatch('selectVariant', {key: this.productGroup.key, id})
+          dispatch("selectVariant", { key: this.productGroup.key, id });
 
           if (variant && this.product)
-            history.replaceState(null, '', this.productUrl);
+            history.replaceState(null, "", this.productUrl);
         }
       }),
       getVariant(options) {
         const group = this.productGroup;
-        if(group && group.variants.length) {
-          return group.variants.find(v => {
+        if (group && group.variants.length) {
+          const variants = group.variants.filter(v => {
             return options.every(opt => {
-              return v.merged_options[opt.position - 1].split(":")[1] == opt.selected_value;
-            })
-          })
+              const variant_option = v.merged_options
+                .map(mo => {
+                  const [name, value] = mo.split(':');
+                  return { name, value };
+                })
+                .find(mo => mo.name.toLowerCase() === opt.name.toLowerCase());
+              return variant_option && variant_option.value == opt.selected_value;
+            });
+          });
+          return variants.length && variants[0];
         }
         return null;
       },
+      getOptionsWithSelectedValues(position, name, value) {
+        return this.productGroup.options_with_values.map(o => {
+          if (name.toLowerCase() === o.name.toLowerCase())
+            return { ...o, selected_value: value };
+          if (position == o.position)
+            return { ...o, selected_value: null }; //deselect other options with the same position but different name
+          return o;
+        })
+        .filter(o => o.selected_value); //we only need to match options that have a selected value
+      },
       addQty() {
-        this.quantity++
+        this.quantity++;
       },
       decQty() {
-        if(this.quantity > 1)
-          this.quantity--;
+        if (this.quantity > 1) this.quantity--;
       },
       addToCart() {
-        if(!this.variant) 
-          console.log('Unable to add item to cart, variant not found')
-        
+        if (!this.variant)
+          console.log("Unable to add item to cart, variant not found");
+
         const properties = {};
-        if(this.giftMessage) {
+        if (this.giftMessage) {
           properties["Gift Message"] = this.giftMessage;
         }
-        if(this.tagsToAdd) {
-          this.tagsToAdd.forEach((t,index) => {
+        if (this.tagsToAdd) {
+          this.tagsToAdd.forEach((t, index) => {
             const keyValMap = t.mapping.prop_key_value;
             const split = keyValMap.split(":");
-            if(split.length > 1) {
-              const key = split[0] == '${prefix}' ? t.mapping.prefix : split[0];
-              let val = split[1]
-              if(split[1] == '${label}')
-                val = t.mapping.label
-              else if(split[1] == '${tag}'){
+            if (split.length > 1) {
+              const key = split[0] == "${prefix}" ? t.mapping.prefix : split[0];
+              let val = split[1];
+              if (split[1] == "${label}") val = t.mapping.label;
+              else if (split[1] == "${tag}") {
                 const tagSplit = t.tag.split(":");
                 val = tagSplit.length > 1 ? tagSplit[1] : tagSplit[0];
               }
-  
+
               properties[key.trim()] = val.trim();
             } else {
               properties[`item${index}`] = keyValMap || t.tag;
             }
-          })
-        }
-        this.addItem({id: this.variant.id, quantity: this.quantity, properties})
-          .then(_ => {
-            this.openCartDrawer();
           });
+        }
+        this.addItem({
+          id: this.variant.id,
+          quantity: this.quantity,
+          properties
+        }).then(_ => {
+          this.openCartDrawer();
+        });
       },
       /**
        * Returns -1 if variant combination doesn't exist, 1 if variant is available, 0 if variant exists but is not available or has no inventory
        */
-      isAvailable(position, value) {
-        const opt = this.productGroup.options_with_values.map(o => { 
-          if(position == o.position)
-            return { position, selected_value: value };
-          return { position: o.position, selected_value: o.selected_value }
-        });
-        
+      isAvailable(position, name, value) {
+        const opt = this.getOptionsWithSelectedValues(position, name, value);
+
+        // console.log('checking availability for options', opt);
         const variant = this.getVariant(opt);
-        if(!variant)
-          return -1;
-        return variant.available ? 1 : 0
+        if (!variant) return -1;
+        return variant.available ? 1 : 0;
       },
       setMainSwiper(thumbSwiper) {
         this.swiperMainOptions = {
-          mousewheel: true, 
-          autoplay: false, 
+          mousewheel: true,
+          autoplay: false,
           loop: true,
           zoom: true,
           thumbs: {
             swiper: thumbSwiper
           }
-        }
+        };
       },
       scrollToImage(index) {
-        $('body,html').animate({ scrollTop: $(`.product-images .product-image:eq(${index})`).offset().top - 75 }, 100);
+        $("body,html").animate(
+          {
+            scrollTop:
+              $(`.product-images .product-image:eq(${index})`).offset().top - 75
+          },
+          100
+        );
       },
 
       displayVideoAfterOnloadPage() {
-        window.onload = function () { 
+        window.onload = function() {
           $("#product-video").show();
-          console.log('show')
-      }
+          console.log("show");
+        };
       },
 
       onclickPlayVideo() {
         $("#product-video")[0].play();
-      },
+      }
+    },
+    watch: {
+      product: function(val, oldVal) {
+        $(".thumb-slider").slick("unslick");
+        $(".slider-wrap-pdp").slick("unslick");
+        this.$nextTick(_ => {
+          $(".thumb-slider").slick({
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            asNavFor: ".slider-wrap-pdp",
+            dots: false,
+            infinite: true,
+            focusOnSelect: true,
+            centerMode: false,
+            arrows: false,
+            adaptiveHeight: true,
+            vertical: false,
+            verticalSwiping: false
+          });
+          $(".slider-wrap-pdp").slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: ".thumb-slider",
+            dots: false,
+            arrows: true,
+            cssEase: "linear",
+            speed: 500,
+            fade: true,
+            centerMode: false
+          });
+        });
+      }
     }
-  })
-})
+  });
+});

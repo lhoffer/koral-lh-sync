@@ -24,7 +24,7 @@
       
       {% assign productURL = product.url | within: collection %}
       
-	    {% if productURL contains '/collections/bundles/' %}      
+	    {% if productURL contains '/collections/kits/' %}      
       {% include 'product__images_bundle' %}      
       {% else %}
       {% include 'product__images' %}      
@@ -33,7 +33,7 @@
       <div class="product__details">
         
         {% assign productURL = product.url | within: collection %}
-		{% if productURL contains '/collections/bundles/' %}
+		{% if productURL contains '/collections/kits/' %}
 
         <div class="product__details-container">
           <h1 class="product__title">{{ product.metafields.accentuate.bundle_name }}</h1>
@@ -45,7 +45,7 @@
         {% else %}
 
         <div class="product__details-container">
-          <h1 class="product__title prod-title" v-html="product.title">{{ product.title }}test deploy</h1>
+          <h1 class="product__title prod-title" v-html="product.title">{{ product.title }}</h1>
           
           {% for tag in product.tags %}
             {% if tag contains 'final_sale' %}
@@ -93,7 +93,8 @@
 
             <form class="form form-wrapper" @submit.prevent="addToCart()" ref="addToCartForm">
               <div class="product__variant-options" v-if="!hasOnlyDefaultVariant">
-                <product-option v-for="opt in productGroup.options_with_values" :key="opt.name" :option="opt" @selected="selectOption" :is-available="isAvailable"></product-option>
+                <product-option v-for="opt in productGroup.options_with_values" v-if="opt.name != 'Size'" :key="opt.name" :option="opt" @selected="selectOption" :is-available="isAvailable"></product-option>
+                <product-option v-for="opt in productGroup.options_with_values" v-if="opt.name == 'Size'" :key="opt.name" :option="opt" @selected="selectOption" :is-available="isAvailable"></product-option>
               </div>
 
               {%- if section.settings.remaining_stock_max > 0 -%}

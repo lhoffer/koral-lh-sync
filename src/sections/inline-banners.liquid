@@ -1,0 +1,614 @@
+<script>
+  
+  {% for block in section.blocks %}
+  
+  /* Desktop Versions */
+  
+  {% if block.type == 'inline_banner_full' and collection.handle == block.settings.linked-inline-collection %}
+  window.setInterval(function() {
+    if ($('div.collection__grid > div.product__item') != undefined) {
+       if ($('div.collection__grid > div.product__item_full-{{ block.id }}').html() == undefined) { 
+         $('div.collection__grid > div.product__item:nth-child({{ block.settings.inline_position }})').before('<div class="product__item product__item_full product__item_full-{{ block.id }}"><img src="{{ block.settings.inline_image | img_url: '1200x' }}"><div class="ib-content" style="color: {{ block.settings.content_color }}"><div class="ib-header-text">{{ block.settings.ib-header }}</div><div class="ib-subheader-text">{{ block.settings.ib-subheader }}</div><a href="{{ block.settings.ib-link }}">{% if block.settings.ib-cta != '' %}<button class="ib-cta btn btn-primary">{{ block.settings.ib-cta }}</button>{% endif %}</div></a></div>');
+  }}}, 100);
+  {% endif %}
+  
+  {% if block.type == 'inline_banner_3_4' and collection.handle == block.settings.linked-inline-collection %}
+  window.setInterval(function() {
+    if ($('div.collection__grid > div.product__item') != undefined) {
+       if ($('div.collection__grid > div.product__item_3_4-{{ block.id }}').html() == undefined) {                                                                                                
+          $('div.collection__grid > div.product__item:nth-child({{ block.settings.inline_position }})').before('<div class="product__item product__item_3_4 product__item_3_4-{{ block.id }}"><img src="{{ block.settings.inline_image | img_url: '900x' }}"><div class="ib-content" style="color: {{ block.settings.content_color }}"><div class="ib-header-text">{{ block.settings.ib-header }}</div><div class="ib-subheader-text">{{ block.settings.ib-subheader }}</div><a href="{{ block.settings.ib-link }}">{% if block.settings.ib-cta != '' %}<button class="ib-cta btn btn-primary">{{ block.settings.ib-cta }}</button>{% endif %}</div></a></div>');
+  }}}, 100);
+  {% endif %}
+  
+  {% if block.type == 'inline_banner_half' and collection.handle == block.settings.linked-inline-collection %}
+  window.setInterval(function() {
+    if ($('div.collection__grid > div.product__item') != undefined) {
+       if ($('div.collection__grid > div.product__item_half-{{ block.id }}').html() == undefined) { 
+         $('div.collection__grid > div.product__item:nth-child({{ block.settings.inline_position }})').before('<div class="product__item product__item_half product__item_half-{{ block.id }}"><img src="{{ block.settings.inline_image | img_url: '600x' }}"><div class="ib-content" style="color: {{ block.settings.content_color }}"><div class="ib-header-text">{{ block.settings.ib-header }}</div><div class="ib-subheader-text">{{ block.settings.ib-subheader }}</div><a href="{{ block.settings.ib-link }}">{% if block.settings.ib-cta != '' %}<button class="ib-cta btn btn-primary">{{ block.settings.ib-cta }}</button>{% endif %}</div></a></div>');
+  }}}, 100);
+  {% endif %}
+
+  {% if block.type == 'inline_banner_1_4' and collection.handle == block.settings.linked-inline-collection %}
+  window.setInterval(function() {
+    if ($('div.collection__grid > div.product__item') != undefined) {
+       if ($('div.collection__grid > div.product__item_1_4-{{ block.id }}').html() == undefined) { 
+         $('div.collection__grid > div.product__item:nth-child({{ block.settings.inline_position }})').before('<div class="product__item product__item_1_4 product__item_1_4-{{ block.id }}"><img src="{{ block.settings.inline_image | img_url: '300x' }}"><div class="ib-content" style="color: {{ block.settings.content_color }}"><div class="ib-header-text">{{ block.settings.ib-header }}</div><div class="ib-subheader-text">{{ block.settings.ib-subheader }}</div><a href="{{ block.settings.ib-link }}">{% if block.settings.ib-cta != '' %}<button class="ib-cta btn btn-primary">{{ block.settings.ib-cta }}</button>{% endif %}</div></a></div>');
+  }}}, 100);
+  {% endif %}
+  
+  /* Mobile Versions */
+  
+  {% if block.type == 'inline_banner_full_mobile' and collection.handle == block.settings.linked-inline-collection %}
+  window.setInterval(function() {
+    if ($('div.collection__grid > div.product__item') != undefined) {
+      if ($('div.collection__grid > div.product__item_full_mobile-{{ block.id }}').html() == undefined) {                                                                                                
+          $('div.collection__grid > div.product__item:nth-child({{ block.settings.inline_position }})').before('<div class="product__item product__item_full_mobile product__item_full_mobile-{{ block.id }}"><img src="{{ block.settings.inline_image | img_url: '900x' }}"><div class="ib-content" style="color: {{ block.settings.content_color }}"><div class="ib-header-text">{{ block.settings.ib-header }}</div><div class="ib-subheader-text">{{ block.settings.ib-subheader }}</div><a href="{{ block.settings.ib-link }}">{% if block.settings.ib-cta != '' %}<button class="ib-cta btn btn-primary">{{ block.settings.ib-cta }}</button>{% endif %}</div></a></div>');
+  }}}, 100);
+  {% endif %}
+  
+  {% if block.type == 'inline_banner_half_mobile' and collection.handle == block.settings.linked-inline-collection %}
+  window.setInterval(function() {
+    if ($('div.collection__grid > div.product__item') != undefined) {
+       if ($('div.collection__grid > div.product__item_half_mobile-{{ block.id }}').html() == undefined) { 
+         $('div.collection__grid > div.product__item:nth-child({{ block.settings.inline_position }})').before('<div class="product__item product__item_half_mobile product__item_half_mobile-{{ block.id }}"><img src="{{ block.settings.inline_image | img_url: '900x' }}"><div class="ib-content" style="color: {{ block.settings.content_color }}"><div class="ib-header-text">{{ block.settings.ib-header }}</div><div class="ib-subheader-text">{{ block.settings.ib-subheader }}</div><a href="{{ block.settings.ib-link }}">{% if block.settings.ib-cta != '' %}<button class="ib-cta btn btn-primary">{{ block.settings.ib-cta }}</button>{% endif %}</div></a></div>');
+  }}}, 100);
+  {% endif %}
+  
+  {% endfor %}
+  
+  $(document).ready(function() {
+    $(window).resize(function() {
+        if($(window).width() >= 768) {
+            console.log('Desktop & Tablet');
+        } else {
+            console.log('Mobile');
+        }
+    }).resize();
+    });
+  
+</script>
+
+<style>
+  
+div.collection__grid > div.product__item {
+  position: relative;
+}
+div.collection__grid > div.product__item > img {
+  position: relative;
+  width: 100%;
+}
+div.collection__grid > div.product__item_1_4 {
+  width: 25%;
+} 
+div.collection__grid > div.product__item_half {
+  width: 50%;
+}
+div.collection__grid > div.product__item_3_4 {
+  width: 75%;
+}
+div.collection__grid > div.product__item_full {
+  width: 100%;
+} 
+.ib-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+div.product__item_full > .ib-content {
+    padding: 130px 15px 0 15px;
+}
+div.product__item_3_4 > .ib-content {
+    padding: 130px 15px 0 15px;
+}
+div.product__item_half > .ib-content {
+    padding: 130px 15px 0 15px;
+}
+div.product__item_1_4 > .ib-content {
+    padding: 130px 15px 0 15px;
+}
+.ib-header-text {
+    font-size: 2.5rem;
+    font-family: {{ block.settings.ib-header-font }};
+    font-weight: {{ block.settings.ib-header-font-weight }};
+    font-style: normal;
+    margin: 10px 0;
+}
+.ib-subheader-text {
+    font-size: 1.6rem;
+    font-family: {{ block.settings.ib-subheader-font }};
+    font-weight: {{ block.settings.ib-subheader-font-weight }};
+    font-style: normal;
+    margin: 10px 0;
+}
+div.collection__grid > div.product__item_full_mobile {
+  display: none;
+}
+div.collection__grid > div.product__item_half_mobile {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  
+div.collection__grid > div.product__item_full {
+  display: none;
+}
+div.collection__grid > div.product__item_3_4 {
+  display: none;
+}
+div.collection__grid > div.product__item_half {
+  display: none;
+}
+div.collection__grid > div.product__item_1_4 {
+  display: none;
+}  
+div.collection__grid > div.product__item_full_mobile {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+div.collection__grid > div.product__item_full_mobile > img {
+  width: 100%;
+}
+div.collection__grid > div.product__item_half_mobile {
+  width: 50%;
+  display: block;
+}
+div.collection__grid > div.product__item_half_mobile > img {
+  width: 100%;
+}
+div.product__item_full_mobile > .ib-content {
+    padding: 25% 15px 0 15px;
+}
+div.product__item_half_mobile > .ib-content {
+    padding: 30% 15px 0 15px;
+}
+.ib-header-text {
+    font-size: 2rem;
+}
+.ib-subheader-text {
+    font-size: 1.4rem;
+}
+.ib-cta {
+    font-size: 1.4rem;
+}
+}
+  
+</style>
+
+
+{% schema %}
+  {
+    "name": "Inline Banner",
+    "blocks": [
+    {
+      "name": "Inline Banner (Full)",
+      "type": "inline_banner_full",
+      "settings": [
+					{
+          				"id": 			"linked-inline-collection",
+          				"type": 		"collection",
+          				"label": 		"Collection"
+        			},
+				    	{
+          				"id": 			"inline_position",
+          				"type": 		"text",
+          				"label": 		"Position"
+        			},
+        			{
+          				"id": 			"inline_image",
+          				"type": 		"image_picker",
+          				"label": 		"Image (Full)",
+					      	"info":			"1200x420 Pixels in Width"
+        			},
+        			{
+          				"id": 			"ib-header",
+          				"type": 		"text",
+          				"label": 		"Header",
+					      	"default":		"Sample Header"
+        			},
+        			{
+          				"id": 			"ib-header-font",
+          				"type": 		"text",
+          				"label": 		"Header Font"
+        			},
+        			{
+          				"id": 			"ib-header-font-weight",
+          				"type": 		"text",
+          				"label": 		"Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-subheader",
+          				"type": 		"text",
+          				"label": 		"Sub-Header",
+					      	"default":		"Sample Sub-Header"
+        			},
+        			{
+          				"id": 			"ib-subheader-font",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font"
+        			},
+        			{
+          				"id": 			"ib-subheader-font-weight",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-link",
+          				"type": 		"url",
+          				"label": 		"CTA Link"
+        			},
+        			{
+          				"id": 			"ib-cta",
+          				"type": 		"text",
+          				"label": 		"CTA Text",
+					      	"default":		"SHOP NOW"
+        			},
+        			{
+          				"id": 			"content_color",
+          				"type": 		"color",
+          				"label": 		"Text Color",
+					      	"default":		"#FFFFFF"
+        			}
+				  ]
+	    },
+	    {
+      "name": "Inline Banner (3/4)",
+      "type": "inline_banner_3_4",
+      "settings": [
+					{
+          				"id": 			"linked-inline-collection",
+          				"type": 		"collection",
+          				"label": 		"Collection"
+        			},
+					    {
+          				"id": 			"inline_position",
+          				"type": 		"text",
+          				"label": 		"Position"
+        			},
+        			{
+          				"id": 			"inline_image",
+          				"type": 		"image_picker",
+          				"label": 		"Image (2/3)",
+					      	"info":			"825x420 Pixels in Width"
+        			},
+        			{
+          				"id": 			"ib-header",
+          				"type": 		"text",
+          				"label": 		"Header",
+						      "default":		"Sample Header"
+        			},
+        			{
+          				"id": 			"ib-header-font",
+          				"type": 		"text",
+          				"label": 		"Header Font"
+        			},
+        			{
+          				"id": 			"ib-header-font-weight",
+          				"type": 		"text",
+          				"label": 		"Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-subheader",
+          				"type": 		"text",
+          				"label": 		"Sub-Header",
+						      "default":		"Sample Sub-Header"
+        			},
+        			{
+          				"id": 			"ib-subheader-font",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font"
+        			},
+        			{
+          				"id": 			"ib-subheader-font-weight",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-link",
+          				"type": 		"url",
+          				"label": 		"CTA Link"
+        			},
+        			{
+          				"id": 			"ib-cta",
+          				"type": 		"text",
+          				"label": 		"CTA Text",
+					      	"default":		"SHOP NOW"
+        			},
+        			{
+          				"id": 			"content_color",
+          				"type": 		"color",
+          				"label": 		"Text Color",
+					      	"default":		"#FFFFFF"
+        			}
+				  ]
+	    },
+	    {
+      "name": "Inline Banner (Half)",
+      "type": "inline_banner_half",
+      "settings": [
+					{
+          				"id": 			"linked-inline-collection",
+          				"type": 		"collection",
+          				"label": 		"Collection"
+        			},
+					    {
+          				"id": 			"inline_position",
+          				"type": 		"text",
+          				"label": 		"Position"
+        			},
+        			{
+          				"id": 			"inline_image",
+          				"type": 		"image_picker",
+          				"label": 		"Image (2/3)",
+					      	"info":			"540x420 Pixels in Width"
+        			},
+        			{
+          				"id": 			"ib-header",
+          				"type": 		"text",
+          				"label": 		"Header",
+						      "default":		"Sample Header"
+        			},
+        			{
+          				"id": 			"ib-header-font",
+          				"type": 		"text",
+          				"label": 		"Header Font"
+        			},
+        			{
+          				"id": 			"ib-header-font-weight",
+          				"type": 		"text",
+          				"label": 		"Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-subheader",
+          				"type": 		"text",
+          				"label": 		"Sub-Header",
+						      "default":		"Sample Sub-Header"
+        			},
+        			{
+          				"id": 			"ib-subheader-font",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font"
+        			},
+        			{
+          				"id": 			"ib-subheader-font-weight",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-link",
+          				"type": 		"url",
+          				"label": 		"CTA Link"
+        			},
+        			{
+          				"id": 			"ib-cta",
+          				"type": 		"text",
+          				"label": 		"CTA Text",
+					      	"default":		"SHOP NOW"
+        			},
+        			{
+          				"id": 			"content_color",
+          				"type": 		"color",
+          				"label": 		"Text Color",
+					      	"default":		"#FFFFFF"
+        			}
+				  ]
+	    },
+	    {
+      "name": "Inline Banner (1/4)",
+      "type": "inline_banner_1_4",
+      "settings": [
+					{
+          				"id": 			"linked-inline-collection",
+          				"type": 		"collection",
+          				"label": 		"Collection"
+        			},
+					    {
+          				"id": 			"inline_position",
+          				"type": 		"text",
+          				"label": 		"Position"
+        			},
+        			{
+          				"id": 			"inline_image",
+          				"type": 		"image_picker",
+          				"label": 		"Image (1/3)",
+					      	"info":			"255x420 Pixels in Width"
+        			},
+        			{
+          				"id": 			"ib-header",
+          				"type": 		"text",
+          				"label": 		"Header",
+					      	"default":		"Sample Header"
+        			},
+        			{
+          				"id": 			"ib-header-font",
+          				"type": 		"text",
+          				"label": 		"Header Font"
+        			},
+        			{
+          				"id": 			"ib-header-font-weight",
+          				"type": 		"text",
+          				"label": 		"Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-subheader",
+          				"type": 		"text",
+          				"label": 		"Sub-Header",
+					      	"default":		"Sample Sub-Header"
+        			},
+        			{
+          				"id": 			"ib-subheader-font",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font"
+        			},
+        			{
+          				"id": 			"ib-subheader-font-weight",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-link",
+          				"type": 		"url",
+          				"label": 		"CTA Link"
+        			},
+        			{
+          				"id": 			"ib-cta",
+          				"type": 		"text",
+          				"label": 		"CTA Text",
+					      	"default":		"SHOP NOW"
+        			},
+        			{
+          				"id": 			"content_color",
+          				"type": 		"color",
+          				"label": 		"Text Color",
+						      "default":		"#FFFFFF"
+        			}
+				  ]
+	},
+	{
+      "name": "Inline Banner Full Mobile",
+      "type": "inline_banner_full_mobile",
+      "settings": [
+					{
+          				"id": 			"linked-inline-collection",
+          				"type": 		"collection",
+          				"label": 		"Collection"
+        			},
+					    {
+          				"id": 			"inline_position",
+          				"type": 		"text",
+          				"label": 		"Position"
+        			},
+        			{
+          				"id": 			"inline_image",
+          				"type": 		"image_picker",
+          				"label": 		"Image Full",
+						      "info":			"800x700 Pixels in Width"
+        			},
+        			{
+          				"id": 			"ib-header",
+          				"type": 		"text",
+          				"label": 		"Header",
+					      	"default":		"Sample Header"
+        			},
+        			{
+          				"id": 			"ib-header-font",
+          				"type": 		"text",
+          				"label": 		"Header Font"
+        			},
+        			{
+          				"id": 			"ib-header-font-weight",
+          				"type": 		"text",
+          				"label": 		"Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-subheader",
+          				"type": 		"text",
+          				"label": 		"Sub-Header",
+					      	"default":		"Sample Sub-Header"
+        			},
+        			{
+          				"id": 			"ib-subheader-font",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font"
+        			},
+        			{
+          				"id": 			"ib-subheader-font-weight",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-link",
+          				"type": 		"url",
+          				"label": 		"CTA Link"
+        			},
+        			{
+          				"id": 			"ib-cta",
+          				"type": 		"text",
+          				"label": 		"CTA Text",
+					      	"default":		"SHOP NOW"
+        			},
+        			{
+          				"id": 			"content_color",
+          				"type": 		"color",
+          				"label": 		"Text Color",
+					      	"default":		"#FFFFFF"
+        			}
+				  ]
+	},
+	{
+      "name": "Inline Banner Half Mobile",
+      "type": "inline_banner_half_mobile",
+      "settings": [
+					{
+          				"id": 			"linked-inline-collection",
+          				"type": 		"collection",
+          				"label": 		"Collection"
+        			},
+				    	{
+          				"id": 			"inline_position",
+          				"type": 		"text",
+          				"label": 		"Position"
+        			},
+        			{
+          				"id": 			"inline_image",
+          				"type": 		"image_picker",
+          				"label": 		"Image Half",
+					      	"info":			"400x700 Pixels in Width"
+        			},
+        			{
+          				"id": 			"ib-header",
+          				"type": 		"text",
+          				"label": 		"Header",
+						      "default":		"Sample Header"
+        			},
+        			{
+          				"id": 			"ib-header-font",
+          				"type": 		"text",
+          				"label": 		"Header Font"
+        			},
+        			{
+          				"id": 			"ib-header-font-weight",
+          				"type": 		"text",
+          				"label": 		"Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-subheader",
+          				"type": 		"text",
+          				"label": 		"Sub-Header",
+						      "default":		"Sample Sub-Header"
+        			},
+        			{
+          				"id": 			"ib-subheader-font",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font"
+        			},
+        			{
+          				"id": 			"ib-subheader-font-weight",
+          				"type": 		"text",
+          				"label": 		"Sub-Header Font Weight"
+        			},
+        			{
+          				"id": 			"ib-link",
+          				"type": 		"url",
+          				"label": 		"CTA Link"
+        			},
+        			{
+          				"id": 			"ib-cta",
+          				"type": 		"text",
+          				"label": 		"CTA Text",
+						      "default":		"SHOP NOW"
+        			},
+        			{
+          				"id": 			"content_color",
+          				"type": 		"color",
+          				"label": 		"Text Color",
+						      "default":		"#FFFFFF"
+        			}
+				  ]
+	}
+    ]
+  }
+{% endschema %}

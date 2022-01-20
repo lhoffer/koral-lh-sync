@@ -3,7 +3,7 @@
 // Shopify currenty doesn't support the required sass version to compile bootstrap 4
 // Therefore we're using a build tool to output theme.min.css in assets directory.
 //  
-
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.css";
 @import "../base-theme/mixin";
 @import "variables";
 @import "~bootstrap/scss/functions";
@@ -59,3 +59,5 @@
 @import "../koral/components/table";
 @import "../koral/section/filters";
 @import "../koral/section/tri-banner";
+@import "../koral/section/quad-banner";
+@import "../koral/section/featured-collection";

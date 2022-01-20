@@ -1,0 +1,65 @@
+{% if section.settings.show_related_products == true %}
+
+<div class="product__related featured-collection" itemscope itemtype="http://schema.org/Product" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
+ 
+  {% assign current_collection = collections[section.settings.collection] %}
+
+  {% capture products %}
+    {% for product in current_collection.products limit: 25 %}
+        {%- include 'json__product' model: product -%}{%- unless forloop.last -%},{%- endunless -%}
+    {% endfor %}
+  {% endcapture %}
+        
+  <aside class="product__related-container" style="background-color: {{section.settings.bg}}">
+    {% unless section.settings.title == blank %}
+    <header class="product__related-header">
+      <h3 class="product__related-title">{{ section.settings.title }}</h3>
+    </header>
+    {% endunless %}
+
+    <div class="collection__body vue-featured-collection">
+      <featured-collection class="collection__grid" :list='product_groups' :carousel-options="{}" :collection-handle="'{{current_collection.handle}}'"/>
+    </div>
+  </aside>
+  
+  {%- include 'json__products' list: current_collection.products -%}
+</div>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_related_products",
+      "label": "Show featured collection",
+      "default": true
+    },
+    {
+      "id": "bg",
+      "type": "color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Section title",
+      "default": "Featured"
+    },
+    {
+      "id": "collection",
+      "label": "Featured Collection",
+      "type": "collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collect HP",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

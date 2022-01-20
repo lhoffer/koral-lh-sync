@@ -10,7 +10,7 @@
         <transition-group name="minicart__items" 
           class="minicart__items" 
           tag="div">
-          <div class="minicart__item" v-for="item in cart.items" :key="item.key">
+          <div class="minicart__item" v-for="(item, index) in cart.items" :key="item.key">
             <a class="minicart__item-link" :href="item.url">
               <div class="minicart__item-image" v-if="item.image">
                 <img :src="getImage(item.image, '320x')" :alt="item.product_title" />
@@ -20,7 +20,9 @@
               <a class="item_title" :href="item.url">
                 <span>{{item.product_title}}</span>
               </a>
-              <div class="minicart__item-price"><span class="money">{{item.price | money_nodec}}</span></div>
+              <div class="minicart__item-price">
+                <span class="money" :data-line-index="index">{{ item.price | money_nodec }}</span>
+              </div>
               <div class="minicart__options">
                 <div class="minicart__options-wrapper" v-if="!item.gift_card">
                   <dl class="minicart__item-option" v-for="opt in item.variant_options" :key="opt">
@@ -52,7 +54,7 @@
           <dl class="minicart__subtotal">
             <dt>{{ translations.subtotal }}</dt>
             <dd>
-              <span class="money">{{cart.total_price | money}}</span>
+              <span class="money" data-cart-total>{{cart.total_price | money}}</span>
             </dd>
           </dl>
           <p class="minicart__ship-msg" v-if="settings.display_ship_msg">{{ translations.shipping_at_checkout }}</p>

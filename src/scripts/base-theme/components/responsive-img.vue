@@ -1,8 +1,13 @@
 <template>
-  <div class="responsive-img" :class="{'swiper-zoom-container': zoom, 'is-by-ratio': ratio}" :style="ratio" ref="imgContainer">
-    <img :src="resized" v-if="useSrcSet" :srcset="srcSet" sizes="100vw" />
-    <img :src="resized" v-else />
-  </div>
+  <a :href="mobileZoom ? resized : null" v-bind:[fancyBoxAttr]="true">
+    <div class="responsive-img" :class="{'swiper-zoom-container': desktopZoom, 'is-by-ratio': ratio}" :style="ratio" ref="imgContainer">
+      <img :src="resized" v-if="useSrcSet" :srcset="srcSet" sizes="100vw" />
+      <img :src="resized" v-else />
+      <span v-if="zoomFeature" class="image-viewer__zoom-icon">
+        <img src="https://cdn.shopify.com/s/files/1/0744/4099/files/zoom-in.png?v=1591086891" alt="zoom" />
+      </span>
+    </div>
+  </a>
 </template>
 
 <script>
@@ -14,6 +19,7 @@ export default {
     size: String,
     zoom: [String, Object],
     useSrcSet: Boolean,
+    zoomFeature: Boolean,
     maxWidth: Number,
     maxHeight: Number
   },
@@ -42,20 +48,43 @@ export default {
         
       const srcSet = sizes.map(size => `${getSizedImageUrl(this.src, `${size}.progressive`)} ${size.replace('x', 'w')}`);
       return srcSet.join(",")
+    },
+    desktopZoom() {
+      return this.zoom && this.windowWidth >= 768;
+    },
+    mobileZoom() {
+      return this.zoomFeature && this.windowWidth < 768;
+    },
+    windowWidth() {
+      return $(window).width();
+    },
+    fancyBoxAttr() {
+      return this.mobileZoom ? 'data-fancybox' : null;
     }
   },
   mounted() {
     this.$nextTick(_ => {
-      if(this.zoom){
+      if(this.desktopZoom){
         const opt = typeof this.zoom == "string" ? {url: this.zoom} : this.zoom;
         $(this.$refs.imgContainer).zoom(opt)
       }
-    })
+    });
+
+    if(this.windowWidth < 768) {
+      $('[data-fancybox]').fancybox({
+        arrows: false,
+        infobar: false,
+        loop: true,
+        buttons: [
+          'close'
+        ]
+      });
+    }
   },
   watch: {
     zoom: function(val, oldVal) {
       this.$nextTick(_ => {
-        if(this.zoom){
+        if(this.desktopZoom){
           const opt = typeof this.zoom == "string" ? {url: this.zoom} : this.zoom;
           $(this.$refs.imgContainer).zoom(opt)
         }
