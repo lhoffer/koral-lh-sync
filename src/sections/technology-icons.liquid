@@ -1,11 +1,13 @@
+
 <div class="technology-icon-containers">
   {% for block in section.blocks %}
-  <div class="technology-icon-section">
-    <div class="tech-inner-section-img">
+  <div>
+    <div>
       <img src="{{ block.settings.image | img_url: 'master'}}" style="width:100%" />
     </div>
-    <div class="tech-inner-section">
+    <div>
       <h3>{{block.settings.title}}</h3>
+
       {{block.settings.desc}}
     </div>
   </div>

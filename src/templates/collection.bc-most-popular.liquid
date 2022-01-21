@@ -7,7 +7,7 @@
 {%- endif -%}
 {"products":[
 {%- for product in collection.products limit: bc_most_popular_limit -%}
-<script type="application/json" class="bold-product-json">{{ product | json }}</script>
+{%- include 'bold-product' with product, hide_action: 'skip' -%}
 {%- include 'bc-sf-filter-product-json', product: product  -%}
 {%- if forloop.index < bc_most_popular_limit -%},{%- endif -%}
 {%- endfor -%}

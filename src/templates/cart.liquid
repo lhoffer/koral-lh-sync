@@ -1,3 +1,4 @@
+{%- include 'bold-cart' -%}
 <div class="cart vue-cart" v-cloak v-if="cart">
   <div class="cart__container">
     <h1 class="cart__title">{{ 'cart.general.title' | t }}</h1>
@@ -33,7 +34,7 @@
             The data-label attributes on <td> elements are mobile-friendly
             helpers used for responsive-table labels
             {% endcomment %}
-            <tr class="cart__item" v-for="(item, index) in cart.items" :key="item.key">
+            <tr class="cart__item" v-for="item in cart.items" :key="item.key">
               <td class="cart__item-image" data-label="{{ 'customer.order.product' | t }}">
                 <a class="cart__item-link" :href="item.url">
                   <div class="cart__item-image" v-if="item.image">
@@ -67,7 +68,7 @@
                   <s>${ item.original_price | money }</s>
                 </div>
                 <div v-else>
-                  <span class="money" :data-line-index="index">{{ item.price | money }}</span>
+                  ${ item.price | money }
                 </div>
               </td>
               <td class="cart__item-quantity" data-label="{{ 'cart.label.quantity' | t }}">
@@ -80,7 +81,7 @@
                       aria-label="{{ 'cart.general.item_quantity' | t }}">
               </td>
               <td class="cart__item-total" data-label="{{ 'cart.label.total' | t }}">
-                <span class="money" data-line-total :data-line-index="index">{{ item.line_price | money }}</span>
+                ${ item.line_price | money }
               </td>
             </tr>
 
@@ -99,7 +100,7 @@
           <dl class="cart__subtotal">
             <dt>{{ 'cart.general.subtotal' | t }}</dt>
             <dd>
-              <span class="money" data-cart-total>${ cart.total_price | money }</span>
+              <span class="money">${ cart.total_price | money }</span>
             </dd>
           </dl>
           <dl class="cart_savings" v-if="cart.total_discounts > 0">

@@ -1,39 +1,25 @@
 {% assign products_per_page = section.settings.products_per_page %}
 {% paginate collection.products by products_per_page %}
 {% comment %} TOOLBAR {% endcomment %}
- <div id="bc-sf-filter-default-toolbar" class="vue-filter">
+{% comment %} <div id="bc-sf-filter-default-toolbar">
     <div class="bc-sf-filter-default-toolbar-inner">
       <div class="bc-sf-filter-toolbar-item">
-        <a href="#" @click="openFilter" class="bc-sf-filter-btn">
-          <span>FILTER</span>
-        </a>
-        <!-- <div id="bc-sf-filter-top-display-type"></div> -->
+        <div id="bc-sf-filter-top-display-type"></div>
       </div>
       <div class="bc-sf-filter-toolbar-item bc-sf-filter-toolbar-count">
         <span id="bc-sf-filter-total-product"></span>
       </div>
       <div class="bc-sf-filter-toolbar-item text-right" id="bc-sf-filter-top-sorting"></div>
     </div>
-    <button class="btn btn-primary btn-close-filter d-none d-md-none" @click="openFilter">X</button>
-</div> 
+</div> {% endcomment %}
 {% comment %} END TOOLBAR {% endcomment %}
 <div id="bc-sf-filter-wrapper">
-  <div class="bc-sf-filter-left-col is-show-filter">
-    <div id="bc-sf-filter-tree"></div>
-    <div class="filter__action-bar vue-filter d-md-none">
-      <button class="btn btn-default reset" @click="reset">Clear</button>
-      <button class="btn btn-primary apply" @click="openFilter">Apply</button>
-    </div>
-  </div>
-  <div class="bc-sf-filter-right-col is-show-filter">
-    {% if section.settings.nosto_id != blank %}<div class="nosto_element" id="{{ section.settings.nosto_id }}"></div>{% endif %}
-    <div  class="collection__body vue-collection">
-      <collection class="collection__grid" :list="product_groups" :collection-handle="'{{collection.handle}}'">
-        {% for product in collection.products %}
-          {% include 'product__item' %}
-        {% endfor %}
-      </collection>
-    </div>
+  <div  class="collection__body vue-collection">
+    <collection class="collection__grid" :list="product_groups" :collection-handle="'{{collection.handle}}'">
+      {% for product in collection.products %}
+        {% include 'product__item' %}
+      {% endfor %}
+    </collection>
   </div>
   <div id="bc-sf-filter-bottom-pagination" class="bc-sf-filter-bottom-pagination-default"></div>
   <div id="bc-sf-filter-load-more"></div>
@@ -186,11 +172,6 @@
         "id": "from",
         "label": "From",
         "default": "from"
-      },
-      {
-        "type": "text",
-        "id": "nosto_id",
-        "label": "Nosto id"
       }
     ]
   }

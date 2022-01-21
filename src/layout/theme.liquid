@@ -1,146 +1,104 @@
-
 <!doctype html>
 <html class="no-js supports-no-cookies" lang="{{ shop.locale }}"> 
-  <head>
-                
-{% render 'orbislabs_sitemap_noindex' %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  {%- include 'head__meta' -%}
+  {%- include 'social-meta-tags' -%}
 
-  
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    {%- if page_description -%}
-      <meta name="description" content="{{ page_description | escape }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  {%- if settings.favicon != blank -%}
+  <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {%- endif -%}
+
+  <link rel="stylesheet" href="https://use.typekit.net/vmt3hoy.css">
+  {{ 'theme.bundle.css' | asset_url | stylesheet_tag }}
+  {{ 'fonts.scss.css' | asset_url | stylesheet_tag }}
+
+  {{ 'jquery.min.js' | asset_url | script_tag }}
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+  {%- capture seo_title -%}
+    {{ page_title }}
+    {%- if current_tags -%}
+      {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
     {%- endif -%}
-    {%- include 'head__meta' -%}
-    {%- include 'social-meta-tags' -%}
-    
-    {% include 'user1st-script' %}
-  
-    <link rel="canonical" href="{{ canonical_url }}">
-    {%- if settings.favicon != blank -%}
-    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {%- if current_page != 1 -%}
+      &ndash; {{ 'general.meta.page' | t: page: current_page }}
     {%- endif -%}
+    {%- unless page_title -%}
+      &ndash; {{ shop.name }}
+    {%- endunless -%}
+  {%- endcapture -%}  
+  <title>{{ seo_title }}</title>
+
+  {%- if template.directory == 'customers' -%}
+    <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script><!--<![endif]-->
+    <!--[if lte IE 9]><script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script><![endif]-->
+  {%- endif -%}
+
+  {{ content_for_header }}
+  {%- include 'bold-product' with product, hide_action: 'header' -%}
+  {%- include 'bold-product' with product, hide_action: 'header' -%}
+{%- render 'bold-common' -%}
+  {{ 'bold-custom.css' | asset_url | stylesheet_tag }}
+  {%- if settings.collection_use_filters -%}
+  <!--begin-bc-sf-filter-css-->
+    {% include 'bc-sf-filter-style' %}
+  <!--end-bc-sf-filter-css-->
+  {%- endif -%}
+  {% include 'shogun-head' %}
+
+  {% include 'magic-links' %}
   
-    <link rel="stylesheet" href="https://use.typekit.net/vmt3hoy.css">
-    {{ 'theme.bundle.css' | asset_url | stylesheet_tag }}
-    {{ 'fonts.scss.css' | asset_url | stylesheet_tag }}
+</head>
+
+<body class="template-{{ template | handle }} {{ page_title | handle }}">
+  {%- include 'dataLayer-allPages' -%}
+  <div class="root">
+    {%- section 'header' -%}
+    {%- section 'sub-navigation' -%}
+    <main role="main">
+      {{ content_for_layout }}
+    </main>
+    {%- section 'footer' -%}
+  </div>
+  {%- include 'minicart_drawer' -%}
+  {{ 'vendors.bundle.js' | asset_url | script_tag }}
+  {%- if settings.collection_use_filters -%}
+  <!--begin-bc-sf-filter-js-->
+    {% include 'bc-sf-filter' %}
+  <!--end-bc-sf-filter-js-->
+  {% comment %} Init BC Action List {% endcomment %}
+  <!--start-bc-al-init-->
+    {% include 'bc-al-init' %}
+  <!--end-bc-al-init-->
+  {% comment %} Init Recently Viewed Products {% endcomment %}
+  <!-- start-bc-recently-viewed-product-init -->
+    {% include 'bc-recently-viewed-product-init' %}
+  <!-- end-bc-recently-viewed-product-init -->
+  {% comment %} Init Most Popular Widgets {% endcomment %}
+  <!--start-bc-most-popular-product-init-->
+    {% include 'bc-most-popular-product-init' %}
+  <!--end-bc-most-popular-product-init-->
+  {%- else -%}
+    {%- include 'vue-initial-states' -%}
+    {{ 'main.bundle.js' | asset_url | script_tag }}
+  {%- endif -%}
   
-    {{ 'jquery.min.js' | asset_url | script_tag }}
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    {%- capture seo_title -%}
-      {{ page_title }}
-      {%- if current_tags -%}
-        {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
-      {%- endif -%}
-      {%- if current_page != 1 -%}
-        &ndash; {{ 'general.meta.page' | t: page: current_page }}
-      {%- endif -%}
-      {%- unless page_title -%}
-        &ndash; {{ shop.name }}
-      {%- endunless -%}
-    {%- endcapture -%}  
-    <title>{{ seo_title }}</title>
+  <script src="https://cdn.attn.tv/koral/dtag.js"></script>
   
-    {%- if template.directory == 'customers' -%}
-      <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script><!--<![endif]-->
-      <!--[if lte IE 9]><script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script><![endif]-->
-    {%- endif -%}
+  {% include 'klaviyo-bis' %}
   
-    {{ content_for_header }}
-    {% comment %} {%- include 'bold-product' with product, hide_action: 'header' -%} {% endcomment %}
-    {% comment %} {%- include 'bold-product' with product, hide_action: 'header' -%} {% endcomment %}
-    {%- render 'bold-pr' -%}
-    {%- render 'bold-common' -%}
-    {{ 'bold-custom.css' | asset_url | stylesheet_tag }}
-    {%- if settings.collection_use_filters -%}
-    <!--begin-bc-sf-filter-css-->
-      {% include 'bc-sf-filter-style' %}
-    <!--end-bc-sf-filter-css-->
-    {%- endif -%}
-    {% include 'shogun-head' %}
+  {% include 'custom_styling' %}
   
-    {% include 'magic-links' %}
+  {% include 'klarna-snippet' %}
   
-    {% include 'global-e-head' %}
-    
-    <script>var CRL8_SITENAME = 'koral-3ohsxe';!function(){var e=window.crl8=window.crl8||{},n=!1,i=[];e.ready=function(e){n?e():i.push(e)},e.pixel=e.pixel||function(){e.pixel.q.push(arguments)},e.pixel.q=e.pixel.q||[];var t=window.document,o=t.createElement("script"),c=e.debug||-1!==t.location.search.indexOf("crl8-debug=true")?"js":"min.js";o.async=!0,o.src=t.location.protocol+"//edge.curalate.com/sites/"+CRL8_SITENAME+"/site/latest/site."+c,o.onload=function(){n=!0,i.forEach(function(e){e()})};var r=t.getElementsByTagName("script")[0];r.parentNode.insertBefore(o,r.nextSibling)}();</script>
-    <script> 
-      var glegem = window["glegem"] || function () {      
-          (window["glegem"].q = window["glegem"].q || []).push(arguments); 
-        };
-        console.log('window', glegem);
-        glegem("OnCheckoutStepLoaded",function(data){
-          console.log('before loaded');
-          switch(data.StepId){
-            case data.Steps.LOADED:
-              console.log('loaded');
-              break;
-            case data.Steps.CONFIRMATION:
-              console.log('confirmation');
-              if (data.IsSuccess){
-              console.log('success');     
-    
-              }
-              break;
-          }
-        });
-    </script>
-                    
-    {% render 'gdpr-cookie-consent' %}    					
-  </head>
-  
-  <body class="template-{{ template | handle }} {{ page_title | handle }}">
-    {%- include 'dataLayer-allPages' -%}
-    <div class="root">
-      {%- section 'header' -%}
-      {%- section 'sub-navigation' -%}
-      <main role="main" {% if template == 'index' %}class="hp-main"{% endif %}>
-        {{ content_for_layout }}
-      </main>
-      {%- section 'footer' -%}
-    </div>
-    {%- include 'minicart_drawer' -%}
-    {{ 'vendors.bundle.js' | asset_url | script_tag }}
-    {%- if settings.collection_use_filters -%}
-    <!--begin-bc-sf-filter-js-->
-      {% include 'bc-sf-filter' %}
-    <!--end-bc-sf-filter-js-->
-    {% comment %} Init BC Action List {% endcomment %}
-    <!--start-bc-al-init-->
-      {% include 'bc-al-init' %}
-    <!--end-bc-al-init-->
-    {% comment %} Init Recently Viewed Products {% endcomment %}
-    <!-- start-bc-recently-viewed-product-init -->
-      {% include 'bc-recently-viewed-product-init' %}
-    <!-- end-bc-recently-viewed-product-init -->
-    {% comment %} Init Most Popular Widgets {% endcomment %}
-    <!--start-bc-most-popular-product-init-->
-      {% include 'bc-most-popular-product-init' %}
-    <!--end-bc-most-popular-product-init-->
-    {%- else -%}
-      {%- include 'vue-initial-states' -%}
-      {{ 'main.bundle.js' | asset_url | script_tag }}
-    {%- endif -%}
-    
-    <script src="https://cdn.attn.tv/koral/dtag.js"></script>
-    
-    {% include 'klaviyo-bis' %}
-    
-    {% include 'custom_styling' %}
-    
-    {% include 'klarna-snippet' %}
-  
-    {% include 'global-e-body' %}
-                          
-  <!-- CRITEO START -->
-{% include 'criteo-tracking' %}
-<!-- CRITEO END -->
 </body>
 </html>
-  
