@@ -21,7 +21,7 @@
 {%- endif -%}
 {%- assign is_link_button = link_button | default: true -%}
 {%- if link_type == "container" -%} {%- assign is_link_button = false -%} {%-endif-%}
-{%- assign tag = headingTag | default: "h2" -%}
+{%- assign tag = headingTag | default: "h1" -%}
 <div class="image-text {{title | handle}}" style="background-color: {{bg}};color: {{color}}">
   {%- if link != blank and is_link_button == false -%}
   <a class="image-text__container {{container}} {{padding}} {{text_layout}}"{%if isVideo%} data-lity{%endif%}{%if isExternal%} target="_blank"{%endif%} href="{{link}}">
