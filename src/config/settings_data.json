@@ -1,17 +1,30 @@
 {
   "current": {
-    "favicon": "",
-    "go_to_checkout": true,
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "body_font_enable": false,
+    "body_font_family": "futura_n4",
+    "heading_font_enable": false,
+    "heading_font_family": "futura_n3",
+    "product_groupby_type": "tag",
+    "product_groupby_prefix": "STYLE:",
+    "collection_enabled-img-hover": true,
+    "collection_display_breadcrumb": false,
+    "collection_use_filters": true,
+    "quickshop_template": "bc-quickview",
+    "minicart_goto-checkout": true,
+    "display_ship_msg": true,
+    "display_savings": false,
+    "minicart_use_dropdown": false,
+    "minicart_announcements": "",
     "social_sharing_blog": true,
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": true,
-    "social_twitter_link": "",
-    "social_facebook_link": "",
-    "social_pinterest_link": "",
-    "social_instagram_link": "",
-    "checkout_header_image": "",
-    "checkout_logo_image": "",
+    "social_twitter_link": "https:\/\/twitter.com\/koralactivewear",
+    "social_facebook_link": "https:\/\/www.facebook.com\/KoralActivewear",
+    "social_pinterest_link": "https:\/\/www.pinterest.com\/koralactivewear",
+    "social_instagram_link": "https:\/\/instagram.com\/Koral",
+    "checkout_logo_image": "shopify:\/\/shop_images\/KORAL-LOGO_ed764f39-2ee3-4315-970d-414488083c72.jpg",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_body_background_image": "",
@@ -24,19 +37,4489 @@
     "checkout_accent_color": "#197bbd",
     "checkout_button_color": "#197bbd",
     "checkout_error_color": "#e32c2b",
+    "go_to_checkout": true,
     "type_base_size": "16px",
     "color_primary": "#000",
     "color_body_text": "#000",
     "social_snapchat_link": "",
     "social_tumblr_link": "",
     "social_youtube_link": "",
-    "social_vimeo_link": ""
+    "social_vimeo_link": "",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "47d6e356-b035-41e5-b3aa-3b12995e3718": {
+            "type": "menu-item",
+            "settings": {
+              "associated-menu-title": "KORAL KORE",
+              "image": "shopify:\/\/shop_images\/kore_jumpsuits_v2.jpg",
+              "title": "Shop Jumpsuits",
+              "link": "https:\/\/koral.com\/collections\/koral-kore-jumpsuits?ose=false",
+              "position": 0
+            }
+          },
+          "5130fa7b-fdf0-47fb-b022-2c19f0941f7e": {
+            "type": "menu-item",
+            "settings": {
+              "associated-menu-title": "KORAL KORE",
+              "image": "shopify:\/\/shop_images\/hi_support_sports_bras.jpg",
+              "title": "High Support Sports Bras",
+              "link": "https:\/\/koral.com\/collections\/koral-kore-bras?_=pf&pf_t_support=support%3Ahigh",
+              "position": 0
+            }
+          }
+        },
+        "block_order": [
+          "47d6e356-b035-41e5-b3aa-3b12995e3718",
+          "5130fa7b-fdf0-47fb-b022-2c19f0941f7e"
+        ],
+        "settings": {
+          "announce_content": "<p><a href=\"\/collections\/january-22-sample-sale\" title=\"January 2022 Sample Sale\">Winter Sample Sale on Now! Up to 80% OFF | SHOP NOW<\/a><\/p><p><a href=\"\/collections\/new-arrivals\" title=\"NEW ARRIVALS\">JUST DROPPED! New Bronze and winter luxe Houndstooth!<\/a><\/p><p>Shop now, Pay later with Klarna<\/p>",
+          "announce_enable_slide": true,
+          "announce_bg": "#000000",
+          "announce_color": "#ffffff",
+          "announce_font_size": 1.3,
+          "announce_slide_effect": "slide-left",
+          "announce_speed": 3000,
+          "announce_content2": "",
+          "announce_enable_slide2": false,
+          "announce_bg2": "#000000",
+          "announce_color2": "#ffffff",
+          "announce_font_size2": 1,
+          "announce_slide_effect2": "slide",
+          "announce_speed2": 3000,
+          "logo_svg": true,
+          "logo": "shopify:\/\/shop_images\/checkout_logo_2.png",
+          "logo_desktop_width": 140,
+          "logo_mobile_width": 100,
+          "main_linklist": "1-main-navigation",
+          "menu_pos": false,
+          "mobile_main_linklist": "1-main-navigation",
+          "inline_search": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "newsletter_title": "",
+          "newsletter_msg": "<p>SIGN UP AND GET 15% OFF YOUR FIRST ORDER NOW. EXCLUSIVE OFFERS AND EARLY ACCESS.<\/p>",
+          "footer_linklist": "footer-menu",
+          "show_copyright": true,
+          "copyright_text": ""
+        }
+      },
+      "page__about-builder": {
+        "type": "page__about-builder",
+        "blocks": {
+          "1554749669321": {
+            "type": "text-image",
+            "settings": {
+              "bg": "#ffffff",
+              "container": "full-width",
+              "width": 6,
+              "image": "shopify:\/\/shop_images\/2017-02-22_slide02_mobile.jpg",
+              "image_mobile": "",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 3,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 50,
+              "text_align": "text-center text-md-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": "btn btn-primary"
+            }
+          }
+        },
+        "block_order": [
+          "1554749669321"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "1556421831767": {
+        "type": "preset__instafeed",
+        "settings": {
+          "title": "Follow Koral on Instagram",
+          "bg-color": "",
+          "link": "",
+          "link_text": "",
+          "custom_html": "<div data-crl8-container-id=\"homepage\"><\/div>\n<script>\nvar CRL8_SITENAME = 'koral-3ohsxe'; !function(){var e=window.crl8=window.crl8||{},n=!1,i=[];e.ready=function(e){n?e():i.push(e)},e.pixel=e.pixel||function(){e.pixel.q.push(arguments)},e.pixel.q=e.pixel.q||[];var t=window.document,o=t.createElement(\"script\"),c=e.debug||-1!==t.location.search.indexOf(\"crl8-debug=true\")?\"js\":\"min.js\";o.async=!0,o.src=t.location.protocol+\"\/\/edge.curalate.com\/sites\/\"+CRL8_SITENAME+\"\/site\/latest\/site.\"+c,o.onload=function(){n=!0,i.forEach(function(e){e()})};var r=t.getElementsByTagName(\"script\")[0];r.parentNode.insertBefore(o,r.nextSibling)}();\n<\/script>",
+          "access-token": "",
+          "autoplay": true,
+          "speed": 3000,
+          "effect": "slide",
+          "items-desktop": 4,
+          "feed-limit": 12,
+          "navigation": true,
+          "dots": false,
+          "space_between": 30,
+          "bg_size": "cover",
+          "bg_position": "center center"
+        }
+      },
+      "collection-banner": {
+        "type": "collection-banner",
+        "blocks": {
+          "1599801173643": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "vip-secret-sale",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/VIP_secret_sale.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/VIP_secret_sale_38390c64-d957-4fa9-81f9-33ef1d75cd46.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 2,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 0,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "1601526579746": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "breast-cancer-awareness",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/koral_bca_banner_ugc_typo.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/koral_bca_banner_ugc_typo_00217b09-232c-464d-8806-e4631dd644e3.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 1,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 0,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "1603004106920": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/desktop_mask_banner.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/mobile_mask_banner.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 0,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "c113d9ed-3b58-45a6-a077-fd5823ef79ef": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "under-50",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/11_16_20_GIFTGUIDE3.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/11_16_20_GIFTGUIDE4.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 0,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "rgba(0,0,0,0)",
+              "btn_bg": "rgba(0,0,0,0)",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "582ba42f-4016-4e0b-8c54-dac54664dbf5": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "vip-secret-sale-bottoms",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/VIP_secret_sale_38390c64-d957-4fa9-81f9-33ef1d75cd46.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/VIP_secret_sale.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 3,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "bfc907e4-2cab-496b-bf4d-e5bc1e870c19": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "vip-secret-sale-sports-bras",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/VIP_secret_sale_38390c64-d957-4fa9-81f9-33ef1d75cd46.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/VIP_secret_sale.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 3,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "5d714c3f-3ec8-47aa-b140-85d845ea3019": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "vip-secret-sale-tops",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/VIP_secret_sale_38390c64-d957-4fa9-81f9-33ef1d75cd46.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/VIP_secret_sale.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 3,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "48bc8239-2a80-4e80-8e60-deea4ccb1905": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/8_12_2021_sale_on_sale_bf501f54-f659-413d-bc6b-aed75b9392a8.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/8_12_2021_sale_on_sale_5806b41b-8733-4018-bed7-41f645ec7fa6.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 0,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "fdb1238f-849c-4659-8103-93533cf1ceb8": {
+            "type": "collection_banner",
+            "disabled": true,
+            "settings": {
+              "linked-collection": "sale",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/sale_on_sale_last_day_banner.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/sale_on_sale_last_day_banner_b3db4047-defb-42fe-bb6a-9bc84c88d425.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 0,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "226f2c54-b1cb-4237-bb11-19b719ac5de9": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "labor-day-flash-sale",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/8_31_2021_labor_day_sale_banner_v3.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/8_31_2021_labor_day_sale_banner_v3_bf093872-c2be-4f4b-853f-93433c577fab.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 0,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "21c8eb97-d7d1-4b8d-a90a-c8792ce8490d": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "warehouse-sale-1",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/sample_sale_ends_today.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/sample_sale_ends_today_35eb0672-a4ef-4c1d-a7de-fdb798c771c5.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 3,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "9e14eb75-739d-4bfb-9047-6a7c4f88afc0": {
+            "type": "collection_banner",
+            "settings": {
+              "linked-collection": "camo",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/camo_sale_banner.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/camo_sale_banner_80901874-3c19-45c1-965f-a6ae93536b39.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 3,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 0,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          },
+          "67744c59-04b0-463b-aac0-ec747c1f8055": {
+            "type": "collection_banner",
+            "disabled": true,
+            "settings": {
+              "linked-collection": "new-arrivals",
+              "bg": "#ffffff",
+              "container": "full-width",
+              "image": "shopify:\/\/shop_images\/45_cyber_monday_banner_last_day.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/45_cyber_monday_banner_last_day_24f0a9d1-4fd0-41d2-8653-18e151f84c7f.jpg",
+              "padding-type-top-bottom": "py-",
+              "padding-top-bottom": 1,
+              "padding-type-left-right": "px-",
+              "padding-left-right": 0,
+              "text_layout": "top",
+              "text_pos": "align-items-md-center justify-content-md-center",
+              "text_pos_mobile": "align-items-center justify-content-center",
+              "title": "",
+              "subtitle": "",
+              "message": "",
+              "color": "#000000",
+              "message_width": 1000,
+              "text_align": "text-left",
+              "btn_color": "",
+              "btn_bg": "",
+              "link": "",
+              "link_text": "Shop Now",
+              "link_type": ""
+            }
+          }
+        },
+        "block_order": [
+          "1599801173643",
+          "1601526579746",
+          "1603004106920",
+          "c113d9ed-3b58-45a6-a077-fd5823ef79ef",
+          "582ba42f-4016-4e0b-8c54-dac54664dbf5",
+          "bfc907e4-2cab-496b-bf4d-e5bc1e870c19",
+          "5d714c3f-3ec8-47aa-b140-85d845ea3019",
+          "48bc8239-2a80-4e80-8e60-deea4ccb1905",
+          "fdb1238f-849c-4659-8103-93533cf1ceb8",
+          "226f2c54-b1cb-4237-bb11-19b719ac5de9",
+          "21c8eb97-d7d1-4b8d-a90a-c8792ce8490d",
+          "9e14eb75-739d-4bfb-9047-6a7c4f88afc0",
+          "67744c59-04b0-463b-aac0-ec747c1f8055"
+        ],
+        "settings": {}
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+          "products_per_page": 16
+        }
+      },
+      "swatch-settings": {
+        "type": "swatch-settings",
+        "blocks": {
+          "1556870275744": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Pink",
+              "tags": "",
+              "color": "#ffc0cb",
+              "letter_code": "PINK"
+            }
+          },
+          "1556870275745": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "White",
+              "tags": "White",
+              "color": "#ffffff",
+              "letter_code": "WHT"
+            }
+          },
+          "1556870275746": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Aura\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "ARBK"
+            }
+          },
+          "1556870275747": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Aura",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "ARA"
+            }
+          },
+          "1556870275748": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black",
+              "tags": "Black",
+              "color": "#000000",
+              "letter_code": "BLK"
+            }
+          },
+          "1556870275749": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Carmine",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "CRM"
+            }
+          },
+          "1556870275750": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Dark Green",
+              "tags": "",
+              "color": "#006400",
+              "letter_code": "DGR"
+            }
+          },
+          "1556870275751": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Hematite",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "HMT"
+            }
+          },
+          "1556870275752": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Lead",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "LEAD",
+              "image": "shopify:\/\/shop_images\/LEAD.jpg"
+            }
+          },
+          "1556870275753": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Midnight Blue",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "MDBL",
+              "image": "shopify:\/\/shop_images\/MIDNIGHT.jpg"
+            }
+          },
+          "1556870275754": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Marinho",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "MRN"
+            }
+          },
+          "1556870275755": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Vermelho",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "VRM"
+            }
+          },
+          "1556870275756": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Aquamarine\/Camo",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "AQCM"
+            }
+          },
+          "1556870275757": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Camouflage",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "CAMO",
+              "image": "shopify:\/\/shop_images\/Camo_437ca1c7-130a-45cf-af81-091aa98f3fec.JPG"
+            }
+          },
+          "1556870275758": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Lead Camo",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "LDCM",
+              "image": "shopify:\/\/shop_images\/Lead_Camo_ed978707-647f-4443-8e17-6003d49dd9b6.JPG"
+            }
+          },
+          "1556870275759": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Midnight Camo",
+              "tags": "Midnight Camo",
+              "color": "#ffffff",
+              "letter_code": "MBCM",
+              "image": "shopify:\/\/shop_images\/MIDNIGHT_CAMO_3d3d893f-9bd8-4ec2-8430-574e3e2ad5ef.jpg"
+            }
+          },
+          "1556870275760": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Rose Quartz\/Camo",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "RQCM"
+            }
+          },
+          "1556870275761": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Pinstripe",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "PIN"
+            }
+          },
+          "1556870275762": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Opal",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "OPL"
+            }
+          },
+          "1556870275763": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Oceanside",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "OCSD"
+            }
+          },
+          "1556870275764": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Sonic",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "SNC"
+            }
+          },
+          "1556870275765": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Scatter",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "SCT"
+            }
+          },
+          "1556870275766": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/White",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKWT",
+              "image": "shopify:\/\/shop_images\/white_black_7c9981f6-5f3e-4f75-a93d-9a980bf39f9c.jpg"
+            }
+          },
+          "1556870275767": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "White w\/ Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "WTBK"
+            }
+          },
+          "1556870275768": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Agate",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "AGT"
+            }
+          },
+          "1556870275769": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Verde",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKVD"
+            }
+          },
+          "1556870275770": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Lead",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKLD"
+            }
+          },
+          "1556870275771": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Midnight Blue\/White",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "MBWH"
+            }
+          },
+          "1556870275772": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Camo w\/ Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "CAMB"
+            }
+          },
+          "1556870275773": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Selenite",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "SLN"
+            }
+          },
+          "1556870275774": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black Camo w\/ Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BCBK"
+            }
+          },
+          "1556870275775": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black Galaxy",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKGY"
+            }
+          },
+          "1556870275776": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "White Galaxy",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "WTGY"
+            }
+          },
+          "1556870275777": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Vertigo",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "VTGO"
+            }
+          },
+          "1556870275778": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Jasper Orange",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BLJP"
+            }
+          },
+          "1556870275779": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Onyx\/Aquamarine",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "OXAQ"
+            }
+          },
+          "1556870275780": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Auralite",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "ALT"
+            }
+          },
+          "1556870275781": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Marsala",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "MRS"
+            }
+          },
+          "1556870275782": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Camo",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "CAMO",
+              "image": "shopify:\/\/shop_images\/Camo_00f2b0ed-2fbb-4d86-95be-25722667e4fb.JPG"
+            }
+          },
+          "1556870275783": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Aquamarine",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKAQ"
+            }
+          },
+          "1556870275784": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Aura",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKAR"
+            }
+          },
+          "1556870275785": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Ametrine",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "AMT"
+            }
+          },
+          "1556870275786": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Gold\/Silver",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BGDS"
+            }
+          },
+          "1556870275787": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Onyx\/Agate",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "ONAG"
+            }
+          },
+          "1556870275788": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Rose Quartz\/Hematite",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "RQHT"
+            }
+          },
+          "1556870275789": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Hummus\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "HUBK"
+            }
+          },
+          "1556870275790": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Aquamarine",
+              "tags": "",
+              "color": "#7fffd4",
+              "letter_code": "AQM"
+            }
+          },
+          "1556870275791": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Gold\/Silver\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "GSBK"
+            }
+          },
+          "1556870275792": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Taupe",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "TPE"
+            }
+          },
+          "1556870275793": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black Gold",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKGD"
+            }
+          },
+          "1556870275794": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Dark Green",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKDG"
+            }
+          },
+          "1556870275795": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Vermelho\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "VRBK"
+            }
+          },
+          "1556870275796": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Jasper Orange",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "JSP"
+            }
+          },
+          "1556870275797": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Ametrine\/Constelation",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "AMTC"
+            }
+          },
+          "1556870275798": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Constelation",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "CNS"
+            }
+          },
+          "1556870275799": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Rose Quartz",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BLRQ"
+            }
+          },
+          "1556870275800": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Bronze",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKBZ"
+            }
+          },
+          "1556870275801": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Dark Green\/Black\/Caqui",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "DGBC"
+            }
+          },
+          "1556870275802": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Marinho\/Black\/Caqui",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "MBCQ"
+            }
+          },
+          "1556870275803": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Taupe\/Verde",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKTV"
+            }
+          },
+          "1556870275804": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "White Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "WHBK"
+            }
+          },
+          "1556870275805": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Geometrico",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKGT"
+            }
+          },
+          "1556870275806": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Verde",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "VRD"
+            }
+          },
+          "1556870275807": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Marinho\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "MRBK"
+            }
+          },
+          "1556870275808": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Olive\/Marihno",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKOM"
+            }
+          },
+          "1556870275809": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Amarelo\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "AMBK"
+            }
+          },
+          "1556870275810": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "White\/Dark Green\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "WDGB"
+            }
+          },
+          "1556870275811": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Olive",
+              "tags": "",
+              "color": "#808000",
+              "letter_code": "OLV"
+            }
+          },
+          "1556870275813": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Marinho",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "MR"
+            }
+          },
+          "1556870275814": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Lead\/White",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "LDWT"
+            }
+          },
+          "1556870275815": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Geo Net\/Onyx",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "GNOX"
+            }
+          },
+          "1556870275816": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Onyx",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "ONX"
+            }
+          },
+          "1556870275817": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Rose Quartz\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "RQBL"
+            }
+          },
+          "1556870275818": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Agate",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BLAG"
+            }
+          },
+          "1556870275819": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Aquamarine",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BLAQ"
+            }
+          },
+          "1556870275820": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Rose Quartz",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "ROQ"
+            }
+          },
+          "1556870275821": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Hematite",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKHT"
+            }
+          },
+          "1556870275822": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Rose Quartz",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKRQ"
+            }
+          },
+          "1556870275823": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Hematite\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "HTBK"
+            }
+          },
+          "1556870275824": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Copper",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "COPP"
+            }
+          },
+          "1556870275825": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Convolve",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "CON"
+            }
+          },
+          "1556870275826": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Agate\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "AGBK"
+            }
+          },
+          "1556870275827": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Pinstripe\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "PNBK"
+            }
+          },
+          "1556870275828": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Geometrico",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "GMT"
+            }
+          },
+          "1556870275829": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Geo Net",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "GENT"
+            }
+          },
+          "1556870275830": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Caqui",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "CQI"
+            }
+          },
+          "1556870275831": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Copper Plasma",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "CPL"
+            }
+          },
+          "1556870275832": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Gold\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "GDBK"
+            }
+          },
+          "1556870275833": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Jasper Orange\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "JPBK"
+            }
+          },
+          "1556870275834": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Bronze",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BRZ"
+            }
+          },
+          "1556870275835": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Marfim",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "MRF"
+            }
+          },
+          "1556870275836": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "White\/Dark Green",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "WHDG"
+            }
+          },
+          "1556870275837": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Olive",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BKOV"
+            }
+          },
+          "1556870275839": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Ferrugem\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "FGBK"
+            }
+          },
+          "1556870275840": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "DarkGreen\/Black",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "DGBK"
+            }
+          },
+          "1556870275841": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/DarkGreen\/Caqui",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "BDGC"
+            }
+          },
+          "1556870275842": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Moonwalk Grey",
+              "tags": "",
+              "color": "#ffffff",
+              "letter_code": "MWG"
+            }
+          },
+          "1594923797706": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Satin",
+              "tags": "Satin",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/SATIN_a5bbd79b-bc02-4c77-9e1f-5c4e266b7ca4.jpg"
+            }
+          },
+          "1594923824686": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Ruby",
+              "tags": "Ruby",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/RUBY.jpg"
+            }
+          },
+          "1594923840935": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Rosa",
+              "tags": "Rosa",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/ROSA.jpg"
+            }
+          },
+          "1594923858745": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Neon Lime",
+              "tags": "Neon Lime",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/NEON_LIME.jpg"
+            }
+          },
+          "1594923917191": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Leopard Lead",
+              "tags": "Leopard Lead",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Leopard_Lead.JPG"
+            }
+          },
+          "1594923940200": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Harvest Orange",
+              "tags": "Harvest Orange",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/HARVEST_ORANGE.jpg"
+            }
+          },
+          "1594923967968": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Hale",
+              "tags": "Hale",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/HALE.jpg"
+            }
+          },
+          "1594923989676": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Guava",
+              "tags": "Guava",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Guava.jpg"
+            }
+          },
+          "1594924008547": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Emerald",
+              "tags": "Emerald",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/EMERALD.jpg"
+            }
+          },
+          "1594924030145": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Cafe",
+              "tags": "Cafe",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/CAFE.jpg"
+            }
+          },
+          "1594924044249": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black Leopard",
+              "tags": "Black Leopard",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Black_Leopard_846aa96a-2424-4440-9386-5edbb7446379.JPG"
+            }
+          },
+          "1594924070801": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Aubergine",
+              "tags": "Aubergine",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/ABERGINE.jpg"
+            }
+          },
+          "1596505647844": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Emerald Tie Dye",
+              "tags": "Emerald Tie Dye",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Emerald_Tiedye.JPG"
+            }
+          },
+          "1596505687049": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Tuscany Tie Dye",
+              "tags": "Tuscany Tie Dye",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Tuscany_Yellow_Tiedye.JPG"
+            }
+          },
+          "1596505906617": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Vivid Snake",
+              "tags": "Vivid Snake",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Vivid_Snake.JPG"
+            }
+          },
+          "1596508021492": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Brown Cheetara",
+              "tags": "Brown Cheetara",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/brown_cheetara.JPG"
+            }
+          },
+          "1596508046715": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Blue Cheetara",
+              "tags": "Blue Cheetara",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/BLUE_CHEETARA.JPG"
+            }
+          },
+          "1596747425891": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Flamingo",
+              "tags": "Flamingo",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Flamingo.JPG"
+            }
+          },
+          "1596748238197": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Guava",
+              "tags": "Black\/Guava",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_guava_80ff5384-300f-4143-9c96-c4a277dd77b8.JPG"
+            }
+          },
+          "1596748319252": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Hale",
+              "tags": "Black\/Hale",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_hale.JPG"
+            }
+          },
+          "1599623456526": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black Camo",
+              "tags": "Black Camo",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black-camo.jpg"
+            }
+          },
+          "1599623483446": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Camo\/Lime",
+              "tags": "Black\/Camo\/Lime",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black-camo-lime.jpg"
+            }
+          },
+          "1599623500883": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Python",
+              "tags": "Black\/Python",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black-python.jpg"
+            }
+          },
+          "1599623540647": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Camo\/Lime",
+              "tags": "Camo\/Lime",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/camo-lime.jpg"
+            }
+          },
+          "1599623570478": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Neon Lime\/Black",
+              "tags": "Neon Lime\/Black",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Neon-Lime-Black.jpg"
+            }
+          },
+          "1599623607912": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Python",
+              "tags": "Python",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/python.jpg"
+            }
+          },
+          "1599623638544": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "White\/Neon Lime",
+              "tags": "White\/Neon Lime",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/white-neon-lime.jpg"
+            }
+          },
+          "1599695490228": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Yellow",
+              "tags": "Black\/Yellow",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black-tuscany-yellow.jpg"
+            }
+          },
+          "1599695531610": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Top Blue",
+              "tags": "Black\/Top Blue",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black-top-blue.jpg"
+            }
+          },
+          "1599695573994": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Camo\/Harvest Orange",
+              "tags": "Camo\/Harvest Orange",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/camo-harvest-orange.jpg"
+            }
+          },
+          "1601405184306": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Ruby",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/ruby_a339051d-34bb-46bf-9f1e-85f496a5fdbd.jpg"
+            }
+          },
+          "1601405202275": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "RUBY\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/ruby_black.jpg"
+            }
+          },
+          "1601405218915": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Silver\/Black",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Silver_Black_cb8c8394-44b3-45b8-8c0c-11538dc0e848.jpg"
+            }
+          },
+          "1601405237276": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Brilliant",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/brillaint.jpg"
+            }
+          },
+          "1602121029004": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "DIJON",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/dijon.jpg"
+            }
+          },
+          "1602121118427": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "NAVY\/BLAZER",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/navy_8466ef93-38f1-4455-bc1a-d8e9756a1c46.jpg"
+            }
+          },
+          "1602121259490": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "White\/Neon Lime",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/white_lime.jpg"
+            }
+          },
+          "1602121306655": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/DIJON",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_dijon.jpg"
+            }
+          },
+          "1602122969619": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Beam",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/beam.jpg"
+            }
+          },
+          "1602143634846": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "DIJON\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_dijon_valo.jpg"
+            }
+          },
+          "7c334cdd-9c32-4459-9bcd-c646b8a01610": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": ""
+            }
+          },
+          "cadd7c6e-e440-4404-8e5f-6fb575cc5b4f": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BROWN PYTHON",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/python_dcf861c5-2b9f-4e93-8af5-0699a9945eb0.jpg"
+            }
+          },
+          "cbfa4fba-ee66-4ee1-9285-f0c5a6f4b551": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/CAFE",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/venus_black_cafe.jpg"
+            }
+          },
+          "8e3692d7-e98e-438b-86d5-c876bd5a92ce": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/White",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/BLACK_WHITE_28b7d0b7-3e2f-46e4-8014-3dc4aad4ff1e.jpg"
+            }
+          },
+          "e20ad24e-8554-48e8-a0ac-568eb974d63d": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "CAFE",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/cafe_5be5f8b7-511b-4e0b-a080-32356c352d62.jpg"
+            }
+          },
+          "01c6e62c-0e75-43d5-a6d0-30ca9e47ec5f": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "CAFE\/BLACK",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/valo_black_cafe.jpg"
+            }
+          },
+          "c18869a4-82ab-4d28-bba4-ce2c73be4ce1": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BRILLIANT CAFE",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/aerate_brilliant.jpg"
+            }
+          },
+          "7ee2c488-fc70-4577-82da-e5f8987d8417": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Grafitti",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/luca_black_silver.jpg"
+            }
+          },
+          "9a4cb8a7-11e7-457e-8811-2be5d4a4844b": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/ROSA",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/rosa_black.jpg"
+            }
+          },
+          "44490aa0-dad1-4c5c-9708-854e38ad7743": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/ Vivid Snake",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_vivid_snake.jpg"
+            }
+          },
+          "20301cb2-b1f6-4025-b9bd-7b0a8fa416f6": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "WHITE\/BLACK",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/white_black_5fdbdb11-b3ad-40ea-9ce2-776949666cdd.jpg"
+            }
+          },
+          "ff827f8c-ce3d-4b4a-b145-668bc46acfc6": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "GOUFFRE",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/gouffre.jpg"
+            }
+          },
+          "100005e9-cf2c-44e1-bdf2-87476ad638e5": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/AUBERGINE\/MISSION OLIVE",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/BLACK_AUBERGINE_MISSION_OLIVE.jpg"
+            }
+          },
+          "16b5fc2f-aef1-4cde-9b7d-da93146d8006": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "MISSION OLIVE",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/mission_olive.jpg"
+            }
+          },
+          "321636e2-996e-49f6-8e07-1c021df787b7": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "AUBERGINE\/BLACK",
+              "tags": "",
+              "color": "rgba(0,0,0,0)",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/aubergine_black.jpg"
+            }
+          },
+          "0473bb7c-b4d8-41f4-a2bf-c61e8286a918": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "NAVY CAIMAN",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/navy_caiman_9e636626-8ffa-4f94-92fa-82355e08bedc.jpg"
+            }
+          },
+          "dfd49c0b-5fe2-4341-b3eb-5930e3f892a9": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Satin\/black",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/rosa_45f148d4-5350-41a2-9ef7-a809d80b6e74.jpg"
+            }
+          },
+          "83d3a161-3e59-473f-8435-37d4250e7d9f": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Hale\/Black",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/hale_4d6ef059-429a-4aad-9826-34c2892309fe.jpg"
+            }
+          },
+          "fe2c2adb-d74b-4632-8d7a-868cc0779c4b": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Diamond Back",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/diamond_back.jpg"
+            }
+          },
+          "1f42a9bb-7cf1-4ffd-9d08-d88ef0372d90": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "WILD ORCHID\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/wild_orchid.jpg"
+            }
+          },
+          "6fb89631-2183-4923-b934-22ea0839c403": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "LEAF\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/leaf_green.jpg"
+            }
+          },
+          "6000aaff-90a8-4cca-a398-cbcbbef08c11": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "WILD ORCHID",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/wild_orchid_91219441-ee89-46d8-935e-58f9d9a905b8.jpg"
+            }
+          },
+          "b5227461-4ef2-4f92-9900-4edebda207c6": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/WILD ORCHID",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_orchid.jpg"
+            }
+          },
+          "1c3bac7d-c50b-4f8d-b9c2-954aa7ac57ef": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BANDANA TROOP",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/bandana_troop_62060c4c-5848-41a9-926c-d67538cde196.jpg"
+            }
+          },
+          "2d8a4698-2fcc-4f24-8cc0-708ce534775f": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BANDANA TROOP\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/bandana_troop_black.jpg"
+            }
+          },
+          "69ba9c6c-7728-4e8d-8a5a-742e6e972214": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "LEAF GREEN",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/leaf_green.jpg"
+            }
+          },
+          "f97ae5f5-923b-4d88-8672-8a093456e20a": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "CAMO GREEN",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/camo_green.jpg"
+            }
+          },
+          "86f3f9b7-1627-476e-9411-4de7dfd57e90": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "MISSION OLIVE\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/mission_olive_d0797271-9c56-443b-b195-cd6289ad83a3.jpg"
+            }
+          },
+          "5adac8d0-1373-4353-ab29-887f000bb181": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Leaf GREEN",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_leaf_green.jpg"
+            }
+          },
+          "301e232f-5809-4478-bbc5-fc4c0ba43ca6": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "CITRINA",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/citrina.jpg"
+            }
+          },
+          "c36544aa-c0ae-4a4d-95fc-09f0a6f56e95": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BANDANA WHITE\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/bandana_white_black.jpg"
+            }
+          },
+          "e9412e4a-8bb9-4825-a558-0c6e80d61cfc": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BANDANA WHITE\/CITRINA",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/bandana_white_citrina.jpg"
+            }
+          },
+          "73915384-ecd1-4aee-b4fe-47b5c867bd10": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/CITRINA\/WHITE",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/citrina_white_black.jpg"
+            }
+          },
+          "aaecfa24-0b91-4168-ab32-2ec565e707ab": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "CITRINA\/BLACK\/WHITE",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/citrina_white_black_83f5d810-88b7-42d7-8f2d-7d901170392d.jpg"
+            }
+          },
+          "a1244be2-9e8b-4e9c-8c5b-3982a2b3dd71": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black Snake",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_snake.jpg"
+            }
+          },
+          "ad974987-f569-4a3e-b2b8-3c2653e8e5df": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/CITRINA",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_citrina.jpg"
+            }
+          },
+          "ebdd7446-bd2e-49dc-9016-a8e6325f4490": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Gouffre",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/gouffre_9ed8cedd-5c39-4fe3-b2a3-add7384b2ea4.jpg"
+            }
+          },
+          "96a7b99e-5fdb-44dd-9dda-e7bd4034ed84": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK CROCODILE",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/crocodile.jpg"
+            }
+          },
+          "c780df31-4192-433e-97be-5cf5262e8d52": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Reptile",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/reptile.jpg"
+            }
+          },
+          "ca60a9f1-dbad-40d7-a8eb-84cc42e7f5be": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Cheetara",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/cheetara.jpg"
+            }
+          },
+          "4ba167c6-6490-4ed7-94fe-5b095bebdaa7": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Chic Red",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/chic_red.jpg"
+            }
+          },
+          "8963006a-1abb-4743-b5c5-b9e91e56e90b": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Electric Blue",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/electric_blue.jpg"
+            }
+          },
+          "6a9affaf-03c9-4a5c-bda0-b4dae895d86f": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Electric Blue\/Black",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/electric_blue_black.jpg"
+            }
+          },
+          "819dbb95-2a41-4b6a-be32-2d9c2109b2d6": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Chic Red Caiman",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/chic_red_caiman.jpg"
+            }
+          },
+          "aa4cf109-3b95-45f4-932d-cccbcf65b008": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "CHIC RED\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/chic_red_black.jpg"
+            }
+          },
+          "0a935557-67dd-48dc-9cae-159649aebd20": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black Electric Blue\/Red",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_electric_blue_chic_red.jpg"
+            }
+          },
+          "6f1de0e4-3955-4097-afa5-d086c3e86efa": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "ELECTRIC BLUE\/BLACK\/CHIC RED",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_electric_blue_chic_red_black.jpg"
+            }
+          },
+          "1dd63543-0122-4e31-aa2b-773ec1e76fd5": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "brown leopard",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/brown_leopard_2021.jpg"
+            }
+          },
+          "35e5dad8-234e-49b4-95c7-c061815a024c": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Dark Iris Leopard",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/dark_iris_leopard.jpg"
+            }
+          },
+          "18423117-9bdd-481a-a791-bcd13f73ab05": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Orchid\/Blue",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/Black_Orchid_Blue.jpg"
+            }
+          },
+          "a44f5d9f-b4b9-44ff-82bd-6391fba36b43": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Dark Iris",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/dark_iris.jpg"
+            }
+          },
+          "26563d1a-9c6b-47d2-85cb-c3be454577f3": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "DUSK IRIS\/BLACK\/ROSE ORCHID",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/dark_iris_284e7010-80be-4780-a66b-338743d93c4e.jpg"
+            }
+          },
+          "cb90efc0-b421-4a14-9239-c9482b143eca": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Rose Orchid",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/rose_orchid.jpg"
+            }
+          },
+          "8d3b5427-49d6-4c27-9ea8-e8104c171954": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "DUSK IRIS\/BLACK\/ROSE ORCHID",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_dark_iris.jpg"
+            }
+          },
+          "658a05e0-eb8e-4864-84a9-5798400b25e3": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/ROSE ORCHID",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_rose_orchid.jpg"
+            }
+          },
+          "9816fbe9-9bf9-440a-8735-1baff3c1a490": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "SUGAR PLUM",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/sugar_plum.jpg"
+            }
+          },
+          "402de184-4cbf-43a7-a024-92b5db6fe866": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "RACER BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/racer_black.jpg"
+            }
+          },
+          "497f8602-4de8-4f58-8bb5-ed5c8ae8a192": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BROWN CHEETARA\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/cheetara_black.jpg"
+            }
+          },
+          "3311f1ba-32ce-4e47-9da4-004b41a2547b": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "DUFFLE GREEN CAIMAN",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/duffle_green_caiman.jpg"
+            }
+          },
+          "de5c915f-4b26-4e46-a001-5a8ee831318b": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "DUFFLE GREEN",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/duffle_green.jpg"
+            }
+          },
+          "22319470-0787-4427-b42e-53532e618893": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "GREEN SAGE",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/sage_green.jpg"
+            }
+          },
+          "adb0ea4c-ee58-4a4c-b894-afc81c1a521a": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "ABALONE SHELL",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/ABOLONE_SHELL.jpg"
+            }
+          },
+          "6f4440a5-820b-403a-bd33-eee6c0339e2b": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "STORM",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/STORM.jpg"
+            }
+          },
+          "72978103-40b4-4f42-a6f5-57697f035d5a": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "WHITE IRIDESCENT",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/white_iridescent.jpg"
+            }
+          },
+          "3c9529ec-2719-454c-a930-9612d1794fa5": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Bel Air",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_bel_air.jpg"
+            }
+          },
+          "09d992ce-a3d0-4e69-b4d3-8547d936700a": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/BEL AIR",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_bel_air_8a09dfe9-1fba-416d-a984-d7be010c3957.jpg"
+            }
+          },
+          "f5ae3c1c-b20f-4422-8836-970efc77a576": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Bel Air",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/bel_air_05087f4c-4226-4386-b406-c167544b6f4c.jpg"
+            }
+          },
+          "89360705-854a-4416-87b8-aaaa54097145": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "POMPANO ORANGE",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/pompano_orange.jpg"
+            }
+          },
+          "5a9b4cc5-c358-4f87-8094-a82fb0057842": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/POMPANO ORANGE",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_pompano.jpg"
+            }
+          },
+          "cb54d91f-28b6-4fb5-9fb9-e8e64abf6542": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "POMPANO ORANGE\/BLACK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/pompano_orange_black.jpg"
+            }
+          },
+          "2822c08c-9767-4edb-b544-8d2aed66dcb5": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "REPTILE SAND",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/reptile_sand.jpg"
+            }
+          },
+          "b1f9b2a1-6f86-4723-9b10-0bbb93e08299": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "SAND REPTILE",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/reptile_sand_venus.jpg"
+            }
+          },
+          "b0f6bb96-ddcd-4148-84ac-36dfcc38fd36": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "SAND",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/sand.jpg"
+            }
+          },
+          "a9decf33-63f2-4143-8f39-b5ba7ede1036": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Heather Grey",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/heather_grey_2.jpg"
+            }
+          },
+          "cb9e25c7-94f2-4d2b-8036-0829121d90b2": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Teal Cheetara",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/teal_cheetara_15539a8e-0b2b-4856-a9e1-1994fb64e192.png"
+            }
+          },
+          "bda101ab-2ec0-42ca-aab3-36a854aa224f": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Teal",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/teal_406a1d18-3976-4395-9450-790f71188227.png"
+            }
+          },
+          "202f1857-ff23-42f7-8d3b-5e56fabe0256": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "purple heather",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/purple_heather.jpg"
+            }
+          },
+          "04132228-6a41-48f2-8312-db11a9bbbb60": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "coriander",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/coriander.jpg"
+            }
+          },
+          "ee09cfcb-a6d7-4d4e-b910-75127496d35b": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "purple heather snake",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/purple_heather_snake.jpg"
+            }
+          },
+          "9b9a1cc9-8fe3-46fb-8296-c9d3ca99beeb": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Purple Heather\/Blk\/White",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/purple_heather_black_white.jpg"
+            }
+          },
+          "b2e0424f-ffb5-457f-a5ad-52bab667ff75": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Coriander",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/coriander_black.jpg"
+            }
+          },
+          "081b8fc0-b16b-4a32-92bf-be9c29bb69e2": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black\/Purple Heather",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/pista_heather_purple.jpg"
+            }
+          },
+          "95e01f9d-21b7-4a55-bb91-9243b1538c16": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "VOLCANIC GLASS\/BLK",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/volcanic_glass_camo.jpg"
+            }
+          },
+          "8d208f5e-db89-4acf-8114-e4d8b52a94c4": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "BLACK\/VOLCANIC GLASS",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/volcanic_glass_black.jpg"
+            }
+          },
+          "386ad54c-cc2d-418f-88d3-5bc88bb901fe": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "VOLCANIC GLASS",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/volcanic_glass.jpg"
+            }
+          },
+          "2d15ed8a-20a7-429c-b4b6-16b31be1d02e": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black Shine",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_shine.jpg"
+            }
+          },
+          "b6a57f5f-7c78-440a-b571-1d8767f691dd": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Amparo Blue",
+              "tags": "",
+              "color": "#396cef",
+              "letter_code": ""
+            }
+          },
+          "ac8e64e4-796c-4ae4-bfcd-7066e622238c": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "TANGO",
+              "tags": "",
+              "color": "#ff9941",
+              "letter_code": ""
+            }
+          },
+          "cb4f8386-5e8f-4235-9374-ba971e3dabbf": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Amparo Blue Snake",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/amparo_blue_snake.jpg"
+            }
+          },
+          "f4657021-bbdc-44bc-bb5b-cde08a439525": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Tango Black",
+              "tags": "",
+              "color": "#ff9941",
+              "letter_code": ""
+            }
+          },
+          "c1c638d2-5036-4f18-a24f-3fc34d85ed90": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "",
+              "tags": "",
+              "color": "",
+              "letter_code": ""
+            }
+          },
+          "a01a2320-5e41-4b98-8568-b88b23e9eccc": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "ICED COFFEE",
+              "tags": "",
+              "color": "#e1ab70",
+              "letter_code": ""
+            }
+          },
+          "8293d9c9-d529-4cdb-b0cf-2584ca7969b4": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black White",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_white_a2c7c60a-7735-4dc5-8e59-22a06ae0528e.jpg"
+            }
+          },
+          "1a8fc700-84e2-46ee-a4a6-f11b77bde22c": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Acropoles",
+              "tags": "",
+              "color": "#e6e7e0",
+              "letter_code": ""
+            }
+          },
+          "86729dc8-0a27-45b6-b868-c76cdab9f159": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "JUNIPER CHEETARA",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/juniper_cheetara.jpg"
+            }
+          },
+          "c7c90033-c064-441a-973a-5dcc1c89ec64": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "JUNIPER",
+              "tags": "",
+              "color": "#626748",
+              "letter_code": ""
+            }
+          },
+          "cd635405-a090-4204-8772-0697025cab46": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "rouge",
+              "tags": "",
+              "color": "#d64438",
+              "letter_code": ""
+            }
+          },
+          "a09a33db-c153-4221-ac33-b4b0d5ac85f8": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "shimmer",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/glaze.jpg"
+            }
+          },
+          "2990e42e-f280-4833-9b13-4c8b5f0e8152": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Desejo",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/desejo.jpg"
+            }
+          },
+          "32514667-f556-4641-8b26-3bbbe431f23a": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Black Desejo",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/black_desejo.jpg"
+            }
+          },
+          "57c644ac-70fa-4248-8c2a-6c7be020c1ed": {
+            "type": "color_swatch",
+            "settings": {
+              "title": "Cheetara Rosa",
+              "tags": "",
+              "color": "",
+              "letter_code": "",
+              "image": "shopify:\/\/shop_images\/cheetara_rosa.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1556870275744",
+          "1556870275745",
+          "1556870275746",
+          "1556870275747",
+          "1556870275748",
+          "1556870275749",
+          "1556870275750",
+          "1556870275751",
+          "1556870275752",
+          "1556870275753",
+          "1556870275754",
+          "1556870275755",
+          "1556870275756",
+          "1556870275757",
+          "1556870275758",
+          "1556870275759",
+          "1556870275760",
+          "1556870275761",
+          "1556870275762",
+          "1556870275763",
+          "1556870275764",
+          "1556870275765",
+          "1556870275766",
+          "1556870275767",
+          "1556870275768",
+          "1556870275769",
+          "1556870275770",
+          "1556870275771",
+          "1556870275772",
+          "1556870275773",
+          "1556870275774",
+          "1556870275775",
+          "1556870275776",
+          "1556870275777",
+          "1556870275778",
+          "1556870275779",
+          "1556870275780",
+          "1556870275781",
+          "1556870275782",
+          "1556870275783",
+          "1556870275784",
+          "1556870275785",
+          "1556870275786",
+          "1556870275787",
+          "1556870275788",
+          "1556870275789",
+          "1556870275790",
+          "1556870275791",
+          "1556870275792",
+          "1556870275793",
+          "1556870275794",
+          "1556870275795",
+          "1556870275796",
+          "1556870275797",
+          "1556870275798",
+          "1556870275799",
+          "1556870275800",
+          "1556870275801",
+          "1556870275802",
+          "1556870275803",
+          "1556870275804",
+          "1556870275805",
+          "1556870275806",
+          "1556870275807",
+          "1556870275808",
+          "1556870275809",
+          "1556870275810",
+          "1556870275811",
+          "1556870275813",
+          "1556870275814",
+          "1556870275815",
+          "1556870275816",
+          "1556870275817",
+          "1556870275818",
+          "1556870275819",
+          "1556870275820",
+          "1556870275821",
+          "1556870275822",
+          "1556870275823",
+          "1556870275824",
+          "1556870275825",
+          "1556870275826",
+          "1556870275827",
+          "1556870275828",
+          "1556870275829",
+          "1556870275830",
+          "1556870275831",
+          "1556870275832",
+          "1556870275833",
+          "1556870275834",
+          "1556870275835",
+          "1556870275836",
+          "1556870275837",
+          "1556870275839",
+          "1556870275840",
+          "1556870275841",
+          "1556870275842",
+          "1594923797706",
+          "1594923824686",
+          "1594923840935",
+          "1594923858745",
+          "1594923917191",
+          "1594923940200",
+          "1594923967968",
+          "1594923989676",
+          "1594924008547",
+          "1594924030145",
+          "1594924044249",
+          "1594924070801",
+          "1596505647844",
+          "1596505687049",
+          "1596505906617",
+          "1596508021492",
+          "1596508046715",
+          "1596747425891",
+          "1596748238197",
+          "1596748319252",
+          "1599623456526",
+          "1599623483446",
+          "1599623500883",
+          "1599623540647",
+          "1599623570478",
+          "1599623607912",
+          "1599623638544",
+          "1599695490228",
+          "1599695531610",
+          "1599695573994",
+          "1601405184306",
+          "1601405202275",
+          "1601405218915",
+          "1601405237276",
+          "1602121029004",
+          "1602121118427",
+          "1602121259490",
+          "1602121306655",
+          "1602122969619",
+          "1602143634846",
+          "7c334cdd-9c32-4459-9bcd-c646b8a01610",
+          "cadd7c6e-e440-4404-8e5f-6fb575cc5b4f",
+          "cbfa4fba-ee66-4ee1-9285-f0c5a6f4b551",
+          "8e3692d7-e98e-438b-86d5-c876bd5a92ce",
+          "e20ad24e-8554-48e8-a0ac-568eb974d63d",
+          "01c6e62c-0e75-43d5-a6d0-30ca9e47ec5f",
+          "c18869a4-82ab-4d28-bba4-ce2c73be4ce1",
+          "7ee2c488-fc70-4577-82da-e5f8987d8417",
+          "9a4cb8a7-11e7-457e-8811-2be5d4a4844b",
+          "44490aa0-dad1-4c5c-9708-854e38ad7743",
+          "20301cb2-b1f6-4025-b9bd-7b0a8fa416f6",
+          "ff827f8c-ce3d-4b4a-b145-668bc46acfc6",
+          "100005e9-cf2c-44e1-bdf2-87476ad638e5",
+          "16b5fc2f-aef1-4cde-9b7d-da93146d8006",
+          "321636e2-996e-49f6-8e07-1c021df787b7",
+          "0473bb7c-b4d8-41f4-a2bf-c61e8286a918",
+          "dfd49c0b-5fe2-4341-b3eb-5930e3f892a9",
+          "83d3a161-3e59-473f-8435-37d4250e7d9f",
+          "fe2c2adb-d74b-4632-8d7a-868cc0779c4b",
+          "1f42a9bb-7cf1-4ffd-9d08-d88ef0372d90",
+          "6fb89631-2183-4923-b934-22ea0839c403",
+          "6000aaff-90a8-4cca-a398-cbcbbef08c11",
+          "b5227461-4ef2-4f92-9900-4edebda207c6",
+          "1c3bac7d-c50b-4f8d-b9c2-954aa7ac57ef",
+          "2d8a4698-2fcc-4f24-8cc0-708ce534775f",
+          "69ba9c6c-7728-4e8d-8a5a-742e6e972214",
+          "f97ae5f5-923b-4d88-8672-8a093456e20a",
+          "86f3f9b7-1627-476e-9411-4de7dfd57e90",
+          "5adac8d0-1373-4353-ab29-887f000bb181",
+          "301e232f-5809-4478-bbc5-fc4c0ba43ca6",
+          "c36544aa-c0ae-4a4d-95fc-09f0a6f56e95",
+          "e9412e4a-8bb9-4825-a558-0c6e80d61cfc",
+          "73915384-ecd1-4aee-b4fe-47b5c867bd10",
+          "aaecfa24-0b91-4168-ab32-2ec565e707ab",
+          "a1244be2-9e8b-4e9c-8c5b-3982a2b3dd71",
+          "ad974987-f569-4a3e-b2b8-3c2653e8e5df",
+          "ebdd7446-bd2e-49dc-9016-a8e6325f4490",
+          "96a7b99e-5fdb-44dd-9dda-e7bd4034ed84",
+          "c780df31-4192-433e-97be-5cf5262e8d52",
+          "ca60a9f1-dbad-40d7-a8eb-84cc42e7f5be",
+          "4ba167c6-6490-4ed7-94fe-5b095bebdaa7",
+          "8963006a-1abb-4743-b5c5-b9e91e56e90b",
+          "6a9affaf-03c9-4a5c-bda0-b4dae895d86f",
+          "819dbb95-2a41-4b6a-be32-2d9c2109b2d6",
+          "aa4cf109-3b95-45f4-932d-cccbcf65b008",
+          "0a935557-67dd-48dc-9cae-159649aebd20",
+          "6f1de0e4-3955-4097-afa5-d086c3e86efa",
+          "1dd63543-0122-4e31-aa2b-773ec1e76fd5",
+          "35e5dad8-234e-49b4-95c7-c061815a024c",
+          "18423117-9bdd-481a-a791-bcd13f73ab05",
+          "a44f5d9f-b4b9-44ff-82bd-6391fba36b43",
+          "26563d1a-9c6b-47d2-85cb-c3be454577f3",
+          "cb90efc0-b421-4a14-9239-c9482b143eca",
+          "8d3b5427-49d6-4c27-9ea8-e8104c171954",
+          "658a05e0-eb8e-4864-84a9-5798400b25e3",
+          "9816fbe9-9bf9-440a-8735-1baff3c1a490",
+          "402de184-4cbf-43a7-a024-92b5db6fe866",
+          "497f8602-4de8-4f58-8bb5-ed5c8ae8a192",
+          "3311f1ba-32ce-4e47-9da4-004b41a2547b",
+          "de5c915f-4b26-4e46-a001-5a8ee831318b",
+          "22319470-0787-4427-b42e-53532e618893",
+          "adb0ea4c-ee58-4a4c-b894-afc81c1a521a",
+          "6f4440a5-820b-403a-bd33-eee6c0339e2b",
+          "72978103-40b4-4f42-a6f5-57697f035d5a",
+          "3c9529ec-2719-454c-a930-9612d1794fa5",
+          "09d992ce-a3d0-4e69-b4d3-8547d936700a",
+          "f5ae3c1c-b20f-4422-8836-970efc77a576",
+          "89360705-854a-4416-87b8-aaaa54097145",
+          "5a9b4cc5-c358-4f87-8094-a82fb0057842",
+          "cb54d91f-28b6-4fb5-9fb9-e8e64abf6542",
+          "2822c08c-9767-4edb-b544-8d2aed66dcb5",
+          "b1f9b2a1-6f86-4723-9b10-0bbb93e08299",
+          "b0f6bb96-ddcd-4148-84ac-36dfcc38fd36",
+          "a9decf33-63f2-4143-8f39-b5ba7ede1036",
+          "cb9e25c7-94f2-4d2b-8036-0829121d90b2",
+          "bda101ab-2ec0-42ca-aab3-36a854aa224f",
+          "202f1857-ff23-42f7-8d3b-5e56fabe0256",
+          "04132228-6a41-48f2-8312-db11a9bbbb60",
+          "ee09cfcb-a6d7-4d4e-b910-75127496d35b",
+          "9b9a1cc9-8fe3-46fb-8296-c9d3ca99beeb",
+          "b2e0424f-ffb5-457f-a5ad-52bab667ff75",
+          "081b8fc0-b16b-4a32-92bf-be9c29bb69e2",
+          "95e01f9d-21b7-4a55-bb91-9243b1538c16",
+          "8d208f5e-db89-4acf-8114-e4d8b52a94c4",
+          "386ad54c-cc2d-418f-88d3-5bc88bb901fe",
+          "2d15ed8a-20a7-429c-b4b6-16b31be1d02e",
+          "b6a57f5f-7c78-440a-b571-1d8767f691dd",
+          "ac8e64e4-796c-4ae4-bfcd-7066e622238c",
+          "cb4f8386-5e8f-4235-9374-ba971e3dabbf",
+          "f4657021-bbdc-44bc-bb5b-cde08a439525",
+          "c1c638d2-5036-4f18-a24f-3fc34d85ed90",
+          "a01a2320-5e41-4b98-8568-b88b23e9eccc",
+          "8293d9c9-d529-4cdb-b0cf-2584ca7969b4",
+          "1a8fc700-84e2-46ee-a4a6-f11b77bde22c",
+          "86729dc8-0a27-45b6-b868-c76cdab9f159",
+          "c7c90033-c064-441a-973a-5dcc1c89ec64",
+          "cd635405-a090-4204-8772-0697025cab46",
+          "a09a33db-c153-4221-ac33-b4b0d5ac85f8",
+          "2990e42e-f280-4833-9b13-4c8b5f0e8152",
+          "32514667-f556-4641-8b26-3bbbe431f23a",
+          "57c644ac-70fa-4248-8c2a-6c7be020c1ed"
+        ],
+        "settings": {}
+      },
+      "product": {
+        "type": "product",
+        "settings": {
+          "show_share_buttons": false,
+          "remaining_stock_max": 3,
+          "display_breadcrumb": true
+        }
+      },
+      "preset__featured-collection": {
+        "type": "preset__featured-collection",
+        "settings": {
+          "show_related_products": true,
+          "bg": "rgba(0,0,0,0)",
+          "related_title": "You May Also Like",
+          "number_of_products": 4,
+          "collection": ""
+        }
+      },
+      "size-chart": {
+        "type": "size-chart",
+        "blocks": {
+          "1556479240456": {
+            "type": "size-chart",
+            "settings": {
+              "title": "Size Chart",
+              "types": "sizechart:women",
+              "html": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0744\/4099\/files\/womens-size-chart.jpg?10177\">"
+            }
+          },
+          "1566338100931": {
+            "type": "size-chart",
+            "settings": {
+              "title": "Size Chart",
+              "types": "size chart:womens",
+              "html": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0744\/4099\/files\/womens-size-chart.jpg?10177\">"
+            }
+          }
+        },
+        "block_order": [
+          "1556479240456",
+          "1566338100931"
+        ],
+        "settings": {}
+      },
+      "technology": {
+        "type": "technology",
+        "blocks": {
+          "1537254871838": {
+            "type": "fabric",
+            "settings": {
+              "title": "Infinity",
+              "image": "shopify:\/\/shop_images\/koral_infinity_logo_1.jpg",
+              "message": "<p>Recognizable by its alluring opaque shine, Infinity&#x27;s beauty extends beyond its luxurious second skin surface. Developed with stretch fiber technology, Xtra Life LYCRA® Sport and Intimate LYCRA® provides lightweight, flattering support and muscle support without sacrificing comfort. It also prevents fabric deterioration and shape loss that comes with exposure to chlorine during swimming or washing.<\/p>",
+              "icons": "chlorine-resistant,color-absolute,h20,quick-dry"
+            }
+          },
+          "16f775b3-2c3c-4ef3-80f8-63ce17104f89": {
+            "type": "fabric",
+            "settings": {
+              "title": "Blackout",
+              "image": "shopify:\/\/shop_images\/blackout_logo_tm_500_12.jpg",
+              "message": "<p>Our new fabric, Koral Blackout™, offers incredible support, durable stretch and high compression, increasing oxygen delivery to active muscles and reduces lactic acid build-up and muscle fatigue.  Soft and smooth, Blackout has a moisture management finish that swiftly wicks away perspiration to keep you cool, confident and comfortable through high-endurance workouts.<\/p>",
+              "icons": "anti-pilling,chlorine-resistant,color-absolute,compression,h20,moisture-wicking"
+            }
+          },
+          "1537257180194": {
+            "type": "fabric",
+            "settings": {
+              "title": "Scuba",
+              "message": "<p>Our lofty, low sheen double knit scuba fabric is made of finely spun fibers, which are extremely smooth and structured. With great stretch and resiliency, similar to characteristics of neoprene, this fabric is perfect for creating soft volume. Moreover, scuba effortlessly molds to the body creating a slimming shape without constriction. Lightweight yet extremely warm, scuba is ideal for seamlessly transitioning you from season to season.<\/p>",
+              "icons": "easy-care,compression,anti-bacterial,color-absolute"
+            }
+          },
+          "1537257501047": {
+            "type": "fabric",
+            "settings": {
+              "title": "Netz",
+              "message": "<p>Breezy and effortless, our silky Tencel® jersey drapes the body in cool softness. Botanic in origin and extremely ecofriendly, Tencel® textiles are more absorbent than cotton, softer than silk and cooler than linen. With everlasting color and incredible sheen, our Tencel® jersey pieces retain exceptional brilliance through repeated washings and wear.<\/p>",
+              "icons": "breatheable,quick-dry,color-absolute"
+            }
+          },
+          "1537257647504": {
+            "type": "fabric",
+            "settings": {
+              "title": "Jacquard",
+              "message": "<p>Extremely soft and luxurious, our jacquard fabrics feature a raised patternwoven into the fabric, creating a textured non-print, printed effect. Innovative performance features like compression, flexibility and moisture absorption solidify our jacquard fabric as not only beautiful, but functional. The Amni Polyamide yarn used in jacquard knitting feature UV protection that delivers maximum coverage for UV-A and UV-B rays with UPF 50+, guarding the skin against the adverse effects from the sun.<\/p>",
+              "icons": "anti-pilling,compression,uv-protection,anti-bacterial"
+            }
+          },
+          "1537257701123": {
+            "type": "fabric",
+            "settings": {
+              "title": "Powermesh",
+              "message": "<p>Uninhibiting, durable and extremely comfortable, powermesh provides pliable support in our sports performance bras and leggings.<\/p>",
+              "icons": "h20,quick-dry,compression,breatheable"
+            }
+          }
+        },
+        "block_order": [
+          "1537254871838",
+          "16f775b3-2c3c-4ef3-80f8-63ce17104f89",
+          "1537257180194",
+          "1537257501047",
+          "1537257647504",
+          "1537257701123"
+        ],
+        "settings": {
+          "title": "Fabric Technology"
+        }
+      },
+      "technology-icons": {
+        "type": "technology-icons",
+        "blocks": {
+          "1537252028189": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Anti-pilling",
+              "image": "shopify:\/\/shop_images\/anitpiling_b26caec8-150b-4789-b166-955f0d2f36e5_1.jpg",
+              "desc": "<p>Our anti-pilling fabrics guarantee resistance to abrasion to keep your garment looking smooth and refined over time.<\/p>"
+            }
+          },
+          "1537252209653": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Chlorine Resistant",
+              "image": "shopify:\/\/shop_images\/clresist_1.jpg",
+              "desc": "<p>Our Chlorine Resistant technology withstands against fabric deterioration and shape loss that comes with exposure to chlorine during swimming or washing.<\/p>"
+            }
+          },
+          "1537252291483": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Color Absolute",
+              "image": "shopify:\/\/shop_images\/faderesist_1.jpg",
+              "desc": "<p>Color Absolute fabrics ensure your garments will retain their brilliant colors and vibrant prints through workouts and washings.<\/p>"
+            }
+          },
+          "1537252335393": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Compression",
+              "image": "shopify:\/\/shop_images\/compression_1.jpg",
+              "desc": "<p>Our Compression technology is developed to help improve your mobility, increase oxygen delivery to active muscles, reduce lactic acid build-up, and deter muscle fatigue.<\/p>"
+            }
+          },
+          "1537252366558": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "H20",
+              "image": "shopify:\/\/shop_images\/waterwear_1.jpg",
+              "desc": "<p>H20 garments feel like your second skin. Developed for training or play, our water-safe wear are fit for traversing from studio to terrain to sea.<\/p>"
+            }
+          },
+          "1537252389034": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Moisture Wicking",
+              "image": "shopify:\/\/shop_images\/moisturewick_1.jpg",
+              "desc": "<p>Our Moisture Movement system swiftly wicks perspiration off your skin and out to the exterior of the fabric, ensuring you stay dry and comfortable in sweltering heat or strenuous workouts.<\/p>"
+            }
+          },
+          "1537252432986": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Quick Dry",
+              "image": "shopify:\/\/shop_images\/quickdry_1.jpg",
+              "desc": "<p>Our Quick Dry garments rapidly absorb and release moisture to accelerate the evaporative drying rate, keeping your body temperature balanced so you can stay comfortable and focused on your workout.<\/p>"
+            }
+          },
+          "1537252461820": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Easy Care",
+              "image": "shopify:\/\/shop_images\/easycare_1.jpg",
+              "desc": "<p>Our Easy Care garments are machine washable and dryable, requiring little to no special care. However, due to specific style construction, it is always highly recommended to follow the interior care label.<\/p>"
+            }
+          },
+          "1537252487233": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "UV Protection",
+              "image": "shopify:\/\/shop_images\/uv-protection.jpg",
+              "desc": "<p>Our UV Protection fabrics are developed with advanced fiber technology and weave structure, offering the ultraviolet protective properties of SPF 50+ to inhibit adverse exposure to the sun.<\/p>"
+            }
+          },
+          "1537252504824": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Anti-Bacterial",
+              "image": "shopify:\/\/shop_images\/anti-bacterial.jpg",
+              "desc": "<p>Our fabrics treated with antibacterial coating don&#x27;t allow disease-causing bacteria to stick to and grow on their surface - creating an infection and odor free environment.<\/p>"
+            }
+          },
+          "1537252525686": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Eco-Friendly",
+              "image": "shopify:\/\/shop_images\/eco-friendly.jpg",
+              "desc": "<p>Our Tencel jersey is derived from eco-friendly resources and is sustainably produced using less water and energy.<\/p>"
+            }
+          },
+          "1537257561663": {
+            "type": "technology_icon",
+            "settings": {
+              "title": "Breatheable",
+              "image": "shopify:\/\/shop_images\/breathability.jpg",
+              "desc": ""
+            }
+          }
+        },
+        "block_order": [
+          "1537252028189",
+          "1537252209653",
+          "1537252291483",
+          "1537252335393",
+          "1537252366558",
+          "1537252389034",
+          "1537252432986",
+          "1537252461820",
+          "1537252487233",
+          "1537252504824",
+          "1537252525686",
+          "1537257561663"
+        ],
+        "settings": {}
+      },
+      "tag_mappings": {
+        "type": "tag_mappings",
+        "blocks": {
+          "1571782118700": {
+            "type": "tag_mapping",
+            "settings": {
+              "title": "final_sale",
+              "label": "This item is FINAL SALE",
+              "visible": true,
+              "add_to_cart": true,
+              "prop_key_value": "Exclusive:${label}"
+            }
+          },
+          "1573505807617": {
+            "type": "tag_mapping",
+            "settings": {
+              "title": "ecomm exclusive",
+              "label": "Exclusively Ours",
+              "visible": true,
+              "add_to_cart": true,
+              "prop_key_value": "Exclusives:${label}"
+            }
+          },
+          "1583283139403": {
+            "type": "tag_mapping",
+            "settings": {
+              "title": "#Expected to Ship:",
+              "label": "",
+              "visible": true,
+              "add_to_cart": true,
+              "prop_key_value": "${prefix}:${label}"
+            }
+          }
+        },
+        "block_order": [
+          "1571782118700",
+          "1573505807617",
+          "1583283139403"
+        ],
+        "settings": {}
+      },
+      "ambassador": {
+        "type": "ambassador",
+        "settings": {}
+      },
+      "preset__recently-viewed": {
+        "type": "preset__recently-viewed",
+        "settings": {
+          "show_recently_viewed": true,
+          "bg": "#ffffff",
+          "title": "Recently Viewed",
+          "number_of_products": 4
+        }
+      },
+      "koral-krew": {
+        "type": "koral-krew",
+        "blocks": {
+          "1560375125084": {
+            "type": "koral-krew-block",
+            "settings": {
+              "kk_url": "shopify:\/\/pages\/koral-krew-form",
+              "kk_image_d": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V1.jpg",
+              "kk_image_m": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V1MOBILE_7db15388-e96f-4d76-a239-9689fc0c83c5.jpg"
+            }
+          },
+          "1560375521004": {
+            "type": "koral-krew-block",
+            "settings": {
+              "kk_url": "",
+              "kk_image_d": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V12.jpg",
+              "kk_image_m": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V1MOBILE2_6bca7eb5-700c-4a8b-885a-a96f61ae7b93.jpg"
+            }
+          },
+          "1560375534515": {
+            "type": "koral-krew-block",
+            "settings": {
+              "kk_url": "",
+              "kk_image_d": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V13.jpg",
+              "kk_image_m": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V1MOBILE3_301e3b6d-5524-40dd-9b66-91c0f84a7ff1.jpg"
+            }
+          },
+          "1560375545601": {
+            "type": "koral-krew-block",
+            "settings": {
+              "kk_url": "",
+              "kk_image_d": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V14.jpg",
+              "kk_image_m": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V1MOBILE4_c461d50b-7ace-4b56-ae1f-ec4a8022cc25.jpg"
+            }
+          },
+          "1560375557398": {
+            "type": "koral-krew-block",
+            "settings": {
+              "kk_url": "shopify:\/\/pages\/koral-krew-form",
+              "kk_image_d": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V15.jpg",
+              "kk_image_m": "shopify:\/\/shop_images\/KREW_LANDING_PAGE_V1MOBILE5_9d20599b-1a23-496c-abb6-df4417ed2012.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1560375125084",
+          "1560375521004",
+          "1560375534515",
+          "1560375545601",
+          "1560375557398"
+        ],
+        "settings": {}
+      },
+      "mens-lp": {
+        "type": "mens-lp",
+        "blocks": {
+          "1559870211894": {
+            "type": "mens-lp-section",
+            "settings": {
+              "mlp_link": "shopify:\/\/collections\/mens-new-arrivals",
+              "mlp_img_desktop": "shopify:\/\/shop_images\/MENS_LP_1_1.jpg",
+              "mlp_img_mobile": "shopify:\/\/shop_images\/MENS_LANDING_PAGEMOBILE_V1.jpg"
+            }
+          },
+          "1559870235185": {
+            "type": "mens-lp-section",
+            "settings": {
+              "mlp_link": "shopify:\/\/collections\/mens-designer-picks",
+              "mlp_img_desktop": "shopify:\/\/shop_images\/MENS_LP_2.jpg",
+              "mlp_img_mobile": "shopify:\/\/shop_images\/MENS_LANDING_PAGEMOBILE_V12.jpg"
+            }
+          },
+          "1559870260743": {
+            "type": "mens-lp-section",
+            "settings": {
+              "mlp_link": "shopify:\/\/collections\/mens-koral-kore",
+              "mlp_img_desktop": "shopify:\/\/shop_images\/MENS_LP_3.jpg",
+              "mlp_img_mobile": "shopify:\/\/shop_images\/MENS_LANDING_PAGEMOBILE_V13.jpg"
+            }
+          },
+          "1559870313836": {
+            "type": "mens-lp-section",
+            "settings": {
+              "mlp_link": "shopify:\/\/collections\/mens-new-arrivals",
+              "mlp_img_desktop": "shopify:\/\/shop_images\/MENS_LP_4.jpg",
+              "mlp_img_mobile": "shopify:\/\/shop_images\/MENS_LANDING_PAGEMOBILE_V14.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1559870211894",
+          "1559870235185",
+          "1559870260743",
+          "1559870313836"
+        ],
+        "settings": {}
+      },
+      "womens-lp-hero": {
+        "type": "womens-lp-hero",
+        "settings": {
+          "hero_sec_link": "shopify:\/\/collections\/new-arrivals",
+          "hero_sec_image_d": "shopify:\/\/shop_images\/koral-hp-hero-2.jpg",
+          "hero_sec_image_m": "shopify:\/\/shop_images\/06.04.19_SUMMER19_LAUNCH_MOBILE.jpg"
+        }
+      },
+      "womens-lp-video": {
+        "type": "womens-lp-video",
+        "settings": {
+          "video_header": "Mystical Garden Summer 19",
+          "video_iframe": "<iframe style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" src=\"https:\/\/player.vimeo.com\/video\/340250074?autoplay=0&amp;loop=1&amp;autopause=0\" width=\"640\" height=\"360\" frameborder=\"0\" title=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\"><\/iframe>"
+        }
+      },
+      "womens-lp-sale": {
+        "type": "womens-lp-sale",
+        "settings": {
+          "sale_sec_link": "shopify:\/\/collections\/sale",
+          "sale_sec_image_d": "shopify:\/\/shop_images\/sale-banner.jpg",
+          "sale_sec_image_m": "shopify:\/\/shop_images\/KRL042-WEBSITE-hp-refresh-Womens-v5-01-save_10.jpg"
+        }
+      },
+      "preset__instafeed": {
+        "type": "preset__instafeed",
+        "settings": {
+          "title": "Follow Koral on Instagram",
+          "bg-color": "",
+          "link": "",
+          "link_text": "",
+          "custom_html": "<div data-crl8-container-id=\"homepage\"><\/div>\n<script>\nvar CRL8_SITENAME = 'koral-3ohsxe'; !function(){var e=window.crl8=window.crl8||{},n=!1,i=[];e.ready=function(e){n?e():i.push(e)},e.pixel=e.pixel||function(){e.pixel.q.push(arguments)},e.pixel.q=e.pixel.q||[];var t=window.document,o=t.createElement(\"script\"),c=e.debug||-1!==t.location.search.indexOf(\"crl8-debug=true\")?\"js\":\"min.js\";o.src=t.location.protocol+\"\/\/cdn.curalate.com\/sites\/\"+CRL8_SITENAME+\"\/site\/latest\/site.\"+c,o.onload=function(){n=!0,i.forEach(function(e){e()})};var r=t.getElementsByTagName(\"script\")[0];r.parentNode.insertBefore(o,r.nextSibling)}();\n<\/script>",
+          "access-token": "",
+          "autoplay": true,
+          "speed": 3000,
+          "effect": "slide",
+          "items-desktop": 4,
+          "feed-limit": 12,
+          "navigation": true,
+          "dots": false,
+          "space_between": 30,
+          "bg_size": "cover",
+          "bg_position": "center center"
+        }
+      },
+      "womens-staggered-block": {
+        "type": "womens-staggered-block",
+        "settings": {
+          "stag_sec_image_1": "shopify:\/\/shop_images\/KRL042-WEBSITE-landing-Womens-v6-02_03_c2bc1797-3fea-4eec-91db-81b36987ad7f.jpg",
+          "stag_sec_header_1": "HINTS OF SUMMER",
+          "stag_sec_subheader_1": "Ready-to-copy outfits<br>for warmer days ahead.",
+          "stag_sec_cta_1": "SHOP NOW",
+          "stag_sec_link_1": "shopify:\/\/collections\/streetstyle",
+          "stag_sec_image_2": "shopify:\/\/shop_images\/KRL042-WEBSITE-landing-Womens-v6-02_05_eea659c7-fb34-43ef-9631-620f5455d6e3.jpg",
+          "stag_sec_header_2": "COLOR YOUR STYLE",
+          "stag_sec_subheader_2": "Add a pop of color to your workout.",
+          "stag_sec_cta_2": "SHOP EXCLUSIVES",
+          "stag_sec_link_2": "shopify:\/\/collections\/colors-of-the-season"
+        }
+      },
+      "collection-filters": {
+        "type": "collection-filters",
+        "settings": {}
+      },
+      "collection-template-bc-sf-filter": {
+        "type": "collection-template-bc-sf-filter",
+        "settings": {
+          "products_per_page": 15,
+          "products_per_row": 3,
+          "products_per_row_mobile": 2,
+          "show_vendor": true,
+          "show_price": true,
+          "show_sale_label": true,
+          "show_sold_out_label": true,
+          "active_image_swap": true,
+          "show_sorting": true,
+          "soldout_label": "Sold out",
+          "sale_label": "Sale",
+          "from": "from",
+          "nosto_id": ""
+        }
+      },
+      "shop-the-look": {
+        "type": "shop-the-look",
+        "settings": {}
+      },
+      "careers": {
+        "type": "careers",
+        "blocks": {
+          "1581366385902": {
+            "type": "career-block",
+            "settings": {
+              "title": "Shopify Admin",
+              "description": "Los Angeles, Open To Remote",
+              "link_text": "View Position",
+              "link": "shopify:\/\/pages\/career-shopify-admin",
+              "color": "#000"
+            }
+          }
+        },
+        "block_order": [
+          "1581366385902"
+        ],
+        "settings": {}
+      },
+      "1591837638289": {
+        "type": "preset__static-image",
+        "disabled": true,
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/DT5_ffe68e36-0ef5-48c5-93bd-11fe780cae9e.gif",
+          "static_image_mobile": "shopify:\/\/shop_images\/MB5_343fe6c9-39d4-469f-9ec2-00c76e531ce2.gif",
+          "static_image_alt": "accessorize",
+          "static_image_link": "shopify:\/\/collections\/accessories"
+        }
+      },
+      "1599696979683": {
+        "type": "preset__static-image",
+        "disabled": true,
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/bca_desktop_banner.jpg",
+          "static_image_mobile": "shopify:\/\/shop_images\/bca_mobile_banner_09d78de3-1d5c-480f-8b47-c3c1dc2743dd.jpg",
+          "static_image_alt": "Koral x Cancer Cartel",
+          "static_image_link": "shopify:\/\/collections\/breast-cancer-awareness"
+        }
+      },
+      "1599715508962": {
+        "type": "preset__featured-collection",
+        "settings": {
+          "show_related_products": true,
+          "bg": "#ffffff",
+          "related_title": "New Arrivals",
+          "number_of_products": 5,
+          "collection": "new-arrivals"
+        }
+      },
+      "1600199985520": {
+        "type": "preset__static-image",
+        "disabled": true,
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/HP1B.jpg",
+          "static_image_mobile": "shopify:\/\/shop_images\/MOBILE1B.jpg",
+          "static_image_alt": "Shop New Arrivals",
+          "static_image_link": "shopify:\/\/collections\/new-arrivals"
+        }
+      },
+      "1605081293c7bdf9b6": {
+        "type": "preset__static-image",
+        "disabled": true,
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/12_22_21_KITS_SALE4A.gif",
+          "static_image_mobile": "shopify:\/\/shop_images\/12_22_21_KITS_SALE4.jpg",
+          "static_image_alt": "35% off Koral Kits",
+          "static_image_link": "shopify:\/\/pages\/kits"
+        }
+      },
+      "16055894129ad7db76": {
+        "type": "preset__tri-banner",
+        "settings": {
+          "container": "full-width",
+          "left_bg": "#ffffff",
+          "left_image": "shopify:\/\/shop_images\/jumpsuits_9b537950-3a40-4c8f-bf0a-80d905406a47.jpg",
+          "left_image_mobile": "shopify:\/\/shop_images\/jumpsuits_435ebad6-4e4a-477b-86e2-b4f55f3bf09f.jpg",
+          "left_padding-type-top-bottom": "py-",
+          "left_padding-top-bottom": 3,
+          "left_padding-type-left-right": "px-",
+          "left_padding-left-right": 1,
+          "left_text_layout": "below",
+          "left_text_pos": "align-items-md-center justify-content-md-center",
+          "left_text_pos_mobile": "align-items-center justify-content-center",
+          "left_title": "",
+          "left_subtitle": "",
+          "left_message": "",
+          "left_color": "#000000",
+          "left_message_width": 1000,
+          "left_text_align": "text-center",
+          "left_btn_color": "#000000",
+          "left_btn_bg": "rgba(0,0,0,0)",
+          "left_btn_border_color": "#ffffff",
+          "left_link": "shopify:\/\/collections\/womens-jumpsuits",
+          "left_link_text": "SHOP JUMPSUITS",
+          "left_link_type": "container",
+          "center_bg": "#ffffff",
+          "center_image": "shopify:\/\/shop_images\/LEGGINGS_e23a264d-bbfe-476a-97f2-fec07a61e3ae.jpg",
+          "center_image_mobile": "shopify:\/\/shop_images\/LEGGINGS_35e2053d-aef2-4ac4-8bae-ebef0235c422.jpg",
+          "center_padding-type-top-bottom": "py-",
+          "center_padding-top-bottom": 3,
+          "center_padding-type-left-right": "px-",
+          "center_padding-left-right": 1,
+          "center_text_layout": "below",
+          "center_text_pos": "align-items-md-center justify-content-md-center",
+          "center_text_pos_mobile": "align-items-center justify-content-center",
+          "center_title": "",
+          "center_subtitle": "",
+          "center_message": "",
+          "center_color": "#000000",
+          "center_message_width": 1000,
+          "center_text_align": "text-center",
+          "center_btn_color": "#000000",
+          "center_btn_bg": "rgba(0,0,0,0)",
+          "center_btn_border_color": "rgba(0,0,0,0)",
+          "center_link": "shopify:\/\/collections\/leggings",
+          "center_link_text": "LEGGINGS",
+          "center_link_type": "container",
+          "right_bg": "#ffffff",
+          "right_image": "shopify:\/\/shop_images\/BRAS_67500e7f-d84a-40b1-9189-957a3cdc9ee0.jpg",
+          "right_image_mobile": "shopify:\/\/shop_images\/BRAS_5bdfb7fa-323d-47e1-9f0c-883c9b9b3f11.jpg",
+          "right_padding-type-top-bottom": "py-",
+          "right_padding-top-bottom": 3,
+          "right_padding-type-left-right": "px-",
+          "right_padding-left-right": 1,
+          "right_text_layout": "below",
+          "right_text_pos": "align-items-md-center justify-content-md-center",
+          "right_text_pos_mobile": "align-items-center justify-content-center",
+          "right_title": "",
+          "right_subtitle": "",
+          "right_message": "",
+          "right_color": "#000000",
+          "right_message_width": 1000,
+          "right_text_align": "text-center",
+          "right_btn_color": "#000000",
+          "right_btn_bg": "rgba(0,0,0,0)",
+          "right_btn_border_color": "#000000",
+          "right_link": "shopify:\/\/collections\/bras",
+          "right_link_text": "SPORTS BRAS",
+          "right_link_type": "container"
+        }
+      },
+      "1605849209c95d5ece": {
+        "type": "preset__2-columns-banner",
+        "disabled": true,
+        "settings": {
+          "swap": false,
+          "container": "full-width",
+          "left_width": 6,
+          "left_bg": "#ffffff",
+          "left_image": "shopify:\/\/shop_images\/sale_tops.jpg",
+          "left_image_mobile": "shopify:\/\/shop_images\/sale_tops_3ebac4d6-cd61-40ee-8ba3-a8c0a684b54d.jpg",
+          "left_padding-type-top-bottom": "pt-",
+          "left_padding-top-bottom": 1,
+          "left_padding-type-left-right": "px-",
+          "left_padding-left-right": 4,
+          "left_text_layout": "top",
+          "left_text_pos": "align-items-md-center justify-content-md-center",
+          "left_text_pos_mobile": "align-items-center justify-content-center",
+          "left_title": "",
+          "left_subtitle": "",
+          "left_message": "",
+          "left_color": "rgba(0,0,0,0)",
+          "left_message_width": 1000,
+          "left_text_align": "text-left",
+          "left_btn_color": "rgba(0,0,0,0)",
+          "left_btn_bg": "rgba(0,0,0,0)",
+          "left_link": "shopify:\/\/collections\/sale-tops",
+          "left_link_text": "",
+          "left_link_type": "container",
+          "right_bg": "#ffffff",
+          "right_image": "shopify:\/\/shop_images\/sale_bottoms.jpg",
+          "right_image_mobile": "shopify:\/\/shop_images\/sale_bottoms_1ee85e6e-9e89-46a3-82e1-492a56e6fbaa.jpg",
+          "right_padding-type-top-bottom": "py-",
+          "right_padding-top-bottom": 1,
+          "right_padding-type-left-right": "px-",
+          "right_padding-left-right": 4,
+          "right_text_layout": "top",
+          "right_text_pos": "align-items-md-center justify-content-md-center",
+          "right_text_pos_mobile": "align-items-center justify-content-center",
+          "right_title": "",
+          "right_subtitle": "",
+          "right_message": "",
+          "right_color": "rgba(0,0,0,0)",
+          "right_message_width": 1000,
+          "right_text_align": "text-left",
+          "right_btn_color": "rgba(0,0,0,0)",
+          "right_btn_bg": "rgba(0,0,0,0)",
+          "right_link": "shopify:\/\/collections\/sale-bottoms",
+          "right_link_text": "",
+          "right_link_type": "container"
+        }
+      },
+      "product__bundle": {
+        "type": "product__bundle",
+        "blocks": {
+          "6d402d39-c1f9-4b9c-8cfc-ecf29fd24124": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/azra-infinity-bikini-bra-desejo",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/desejo_bikini._jill_pec.jpg",
+              "image_hover": "shopify:\/\/shop_images\/desejo_bikini._jill_pec_0d96c7b9-520d-410e-a156-39ebe71e0aa2.jpg",
+              "name": "Desejo\/Black Reversible Bikini Kit",
+              "price": "$101 ($154 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "af2bc409-6537-4cd7-bba5-5f246b911a5d": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/gal-glaze-reversible-bikini-bra-shimmer-black",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/gal_shimmer_bikini_set_jill_pec_d278e60e-e4b8-4e16-a16c-7918cb7642f2.jpg",
+              "image_hover": "shopify:\/\/shop_images\/gal_shimmer_bikini_set_jill_pec_ab62ee81-8ce0-4fa6-92ab-b48de13051ce.jpg",
+              "name": "Shimmer\/Black Reversible Bikini Kit",
+              "price": "$106 ($162 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "00b815ef-4fa9-47bc-abf6-02baf3a20654": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/daria-bandeau-cheetara-rosa",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/daria_top_vista_cheetara_rosa_jill_pec.jpg",
+              "image_hover": "shopify:\/\/shop_images\/daria_top_vista_cheetara_rosa_jill_pec_e804ed2e-93cb-4db1-941f-6c2dd936995c.jpg",
+              "name": "Cheetara Rosa Bikini Kit",
+              "price": "$101 ($154 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "7db38dc6-7fb8-4d7a-83f2-aeea0e4d9a8b": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/drive-high-rise-cheetara-legging-cheetara-rosa",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/beau_cheetara_rosa.jpg",
+              "image_hover": "shopify:\/\/shop_images\/beau_cheetara_rosa_e578ee2c-1d57-476c-80ae-68891c2504e8.jpg",
+              "name": "Cheetara Rosa Workout Kit",
+              "price": "$145 ($193 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "32f7de7e-91e9-4f5a-8a44-cc79abee7aa6": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/outlaw-black-out-crop-top",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/outlaw_tennis_skirt.jpg",
+              "image_hover": "shopify:\/\/shop_images\/outlaw_tennis_skirt_77cccd08-d67f-4dd3-89c2-7ba5a109524d.jpg",
+              "name": "Tennis Blackout Kit",
+              "price": "$182 ($279 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "249add99-b2ca-4751-90fb-c6aef26fa74d": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/montana-shinny-netz-jacket",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/montana_haze_pant.jpg",
+              "image_hover": "shopify:\/\/shop_images\/montana_haze_pant_2d573745-268e-4887-b39f-d915d368fb82.jpg",
+              "name": "Black Shiny Netz Lounge Kit",
+              "price": "$227 ($348 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "c58f4620-e5b8-4402-abb6-44398fc26a9f": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/lustrous-max-high-rise-legging-desejo",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/tax_desejo.jpg",
+              "image_hover": "shopify:\/\/shop_images\/tax_desejo_aecdc4fc-65a0-4572-830d-6a10bca0a0c0.jpg",
+              "name": "Desejo Infinity Workout Kit",
+              "price": "$113 ($173 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "25d53ec4-5ef0-4b16-ba52-43965faa3492": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/herea-infinity-hr-legging",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/zeus_herea_legging.jpg",
+              "image_hover": "shopify:\/\/shop_images\/zeus_herea_legging_f95cd1a7-2cb8-4703-b1df-41e19b62a84c.jpg",
+              "name": "Criss-Cross Black Infinity Workout Kit",
+              "price": "$116 ($178 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "47981b69-046e-45da-a39a-5a199d0d0cdb": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/vesper-hr-houndstooth-legging",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/houndstooth_kit.jpg",
+              "image_hover": "shopify:\/\/shop_images\/houndstooth_kit_22cfa825-c092-4acd-82f0-8d9b2793bbed.jpg",
+              "name": "Houndstooth Athleisure Kit",
+              "price": "$169 ($259 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "ceaf79c5-307c-479c-8790-50615d3f96f3": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/lustrous-max-high-rise-legging-bronze",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/tangled_bronze.jpg",
+              "image_hover": "shopify:\/\/shop_images\/tangled_bronze_fedb3650-388b-4c0d-be02-f993ed092467.jpg",
+              "name": "Bronze Infinity Workout Kit",
+              "price": "$106 ($163 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "60191ffc-d22c-4448-bf8c-8b658f6f8556": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/fiona-seamless-legging-desejo",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/roxy_desejo.jpg",
+              "image_hover": "shopify:\/\/shop_images\/roxy_desejo_13d02893-1801-4534-88ce-f99a443f52a8.jpg",
+              "name": "Desejo Seamless Workout Kit",
+              "price": "$132 ($203 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "74a6f969-9534-4320-a23c-996db75c762f": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/romance-infinity-sports-bra",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/romance_kit.jpg",
+              "image_hover": "shopify:\/\/shop_images\/romance_kit_ac996e46-bfda-4356-b191-fa8b21b3b107.jpg",
+              "name": "Rouge Infinity Workout Kit",
+              "price": "$115 ($176 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "7cf15b64-b831-4fd6-a172-bc8daefb3887": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/leah-blackout-sports-bra-rouge",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/rouge_leah_illuminate.jpg",
+              "image_hover": "shopify:\/\/shop_images\/rouge_leah_illuminate_e719de72-91e2-49c6-89d2-d044ab00e308.jpg",
+              "name": "Rouge Blackout Workout Kit",
+              "price": "$124 ($190 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "fa6875e4-d1f4-41ba-abe1-4ac991348bbb": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/luca-infinity-crop-top-rouge",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/luca_lustrous_max.jpg",
+              "image_hover": "shopify:\/\/shop_images\/luca_lustrous_max_fe3f0283-33b5-4c29-a149-a9e657c25c81.jpg",
+              "name": "Rouge Workout Kit",
+              "price": "$115 ($176 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "46f92046-dc7f-4981-b873-8aa84aa033b7": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/attract-infinity-top",
+              "alt_text": "Attract Bra \/ Slalom Short Kit",
+              "image": "shopify:\/\/shop_images\/attract_bra_slalom_black.jpg",
+              "image_hover": "shopify:\/\/shop_images\/attract_bra_slalom_black_0aa3d631-2eda-44a8-a7e4-0e061c685646.jpg",
+              "name": "Attract Bra \/ Slalom Short Kit",
+              "price": "$90 ($137 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "e99d87ad-051c-481c-8959-253aa16c3b70": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/apollo-infinity-bikini-bottom",
+              "alt_text": "Apollo \/ Meadow Bikini Kit",
+              "image": "shopify:\/\/shop_images\/apollo_meadow_swim_black.jpg",
+              "image_hover": "shopify:\/\/shop_images\/apollo_meadow_swim_black_f3012938-1e3d-4a1b-a312-f57ab2a9908d.jpg",
+              "name": "Apollo \/ Meadow Bikini Kit",
+              "price": "$92 ($114 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "ad81f995-8153-451d-ba90-026bbb931161": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/lyn-limitess-bikini-bra",
+              "alt_text": "Lyn \/ Cyrus Reptile Bikini Kit",
+              "image": "shopify:\/\/shop_images\/lyn_cyrus_reptile_grey.jpg",
+              "image_hover": "shopify:\/\/shop_images\/lyn_cyrus_reptile_grey_65d6ef82-b871-4aec-8b9c-d8a95aecf314.jpg",
+              "name": "Lyn \/ Cyrus Reptile Bikini Kit",
+              "price": "$78 ($97 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "c779bb7b-98e6-43ac-b092-9646c72eee1c": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/daria-reptile-bandeau",
+              "alt_text": "Daria \/ Kyra Reptile Sand Swim Kit",
+              "image": "shopify:\/\/shop_images\/daria_kyra_reptile_sand.jpg",
+              "image_hover": "shopify:\/\/shop_images\/daria_kyra_reptile_sand_bd46c572-9764-483c-b8f8-2d2fb864da67.jpg",
+              "name": "Daria \/ Kyra Reptile Sand Swim Kit",
+              "price": "$78 ($97 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "b699f622-9a58-43db-b9c0-779bc52ad89c": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/gal-limitless-infinity-bikini-bra-pompano-orange-black",
+              "alt_text": "Gal \/ Kyra Pompano Orange Bikini Kit",
+              "image": "shopify:\/\/shop_images\/gal_birch_pompano_orange.jpg",
+              "image_hover": "shopify:\/\/shop_images\/gal_birch_pompano_orange_ddc89f73-301a-48f1-b365-a7f881895b8f.jpg",
+              "name": "Gal \/ Kyra Pompano Orange Bikini Kit",
+              "price": "$82 ( $102 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "6f9a38de-a04c-407d-b4e1-5ce3faeb02ca": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/daria-limiteless-bandeau",
+              "alt_text": "Daria \/ Kyra Cheetara Bikini Kit",
+              "image": "shopify:\/\/shop_images\/daria_isla_kit_8f8bdfd6-616d-4078-8bf8-79279e4a1271.jpg",
+              "image_hover": "shopify:\/\/shop_images\/daria_isla_kit_0351cb08-a8ff-4f54-87c3-5f6d6a3df1c1.jpg",
+              "name": "Daria \/ Kyra Cheetara Bikini Kit",
+              "price": "$136 ($116 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "28fa7ce1-97ef-4c25-8d7d-1ab220890ce8": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/gal-limitless-bikini-bra",
+              "alt_text": "Gal \/ Ezra Cheetara Bikini Kit",
+              "image": "shopify:\/\/shop_images\/gal_ezra_kit.jpg",
+              "image_hover": "shopify:\/\/shop_images\/gal_ezra_kit_019a9a48-03ed-4e3c-9ca6-aa2a79233ccb.jpg",
+              "name": "Gal \/ Ezra Cheetara Bikini Kit",
+              "price": "$134 ($157 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "0a662b7a-11d4-4e82-9b00-dbaed7de6e03": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/isla-limitless-bandeau-brown-cheetara-black",
+              "alt_text": "Isla Birch Cheetara Bikini Kit",
+              "image": "shopify:\/\/shop_images\/bandeau_birch_kit.jpg",
+              "image_hover": "shopify:\/\/shop_images\/bandeau_birch_kit_aea278b7-890e-4362-8b4f-04e4979f714f.jpg",
+              "name": "Isla Birch Cheetara Bikini Kit",
+              "price": "$122 ($143 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "912aede1-9a62-436b-81f2-5aa7f15d2926": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/bruna-supreme-sports-bra",
+              "alt_text": "Bandana White Workout Kit",
+              "image": "shopify:\/\/shop_images\/bruna_dynamic_duo_bandana_white.jpg",
+              "image_hover": "shopify:\/\/shop_images\/bruna_dynamic_duo_bandana_white_5d1781b3-b3e9-41a0-86ca-f6159441048b.jpg",
+              "name": "Bandana White Workout Kit",
+              "price": "$179 ($210 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "3ec50a93-a8b5-45ed-ac41-837ef09ef4a9": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/bruna-infinity-sports-bra-chic-red",
+              "alt_text": "Chic Red Workout Kit",
+              "image": "shopify:\/\/shop_images\/bruna_lustrous_chic_red.jpg",
+              "image_hover": "shopify:\/\/shop_images\/bruna_lustrous_chic_red_c54ff409-4758-44dc-8124-799020fd4299.jpg",
+              "name": "Chic Red Workout Kit",
+              "price": "$150 ($176 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "36816d2a-36fb-43ee-aef0-e66268940978": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/leah-infinity-sports-bra-dark-iris",
+              "alt_text": "Dark Iris Workout Kit",
+              "image": "shopify:\/\/shop_images\/gamer_dakota_aubergine_3c83157c-b363-497a-a416-3def2f27d87f.jpg",
+              "image_hover": "shopify:\/\/shop_images\/gamer_dakota_aubergine_51e0cb0d-5b71-4c29-baee-c60062951b07.jpg",
+              "name": "Dark Iris Workout Kit",
+              "price": "$131 ($153 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "8c68bc9c-f2a0-4ad5-a762-73e19c725e4e": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/beau-energy-sports-bra",
+              "alt_text": "Bandana Troop Camo Workout Kit",
+              "image": "shopify:\/\/shop_images\/beau_bandana_drive_troop.jpg",
+              "image_hover": "shopify:\/\/shop_images\/beau_bandana_drive_troop_a3a5af55-352c-4148-9c50-35e3ee898e06.jpg",
+              "name": "Bandana Troop Camo Workout Kit",
+              "price": "$173 ($203 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "1d1dd57b-7c19-46b9-a206-830467c61915": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/bermuda-energy-sports-bra",
+              "alt_text": "Camo Green Workout Kit",
+              "image": "shopify:\/\/shop_images\/camo_green_bermuda_drive.jpg",
+              "image_hover": "shopify:\/\/shop_images\/camo_green_bermuda_drive_ef65202b-cfdf-4318-95cc-13d940102e59.jpg",
+              "name": "Camo Green Workout Kit",
+              "price": "$173 ($203 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "cc0fe5a0-c31d-4d79-9ddc-d711c9099999": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/bermuda-infinity-sports-bra",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/mission_olive_bermuda_olive.jpg",
+              "image_hover": "shopify:\/\/shop_images\/mission_olive_bermuda_olive_f050da16-120d-4dd3-bb72-9653423c57a8.jpg",
+              "name": "Mission Olive Workout Kit",
+              "price": "$156 ($183 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "7ca4b87b-c75a-4083-8727-d881ecabad36": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/leah-infinity-sports-bra",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/leah_pista_black.jpg",
+              "image_hover": "shopify:\/\/shop_images\/leah_pista_black_9527e6b4-804a-4485-8ed8-76c9be6b12b5.jpg",
+              "name": "Pista Pocket Infinity Kit",
+              "price": "$111 ($170 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "43376d81-3099-47aa-9162-7c37ef67d8bc": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/sofia-pullover-2",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/midnight_sofia_sweeper_lustrous_8b826a43-6641-4e2e-91b6-544ea69a72dc.jpg",
+              "image_hover": "shopify:\/\/shop_images\/midnight_sofia_sweeper_lustrous.jpg",
+              "name": "Midnight Kore Kit",
+              "price": "$160 ($246 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH SETS"
+            }
+          },
+          "b9dd1782-5d26-43db-8dc4-f3de8b11eaee": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/infinity-face-mask",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/face_masks.jpg",
+              "image_hover": "shopify:\/\/shop_images\/face_masks_b8ef052e-07b0-428a-b21e-d3e4d9b21056.jpg",
+              "name": "Infinity \/ Netz Mask Kit",
+              "price": "$39 ($60 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "3e60ca08-128b-4644-a55d-04ca587202ef": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/scrunchie",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/scrunchies_v2.jpg",
+              "image_hover": "shopify:\/\/shop_images\/scrunchies_v2_a4302088-29d8-4055-92d0-256e662e8713.jpg",
+              "name": "Scrunchie Kit",
+              "price": "$15 ($18 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH SETS"
+            }
+          },
+          "a779fb68-ee5e-4dde-9e7a-3b069351fdf5": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/pump-open-mesh-pullover-white",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/emblem_pump_pullover.jpg",
+              "image_hover": "shopify:\/\/shop_images\/emblem_pump_pullover_42009c55-3e10-4cd6-9939-b867ab62924a.jpg",
+              "name": "Emblem Koral Kore Kit",
+              "price": "$199 ($328 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "97d1fa33-a601-4d97-a86a-abaf3356dad2": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/tax-cheetarah-sports-bra",
+              "alt_text": "Cheetara Sports Bra and Legging",
+              "image": "shopify:\/\/shop_images\/aerate_cheetara_bra.jpg",
+              "image_hover": "shopify:\/\/shop_images\/aerate_cheetara_bra_b41c7e55-4ab6-42d6-8a30-cfde79b9573b.jpg",
+              "name": "Cheetara Workout Kit",
+              "price": "$134 ($205 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "b5d8a99c-e6ac-4d40-9e47-a80b6f1666fc": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/maddox-sports-bra-black-white",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/maddox_aden_infinity.jpg",
+              "image_hover": "shopify:\/\/shop_images\/maddox_aden_infinity_6c4fb289-e88a-455d-ab12-eadf246d043d.jpg",
+              "name": "Koral Kore Classic Kit",
+              "price": "$101 ($154 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "be2be806-1404-4d4f-8f12-b32abdcf91cc": {
+            "type": "product-bundle",
+            "settings": {
+              "link": "shopify:\/\/products\/tax-limitless-plus-sports-bra",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/reptile_tax_drive.jpg",
+              "image_hover": "shopify:\/\/shop_images\/reptile_tax_drive_ef2187fb-d4ac-4405-a274-cb870dab2f9d.jpg",
+              "name": "Reptile Workout Kit",
+              "price": "$118 ($181 Value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "4539e760-3b5e-40b6-bf72-3edb2fdfd55e": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/netz-face-mask",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/solid_netz_mask.jpg",
+              "image_hover": "shopify:\/\/shop_images\/solid_netz_mask_b4d1211a-82d2-453b-948c-8a9b160f364b.jpg",
+              "name": "Koral Netz Mask Kit",
+              "price": "$51 ($60 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          },
+          "acbb53bf-8801-4e12-ae35-dc9c8b2aee3f": {
+            "type": "product-bundle",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/infinity-face-mask-navy-caiman",
+              "alt_text": "",
+              "image": "shopify:\/\/shop_images\/solid_netz_mask_black_leopard.jpg",
+              "image_hover": "shopify:\/\/shop_images\/solid_netz_mask_black_leopard_0b0ecbae-58cc-4e8e-a9dc-8e0fa700e4a8.jpg",
+              "name": "Animal Print Mask Kit",
+              "price": "$28 ($42 value)",
+              "message_color": "#4a19bd",
+              "message": "SAVE WITH KITS"
+            }
+          }
+        },
+        "block_order": [
+          "6d402d39-c1f9-4b9c-8cfc-ecf29fd24124",
+          "af2bc409-6537-4cd7-bba5-5f246b911a5d",
+          "00b815ef-4fa9-47bc-abf6-02baf3a20654",
+          "7db38dc6-7fb8-4d7a-83f2-aeea0e4d9a8b",
+          "32f7de7e-91e9-4f5a-8a44-cc79abee7aa6",
+          "249add99-b2ca-4751-90fb-c6aef26fa74d",
+          "c58f4620-e5b8-4402-abb6-44398fc26a9f",
+          "25d53ec4-5ef0-4b16-ba52-43965faa3492",
+          "47981b69-046e-45da-a39a-5a199d0d0cdb",
+          "ceaf79c5-307c-479c-8790-50615d3f96f3",
+          "60191ffc-d22c-4448-bf8c-8b658f6f8556",
+          "74a6f969-9534-4320-a23c-996db75c762f",
+          "7cf15b64-b831-4fd6-a172-bc8daefb3887",
+          "fa6875e4-d1f4-41ba-abe1-4ac991348bbb",
+          "46f92046-dc7f-4981-b873-8aa84aa033b7",
+          "e99d87ad-051c-481c-8959-253aa16c3b70",
+          "ad81f995-8153-451d-ba90-026bbb931161",
+          "c779bb7b-98e6-43ac-b092-9646c72eee1c",
+          "b699f622-9a58-43db-b9c0-779bc52ad89c",
+          "6f9a38de-a04c-407d-b4e1-5ce3faeb02ca",
+          "28fa7ce1-97ef-4c25-8d7d-1ab220890ce8",
+          "0a662b7a-11d4-4e82-9b00-dbaed7de6e03",
+          "912aede1-9a62-436b-81f2-5aa7f15d2926",
+          "3ec50a93-a8b5-45ed-ac41-837ef09ef4a9",
+          "36816d2a-36fb-43ee-aef0-e66268940978",
+          "8c68bc9c-f2a0-4ad5-a762-73e19c725e4e",
+          "1d1dd57b-7c19-46b9-a206-830467c61915",
+          "cc0fe5a0-c31d-4d79-9ddc-d711c9099999",
+          "7ca4b87b-c75a-4083-8727-d881ecabad36",
+          "43376d81-3099-47aa-9162-7c37ef67d8bc",
+          "b9dd1782-5d26-43db-8dc4-f3de8b11eaee",
+          "3e60ca08-128b-4644-a55d-04ca587202ef",
+          "a779fb68-ee5e-4dde-9e7a-3b069351fdf5",
+          "97d1fa33-a601-4d97-a86a-abaf3356dad2",
+          "b5d8a99c-e6ac-4d40-9e47-a80b6f1666fc",
+          "be2be806-1404-4d4f-8f12-b32abdcf91cc",
+          "4539e760-3b5e-40b6-bf72-3edb2fdfd55e",
+          "acbb53bf-8801-4e12-ae35-dc9c8b2aee3f"
+        ],
+        "settings": {}
+      },
+      "sub-navigation": {
+        "type": "sub-navigation",
+        "settings": {
+          "sub_nav_active": false,
+          "sub_nav_1_text": "",
+          "sub_nav_1_link": "",
+          "sub_nav_2_text": "",
+          "sub_nav_2_link": "",
+          "sub_nav_3_text": "",
+          "sub_nav_3_link": ""
+        }
+      },
+      "16079336577eb7e4db": {
+        "type": "preset__static-image",
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/12_21_21_NEW_SWIM5.jpg",
+          "static_image_mobile": "shopify:\/\/shop_images\/12_21_21_NEW_SWIM6.jpg",
+          "static_image_alt": "Plan your getaway Resort Swim is Here!",
+          "static_image_link": "shopify:\/\/collections\/womens-swimwear"
+        }
+      },
+      "inline-banners": {
+        "type": "inline-banners",
+        "blocks": {
+          "309bb06f-dac4-4378-9ee7-aa7d635c9bd3": {
+            "type": "inline_banner_1_4",
+            "disabled": true,
+            "settings": {
+              "linked-inline-collection": "new-arrivals",
+              "inline_position": "1",
+              "inline_image": "shopify:\/\/shop_images\/labor_day_flash_sale_mobile_8b27e12f-dd42-4741-bd37-8ac178bf7f16.jpg",
+              "ib-header": "",
+              "ib-header-font": "",
+              "ib-header-font-weight": "",
+              "ib-subheader": "",
+              "ib-subheader-font": "",
+              "ib-subheader-font-weight": "",
+              "ib-link": "shopify:\/\/collections\/labor-day-flash-sale",
+              "ib-cta": "",
+              "content_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "309bb06f-dac4-4378-9ee7-aa7d635c9bd3"
+        ],
+        "settings": {}
+      },
+      "pdp-recommendations": {
+        "type": "pdp-recommendations",
+        "settings": {
+          "show_related_products": true,
+          "bg": "#ffffff",
+          "related_title": "Recommended",
+          "number_of_products": 4,
+          "collection": ""
+        }
+      },
+      "pdp-recently-viewed": {
+        "type": "pdp-recently-viewed",
+        "settings": {}
+      },
+      "1611817423e2ccb5d0": {
+        "type": "preset__static-image",
+        "disabled": true,
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/DT_BANNER.gif",
+          "static_image_mobile": "shopify:\/\/shop_images\/MOBILE_BANNER.gif",
+          "static_image_alt": "50% off all masks",
+          "static_image_link": "shopify:\/\/collections\/masks"
+        }
+      },
+      "1612569215dd250e83": {
+        "type": "preset__static-image",
+        "disabled": true,
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/new_items_added_to_sale_1440_height.jpg",
+          "static_image_mobile": "shopify:\/\/shop_images\/new_items_added_to_sale_mobile_raster_padding.jpg",
+          "static_image_alt": "New Items Added to Sale",
+          "static_image_link": "shopify:\/\/collections\/sale"
+        }
+      },
+      "1613464024dcf47439": {
+        "type": "preset__static-image",
+        "disabled": true,
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/2_a9fadf6e-e4be-424f-8220-14c41334479b.jpg",
+          "static_image_mobile": "shopify:\/\/shop_images\/23.jpg",
+          "static_image_alt": "Shop our best-selling signature shine",
+          "static_image_link": "shopify:\/\/collections\/koral-infinity-shine"
+        }
+      },
+      "1616711820d20f9b1c": {
+        "type": "nosto_container",
+        "settings": {
+          "nosto_cont_id": "frontpage-nosto-1"
+        }
+      },
+      "161905162537ea4e81": {
+        "type": "preset__static-image",
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/kore_section_2022_desktop.jpg",
+          "static_image_mobile": "shopify:\/\/shop_images\/kore_section_2022_mobile.jpg",
+          "static_image_alt": "Shop Koral Kore",
+          "static_image_link": "shopify:\/\/collections\/koral-kore"
+        }
+      },
+      "16286612579306e781": {
+        "type": "preset__static-image",
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/DESKTOP1.gif",
+          "static_image_mobile": "shopify:\/\/shop_images\/MOBILE1.gif",
+          "static_image_alt": "Must-Have Colorways Just Dropped!",
+          "static_image_link": "shopify:\/\/collections\/new-arrivals"
+        }
+      },
+      "1630483327664661a0": {
+        "type": "preset__static-image",
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/12_02_21_HOLIDAY_DROP_1_HP_desktop_sherpa_jackets.jpg",
+          "static_image_mobile": "shopify:\/\/shop_images\/12_02_21_HOLIDAY_DROP_1_HP_mobile_sherpa_jackets.jpg",
+          "static_image_alt": "Shop Jackets & Outerwear",
+          "static_image_link": "shopify:\/\/collections\/jackets-sweatshirts"
+        }
+      },
+      "curalate-gallery": {
+        "type": "curalate-gallery",
+        "settings": {}
+      },
+      "163436512844f2fd80": {
+        "type": "preset__2-columns-banner",
+        "disabled": true,
+        "settings": {
+          "swap": true,
+          "container": "full-width",
+          "left_width": 6,
+          "left_bg": "#ffffff",
+          "left_image": "shopify:\/\/shop_images\/gift_guide_cube.jpg",
+          "left_image_mobile": "shopify:\/\/shop_images\/gift_guide_cube_29bfc498-0929-4b73-afee-aa37e8ed373e.jpg",
+          "left_padding-type-top-bottom": "py-",
+          "left_padding-top-bottom": 3,
+          "left_padding-type-left-right": "px-",
+          "left_padding-left-right": 3,
+          "left_text_layout": "below",
+          "left_text_pos": "align-items-md-end justify-content-md-start",
+          "left_text_pos_mobile": "align-items-end justify-content-start",
+          "left_title": "",
+          "left_subtitle": "",
+          "left_message": "",
+          "left_color": "#000000",
+          "left_message_width": 1000,
+          "left_text_align": "text-left",
+          "left_btn_color": "",
+          "left_btn_bg": "",
+          "left_link": "shopify:\/\/pages\/koral-gift-guide",
+          "left_link_text": "SHOP GIFT GUIDE",
+          "left_link_type": "container",
+          "right_bg": "#ffffff",
+          "right_image": "shopify:\/\/shop_images\/jumpsuit_cube_11_30.jpg",
+          "right_image_mobile": "shopify:\/\/shop_images\/jumpsuit_cube_11_30_8f3d2eb7-9cf8-4bc9-8622-6a1d94c597d5.jpg",
+          "right_padding-type-top-bottom": "py-",
+          "right_padding-top-bottom": 3,
+          "right_padding-type-left-right": "px-",
+          "right_padding-left-right": 3,
+          "right_text_layout": "below",
+          "right_text_pos": "align-items-md-end justify-content-md-start",
+          "right_text_pos_mobile": "align-items-end justify-content-start",
+          "right_title": "",
+          "right_subtitle": "",
+          "right_message": "",
+          "right_color": "#000000",
+          "right_message_width": 1000,
+          "right_text_align": "text-left",
+          "right_btn_color": "",
+          "right_btn_bg": "",
+          "right_link": "shopify:\/\/collections\/womens-jumpsuits",
+          "right_link_text": "SHOP JUMPSUITS",
+          "right_link_type": "container"
+        }
+      },
+      "16366172903be965df": {
+        "type": "nosto_container",
+        "settings": {
+          "nosto_cont_id": ""
+        }
+      },
+      "1642693082ffc32c92": {
+        "type": "preset__static-image",
+        "settings": {
+          "static_image_desktop": "shopify:\/\/shop_images\/DESKTOP_58c53a47-7cad-4f88-b0db-d3313983ae3a.jpg",
+          "static_image_mobile": "shopify:\/\/shop_images\/MOBILE_b880a607-a864-46b2-96ec-76a348acef4f.jpg",
+          "static_image_alt": "",
+          "static_image_link": "https:\/\/koral.com\/collections\/january-22-sample-sale"
+        }
+      }
+    },
+    "content_for_index": [
+      "1642693082ffc32c92",
+      "16286612579306e781",
+      "1600199985520",
+      "16055894129ad7db76",
+      "16079336577eb7e4db",
+      "1599715508962",
+      "1605081293c7bdf9b6",
+      "163436512844f2fd80",
+      "1613464024dcf47439",
+      "1630483327664661a0",
+      "1616711820d20f9b1c",
+      "161905162537ea4e81",
+      "1612569215dd250e83",
+      "16366172903be965df",
+      "1599696979683",
+      "1605849209c95d5ece",
+      "1611817423e2ccb5d0",
+      "1556421831767",
+      "1591837638289"
+    ]
   },
   "presets": {
     "Default": {
-      "content_for_index": [
-
-      ]
+      "content_for_index": []
     }
   }
 }

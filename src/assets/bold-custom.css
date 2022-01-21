@@ -4,3 +4,24 @@ label.option[title*="(Bundle price)"] {
 .bold-bundles-widget-item__price {
   display: none;
 }
+dl.cart__item-property > dd {
+  display: none;
+}
+dl.minicart__item-property > dd {
+display:none;
+}
+.money {
+  white-space: nowrap;
+}
+.bold-bundles-widget-item__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.bold-bundles-widget-item__image {
+  vertical-align: bottom;
+  width: 100%;
+}
+.bold-bundles-widget-item--product {
+  margin-bottom: 20px;
+}

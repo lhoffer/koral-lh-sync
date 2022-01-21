@@ -45,6 +45,12 @@
         </span>
       </button>
     </li>
+    <li class="search-list vue-app">
+      <a href="#" v-toggle="{target: 'body', class: 'header__search--is-active', focus: '.header__search-form input'}" class="header__search-link--mobile">
+        <label>{{ 'layout.search' | t }}</label>
+        {% include 'icon-search' %}
+      </a>
+    </li>   
     {%- endif -%}
     {%- if additional_links != blank -%}
     {{additional_links}}

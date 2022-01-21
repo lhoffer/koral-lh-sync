@@ -16,7 +16,7 @@
           <div class="nav__submenu child">
             {%- include 'header__nav-image-item' -%}
             <ul class="child-count-{{link.links.size}} image-link-count-{{image_count}}">
-            {{ image_links }}
+
             {%- for childlink in link.links -%}
               {%- if childlink.links != blank -%}
                 <li class="{% if childlink.links.size > 5 %}wide{% endif %} has-submenu">
@@ -35,6 +35,9 @@
                 </li>
               {%- endif -%}
             {%- endfor -%}
+
+            {{ image_links }}
+
             </ul>
           </div>
         </li>

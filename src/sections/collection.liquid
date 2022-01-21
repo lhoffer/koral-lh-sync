@@ -7,7 +7,7 @@
       {{ inline_banner1 }} 
       
       {% for product in collection.products %}
-      {%- include 'bold-product' with product, hide_action: 'skip' -%}
+      <script type="application/json" class="bold-product-json">{{ product | json }}</script>
         {% include 'product__item' %}
       {% else %}
         {% if collection.handle == 'all' and   
